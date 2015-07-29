@@ -1,0 +1,2 @@
+module GreenButtonData::Parser
+end
