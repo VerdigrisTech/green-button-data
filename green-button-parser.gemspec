@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Parser for Green Button data format'
   s.description = 'A library to parse large Green Button feed quickly'
 
+  s.files         = `git ls-files`.split("\n")
   s.require_paths = ['lib']
 
   s.platform    = Gem::Platform::RUBY
