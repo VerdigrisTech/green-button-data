@@ -4,45 +4,49 @@ module GreenButtonData
       include SAXMachine
       include Utilities
 
-      element :expires_at do |epoch|
-        # Convert UNIX epoch to DateTime object
-        Time.at(epoch).utc.to_datetime
+      element :authorizedPeriod, class: Interval, as: :authorized_period
+      element :publishedPeriod, class: Interval, as: :published_period
+
+      element :expires_at, class: Integer do |epoch|
+        Time.at(normalize_epoch(epoch)).utc.to_datetime
       end
 
-      element :'resourceURI', as: resource_uri
-      element :'authorizationURI', as: authorization_uri
+      element :status, class: Integer
 
-      #########
-
-      element :id, as: :entry_id
-
-      def id
-        @entry_id ||= @url
+      def active?
+        @status > 0
       end
 
-      element :link, as: :up, value: :href, with: { rel: 'up' }
-      element :link, as: :self, value: :href, with: { rel: 'self' }
-      element :link, as: :related, value: :href, with: { rel: 'related' }
+      # TODO: Add scope parser
+      element :scope
 
-      element :content
+      element :resourceURI, as: :resource_uri
+      element :authorizationURI, as: :authorization_uri
 
-      # Published Date
-      element :published
+      # ESPI Namespacing
+      element :'espi:authorizedPeriod', class: Interval, as: :authorized_period
+      element :'espi:publishedPeriod', class: Interval, as: :published_period
+      element :'espi:expires_at', class: Integer, as: :expires_at
+      element :'espi:status', class: Integer, as: :status
+      element :'espi:scope', as: :scope
+      element :'espi:resourceURI', as: :resource_uri
+      element :'espi:authorizationURI', as: :authorization_uri
 
-      def published
-        @published ||= @updated
-      end
-
-      def published=(val)
-        @published = parse_datetime val
-      end
-
-      # Updated Date
-      element :updated
-
-      def updated=(val)
-        @updated = parse_datetime val
-      end
+      # Special case for PG&E which uses generic namespacing
+      element :'ns0:authorizedPeriod', class: Interval, as: :authorized_period
+      element :'ns0:publishedPeriod', class: Interval, as: :published_period
+      element :'ns0:expires_at', class: Integer, as: :expires_at
+      element :'ns0:status', class: Integer, as: :status
+      element :'ns0:scope', as: :scope
+      element :'ns0:resourceURI', as: :resource_uri
+      element :'ns0:authorizationURI', as: :authorization_uri
+      element :'ns1:authorizedPeriod', class: Interval, as: :authorized_period
+      element :'ns1:publishedPeriod', class: Interval, as: :published_period
+      element :'ns1:expires_at', class: Integer, as: :expires_at
+      element :'ns1:status', class: Integer, as: :status
+      element :'ns1:scope', as: :scope
+      element :'ns1:resourceURI', as: :resource_uri
+      element :'ns1:authorizationURI', as: :authorization_uri
     end
   end
 end
