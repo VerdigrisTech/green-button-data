@@ -12,11 +12,11 @@ module GreenButtonData
         normalize_epoch t
       end
 
-      def start_at
+      def starts_at
         Time.at(normalize_epoch(@start)).utc.to_datetime
       end
 
-      def end_at
+      def ends_at
         Time.at(normalize_epoch(@start + @duration)).utc.to_datetime
       end
 
