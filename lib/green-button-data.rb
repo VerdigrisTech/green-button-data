@@ -6,6 +6,7 @@ require 'green-button-data/parser'
 require 'green-button-data/parser/interval'
 require 'green-button-data/parser/authorization'
 require 'green-button-data/parser/application_information'
+require 'green-button-data/parser/service_category'
 
 module GreenButtonData
   SERVICE_CATEGORY = {
