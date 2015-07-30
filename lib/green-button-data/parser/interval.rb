@@ -1,6 +1,6 @@
 module GreenButtonData
   module Parser
-    class Period
+    class Interval
       include SAXMachine
       include Utilities
 
