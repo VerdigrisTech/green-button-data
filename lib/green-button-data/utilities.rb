@@ -34,5 +34,43 @@ module GreenButtonData
         epoch
       end
     end
+
+    ##
+    # Retrieves the first Sunday of the month
+    #
+    # ==== Arguments
+    #
+    # * +date+ - Date object
+    def first_sunday_of_month(date)
+      year = date.year
+      month = date.month
+      first_day = Date.new(year, month, 1)
+      first_weekday = first_day.wday
+
+      # If today is Sunday, no offset, otherwise, calculate number of days that
+      # need to be added before hitting the first Sunday of month
+      day_offset = first_weekday == 0 ? 0 : 7 - first_weekday
+
+      # Return first Monday of the month
+      first_day + day_offset
+    end
+
+    ##
+    # Returns the Nth weekday in the given month
+    #
+    # ==== Arguments
+    #
+    # * +weekday+ - day of week; 0 = Sunday, 6 = Saturday
+    # * +week+ - Nth week of month
+    # * +date+ - Date object
+    #
+    # ==== Examples
+    #
+    # To retrieve third Friday of July 2015,
+    #     nth_weekday_of_month(5, 3, Date.new(2015, 7))
+    def nth_weekday_of_month(weekday = 0, week = 1, date)
+      # Day offset needed for Nth day of the week
+      first_sunday_of_month(date) + weekday + (week - 1) * 7
+    end
   end
 end
