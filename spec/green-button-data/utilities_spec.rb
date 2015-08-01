@@ -27,4 +27,11 @@ describe GreenButtonData::Utilities do
       expect(epoch).to eq 1445469681
     end
   end
+
+  describe "#first_sunday_of" do
+    it "should return the first Sunday of a given month" do
+      date = @klass.new.first_sunday_of 2015, 10
+      expect(date.day).to eq 4
+    end
+  end
 end
