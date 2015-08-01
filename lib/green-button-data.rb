@@ -11,7 +11,8 @@ require 'green-button-data/parser/interval_reading'
 require 'green-button-data/parser/authorization'
 require 'green-button-data/parser/application_information'
 require 'green-button-data/parser/service_category'
-require 'green-button-data/parser/local_time_parameter'
+require 'green-button-data/parser/local_time_parameters'
+require 'green-button-data/parser/reading_type'
 
 module GreenButtonData
 end
