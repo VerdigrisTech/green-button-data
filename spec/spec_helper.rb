@@ -2,7 +2,10 @@ require File.expand_path(File.dirname(__FILE__) + '/../lib/green-button-data')
 require 'fixtures'
 require 'simplecov'
 
-SimpleCov.start
+SimpleCov.start do
+  add_filter "/spec/"
+end
+
 if ENV['CI'] == 'true'
   require 'codecov'
   SimpleCov.formatter = SimpleCov::Formatter::Codecov
