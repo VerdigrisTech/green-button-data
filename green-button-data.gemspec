@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
 
   s.platform    = Gem::Platform::RUBY
 
+  s.add_dependency 'nokogiri', '~> 1.6'
   s.add_dependency 'sax-machine', '~> 1.3'
-  s.add_dependency 'ox', '~> 2.2'
 
   s.add_development_dependency 'rspec', '~> 3.0'
 end
