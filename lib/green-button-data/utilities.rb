@@ -27,7 +27,7 @@ module GreenButtonData
     # * +epoch+ - Amount of seconds/milliseconds/microseconds since 1970-01-01
     def normalize_epoch(epoch)
       if epoch.digits >= 15
-        epoch / 1000000
+        epoch / 100000
       elsif epoch.digits >= 13
         epoch / 1000
       else
