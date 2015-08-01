@@ -1,6 +1,6 @@
 module GreenButtonData
   module Parser
-    class LocalTimeParameter
+    class LocalTimeParameters
       include SAXMachine
       include Dst
       include Utilities
