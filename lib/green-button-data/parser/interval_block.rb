@@ -4,7 +4,7 @@ module GreenButtonData
       include SAXMachine
 
       element :interval, class: Interval
-      element :IntervalReading, class: IntervalReading, as: :interval_reading
+      element :IntervalReading, class: IntervalReading, as: :interval_readings
 
       def duration
         @interval.duration
@@ -21,12 +21,12 @@ module GreenButtonData
       # Standard ESPI namespacing
       element :'espi:interval', class: Interval, as: :interval
       element :'espi:IntervalReading', class: IntervalReading,
-              as: :interval_reading
+              as: :interval_readings
 
       # Special case for PG&E which uses generic namespacing
       element :'ns0:interval', class: Interval, as: :interval
       element :'ns0:IntervalReading', class: IntervalReading,
-              as: :interval_reading
+              as: :interval_readings
     end
   end
 end
