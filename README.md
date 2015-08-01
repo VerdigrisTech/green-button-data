@@ -9,3 +9,10 @@ Green Button Data is a Ruby gem that can quickly parse the Green Button data
 standard. It uses an event-driven <abbr title="Simple API for XML">SAX</abbr>
 parser which does not build the <abbr title="Document Object Model">DOM</abbr>
 in memory.
+
+## License
+
+Distributed under [Simplified BSD](https://raw.githubusercontent.com/VerdigrisTech/green-button-data/master/LICENSE.txt)
+license.
+
+Copyright © 2015, Verdigris Technologies Inc. All rights reserved.
