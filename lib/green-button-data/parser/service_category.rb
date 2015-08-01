@@ -8,7 +8,7 @@ module GreenButtonData
       end
 
       # ESPI Namespacing
-      element :'espi:kind', class: Integer, as: kind
+      element :'espi:kind', class: Integer, as: :kind
 
       # Special case for PG&E which uses generic namespacing
       element :'ns0:kind', class: Integer, as: :kind
