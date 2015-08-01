@@ -1,5 +1,3 @@
-require File.expand_path(File.dirname(__FILE__) + '/../lib/green-button-data')
-require 'fixtures'
 require 'simplecov'
 
 SimpleCov.start do
@@ -10,6 +8,9 @@ if ENV['CI'] == 'true'
   require 'codecov'
   SimpleCov.formatter = SimpleCov::Formatter::Codecov
 end
+
+require File.expand_path(File.dirname(__FILE__) + '/../lib/green-button-data')
+require 'fixtures'
 
 SAXMachine.handler = ENV['HANDLER'].to_sym if ENV['HANDLER']
 
