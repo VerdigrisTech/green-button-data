@@ -50,7 +50,10 @@ describe GreenButtonData::Utilities do
   describe "#last_weekday_of" do
     it "should return the last given day of the week of a given month" do
       last_thursday = @klass.new.last_weekday_of 2015, 10, 4
+      last_friday = @klass.new.last_weekday_of 2015, 9, 5
+
       expect(last_thursday.day).to eq 29
+      expect(last_friday.day).to eq 25
     end
   end
 end
