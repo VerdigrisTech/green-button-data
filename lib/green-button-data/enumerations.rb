@@ -66,6 +66,13 @@ module GreenButtonData
       978 => :eur
     }
 
+    DATA_CUSTODIAN_APPLICATION_STATUS = {
+      1 => :review,
+      2 => :production,
+      3 => :on_hold,
+      4 => :revoked
+    }
+
     DATA_QUALIFIER = {
        0 => :none,
        2 => :average,
