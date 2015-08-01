@@ -84,6 +84,11 @@ module GreenButtonData
       26 => :sum
     }
 
+    ESPI_SERVICE_STATUS = {
+      0 => :unavailable,
+      1 => :normal
+    }
+
     FLOW_DIRECTION = {
        0 => :none,
        1 => :forward,
