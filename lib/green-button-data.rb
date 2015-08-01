@@ -16,6 +16,7 @@ require 'green-button-data/parser/local_time_parameters'
 require 'green-button-data/parser/reading_type'
 require 'green-button-data/parser/content'
 require 'green-button-data/parser/entry'
+require 'green-button-data/parser/feed'
 
 module GreenButtonData
 end
