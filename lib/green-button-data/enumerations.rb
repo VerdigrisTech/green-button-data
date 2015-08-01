@@ -277,6 +277,21 @@ module GreenButtonData
       4 => :retired
     }
 
+    THIRD_PARTY_APPLICATION_TYPE = {
+      1 => :web,
+      2 => :desktop,
+      3 => :mobile,
+      4 => :device
+    }
+
+    THIRD_PARTY_APPLICATION_USE = {
+      1 => :energy_management,
+      2 => :comparisons,
+      3 => :government,
+      4 => :academic,
+      5 => :law_enforcement
+    }
+
     TIME_ATTRIBUTE = {
        0 => :none,
        1 => :ten_minute,
