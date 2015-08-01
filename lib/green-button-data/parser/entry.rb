@@ -7,7 +7,7 @@ module GreenButtonData
       element :id, as: :entry_id
 
       def id
-        @entry_id ||= @url
+        @entry_id ||= @self
       end
 
       element :link, as: :up, value: :href, with: { rel: 'up' }
