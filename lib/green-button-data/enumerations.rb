@@ -14,6 +14,12 @@ module GreenButtonData
       14 => :bounded_quantity
     }
 
+    AUTHORIZATION_STATUS = {
+      0 => :revoked,
+      1 => :active,
+      2 => :denied
+    }
+
     COMMODITY = {
        0 => :none,                          # NA
        1 => :electricity_seconday_metered,  # Secondary electricity meter
