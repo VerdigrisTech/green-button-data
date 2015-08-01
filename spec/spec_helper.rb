@@ -11,6 +11,7 @@ end
 
 require File.expand_path(File.dirname(__FILE__) + '/../lib/green-button-data')
 require 'fixtures'
+require 'support/custom_expectations/warn_expectation'
 
 SAXMachine.handler = ENV['HANDLER'].to_sym if ENV['HANDLER']
 
