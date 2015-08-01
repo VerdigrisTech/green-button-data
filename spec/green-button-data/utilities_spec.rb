@@ -11,7 +11,11 @@ describe GreenButtonData::Utilities do
     end
 
     it "should warn and return nil when not a valid ISO 8601 format" do
-      datetime = @klass.new.parse_datetime "Hill Valley"
+      # Ensure datetime is an instance of Object so we can properly test for nil
+      datetime = Object.new
+      expect {
+        datetime = @klass.new.parse_datetime "Hill Valley"
+      }.to warn("Parsing failed for string: \"Hill Valley\"")
       expect(datetime).to be_nil
     end
   end
