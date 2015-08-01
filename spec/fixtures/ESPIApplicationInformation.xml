@@ -1,0 +1,49 @@
+<entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+      <id>urn:uuid:af6e8b03-0299-467e-972a-a883ecdcc575</id>
+      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ApplicationInformation" rel="up"/>
+      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ApplicationInformation/2" rel="self"/>
+      <title>GreenButtonData.org ThirdParty Application</title>
+      <content>
+            <espi:ApplicationInformation>
+                  <espi:dataCustodianId>data_custodian</espi:dataCustodianId>
+                  <espi:dataCustodianApplicationStatus>1</espi:dataCustodianApplicationStatus>
+                  <espi:thirdPartyApplicationDescription>EnergyOS OpenESPI Example Third Party</espi:thirdPartyApplicationDescription>
+                  <espi:thirdPartyApplicationStatus>1</espi:thirdPartyApplicationStatus>
+                  <espi:thirdPartyApplicationType>1</espi:thirdPartyApplicationType>
+                  <espi:thirdPartyApplicationUse>1</espi:thirdPartyApplicationUse>
+                  <espi:authorizationServerUri>https://services.greenbuttondata.org//DataCustodian/</espi:authorizationServerUri>
+                  <espi:thirdPartyNotifyUri>https://services.greenbuttondata.org/ThirdParty/espi/1_1/Notification</espi:thirdPartyNotifyUri>
+                  <espi:authorizationServerAuthorizationEndpoint>https://services.greenbuttondata.org//DataCustodian/oauth/authorize</espi:authorizationServerAuthorizationEndpoint>
+                  <espi:authorizationServerRegistrationEndpoint>https://services.greenbuttondata.org//DataCustodian/espi/1_1/register</espi:authorizationServerRegistrationEndpoint>
+                  <espi:authorizationServerTokenEndpoint>https://services.greenbuttondata.org//DataCustodian/oauth/token</espi:authorizationServerTokenEndpoint>
+                  <espi:dataCustodianBulkRequestURI>https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Batch/Bulk</espi:dataCustodianBulkRequestURI>
+                  <espi:dataCustodianResourceEndpoint>https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource</espi:dataCustodianResourceEndpoint>
+                  <espi:thirdPartyScopeSelectionScreenURI>https://services.greenbuttondata.org/ThirdParty/RetailCustomer/ScopeSelection</espi:thirdPartyScopeSelectionScreenURI>
+                  <espi:thirdPartyUserPortalScreenURI>https://services.greenbuttondata.org/ThirdParty</espi:thirdPartyUserPortalScreenURI>
+                  <espi:client_secret>secret</espi:client_secret>
+                  <espi:logo_uri>https://services.greenbuttondata.org/ThirdParty/resources/ico/favicon.png</espi:logo_uri>
+                  <espi:client_name>Green Button Third Party</espi:client_name>
+                  <espi:client_uri>https://services.greenbuttondata.org/ThirdParty</espi:client_uri>
+                  <espi:redirect_uri>https://services.greenbuttondata.org/ThirdParty/espi/1_1/OAuthCallBack</espi:redirect_uri>
+                  <espi:client_id>third_party</espi:client_id>
+                  <espi:software_id>EnergyOS OpenESPI Example Third Party</espi:software_id>
+                  <espi:software_version>1.2</espi:software_version>
+                  <espi:client_id_issued_at>1403190000</espi:client_id_issued_at>
+                  <espi:client_secret_expires_at>0</espi:client_secret_expires_at>
+                  <espi:contacts>john.teeter@energyos.org,martin.burns@nist.gov,donald.coffin@reminetworks.com</espi:contacts>
+                  <espi:token_endpoint_auth_method>client_secret_basic</espi:token_endpoint_auth_method>
+                  <espi:scope>FB=1_3_4_5_13_14_39;IntervalDuration=3600;BlockDuration=monthly;HistoryLength=13</espi:scope>
+                  <espi:scope>FB=1_3_4_5_13_14_15_39;IntervalDuration=900;BlockDuration=monthly;HistoryLength=13</espi:scope>
+                  <espi:scope>FB=1_3_4_5_6_7_8_9_10_11_29_12_13_14_15_16_17_18_19_27_28_32_33_34_35_37_38_39_40_41_44;IntervalDuration=3600;BlockDuration=monthly;HistoryLength=13</espi:scope>
+                  <espi:grant_types>authorization_code</espi:grant_types>
+                  <espi:grant_types>client_credentials</espi:grant_types>
+                  <espi:grant_types>refresh_token</espi:grant_types>
+                  <espi:response_types>token</espi:response_types>
+                  <espi:registration_client_uri>https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ApplicationInformation/2</espi:registration_client_uri>
+                  <espi:registration_access_token>d89bb056-0f02-4d47-9fd2-ec6a19ba8d0c</espi:registration_access_token>
+                  <espi:dataCustodianScopeSelectionScreenURI>https://services.greenbuttondata.org//DataCustodian/RetailCustomer/ScopeSelectionList?ThirdPartyID=third_party</espi:dataCustodianScopeSelectionScreenURI>
+            </espi:ApplicationInformation>
+      </content>
+      <published>2014-01-02T10:00:00Z</published>
+      <updated>2014-01-02T10:00:00Z</updated>
+</entry>
