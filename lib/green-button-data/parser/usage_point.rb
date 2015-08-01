@@ -2,11 +2,12 @@ module GreenButtonData
   module Parser
     class UsagePoint
       include SAXMachine
+      include Enumerations
 
       element :kind, class: Integer
 
       def service_category
-        SERVICE_CATEGORY[@kind]
+        SERVICE[@kind]
       end
 
       # ESPI Namespacing
