@@ -40,13 +40,6 @@ module GreenButtonData
       element :'ns0:scope', as: :scope
       element :'ns0:resourceURI', as: :resource_uri
       element :'ns0:authorizationURI', as: :authorization_uri
-      element :'ns1:authorizedPeriod', class: Interval, as: :authorized_period
-      element :'ns1:publishedPeriod', class: Interval, as: :published_period
-      element :'ns1:expires_at', class: Integer, as: :expires_at
-      element :'ns1:status', class: Integer, as: :status
-      element :'ns1:scope', as: :scope
-      element :'ns1:resourceURI', as: :resource_uri
-      element :'ns1:authorizationURI', as: :authorization_uri
     end
   end
 end

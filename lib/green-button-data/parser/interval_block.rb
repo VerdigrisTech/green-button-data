@@ -27,9 +27,6 @@ module GreenButtonData
       element :'ns0:interval', class: Interval, as: :interval
       element :'ns0:IntervalReading', class: IntervalReading,
               as: :interval_reading
-      element :'ns1:interval', class: Interval, as: :interval
-      element :'ns1:IntervalReading', class: IntervalReading,
-              as: :interval_reading
     end
   end
 end

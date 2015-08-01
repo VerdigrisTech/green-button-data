@@ -43,10 +43,6 @@ module GreenButtonData
       element :'ns0:dstEndRule', as: :dst_end_rule
       element :'ns0:dstOffset', as: :dst_offset
       element :'ns0:tzOffset', as: :tz_offset
-      element :'ns1:dstStartRule', as: :dst_start_rule
-      element :'ns1:dstEndRule', as: :dst_end_rule
-      element :'ns1:dstOffset', as: :dst_offset
-      element :'ns1:tzOffset', as: :tz_offset
 
       private
 

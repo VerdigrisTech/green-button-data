@@ -25,12 +25,6 @@ module GreenButtonData
       element :'ns0:consumptionTier', class: Integer, as: :consumption_tier
       element :'ns0:tou', class: Integer, as: :tou
       element :'ns0:cpp', class: Integer, as: :cpp
-      element :'ns1:cost', class: Integer, as: :cost
-      element :'ns1:timePeriod', class: Interval, as: :time_period
-      element :'ns1:value', class: Integer, as: :value
-      element :'ns1:consumptionTier', class: Integer, as: :consumption_tier
-      element :'ns1:tou', class: Integer, as: :tou
-      element :'ns1:cpp', class: Integer, as: :cpp
     end
   end
 end

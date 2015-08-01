@@ -129,26 +129,6 @@ module GreenButtonData
       element :'ns0:interharmonic', class: RationalNumber, as: :interharmonic
       element :'ns0:measuringPeriod', class: Integer, as: :measuring_period
       element :'ns0:argument', class: RationalNumber, as: :argument
-      element :'ns1:accumulationBehaviour', class: Integer,
-              as: :accumulation_behaviour
-      element :'ns1:commodity', class: Integer, as: :commodity
-      element :'ns1:consumptionTier', class: Integer, as: :consumption_tier
-      element :'ns1:currency', class: Integer, as: :currency
-      element :'ns1:dataQualifier', class: Integer, as: :data_qualifier
-      element :'ns1:defaultQuality', class: Integer, as: :default_quality
-      element :'ns1:flowDirection', class: Integer, as: :flow_direction
-      element :'ns1:intervalLength', class: Integer, as: :interval_length
-      element :'ns1:kind', class: Integer, as: :kind
-      element :'ns1:phase', class: Integer, as: :phase
-      element :'ns1:powerOfTenMultiplier', class: Integer,
-              as: :power_of_ten_multiplier
-      element :'ns1:timeAttribute', class: Integer, as: :time_attribute
-      element :'ns1:tou', class: Integer, as: :tou
-      element :'ns1:uom', class: Integer, as: :uom
-      element :'ns1:cpp', class: Integer, as: :cpp
-      element :'ns1:interharmonic', class: RationalNumber, as: :interharmonic
-      element :'ns1:measuringPeriod', class: Integer, as: :measuring_period
-      element :'ns1:argument', class: RationalNumber, as: :argument
     end
   end
 end

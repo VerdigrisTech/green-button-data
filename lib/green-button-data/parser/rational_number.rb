@@ -17,8 +17,6 @@ module GreenButtonData
       # Special case for PG&E which uses generic namespacing
       element :'ns0:numerator', class: Integer
       element :'ns0:denominator', class: Integer
-      element :'ns1:numerator', class: Integer
-      element :'ns1:denominator', class: Integer
     end
   end
 end

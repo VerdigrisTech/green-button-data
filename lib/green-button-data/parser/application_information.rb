@@ -152,51 +152,6 @@ module GreenButtonData
       element :'ns0:response_types', as: :response_types
       element :'ns0:registration_client_uri', as: :registration_client_uri
       element :'ns0:registration_access_token', as: :registration_access_token
-      element :'ns1:dataCustodianId', as: :data_custodian_id
-      element :'ns1:dataCustodianApplicationStatus',
-              as: :data_custodian_application_status
-      element :'ns1:dataCustodianScopeSelectionUri',
-              as: :data_custodiwn_scope_selection_uri
-      element :'ns1:dataCustodianBulkRequestUri',
-              as: :data_custodian_bulk_request_uri
-      element :'ns1:dataCustodianResourceEndpoint',
-              as: :data_custodian_resource_endpoint
-      element :'ns1:thirdPartyApplicationType',
-              as: :third_party_application_type
-      element :'ns1:thirdPartyApplicationUse', as: :third_party_application_use
-      element :'ns1:thirdPartyApplicationDescription',
-              as: :third_party_application_description
-      element :'ns1:thirdPartyPhone', as: :third_party_phone
-      element :'ns1:thirdPartyScopeSelectionUri',
-              as: :third_party_scope_selection_uri
-      element :'ns1:thirdPartyUserPortalScreenUri',
-              as: :third_party_user_portal_screen_uri
-      element :'ns1:thirdPartyNotifyUri', as: :third_party_notify_uri
-      element :'ns1:authorizationServerUri', as: :authorization_server_uri
-      element :'ns1:authorizationServerAuthorizationEndpoint',
-              as: :authorization_server_authorization_endpoint
-      element :'ns1:authorizationServerRegistrationEndpoint',
-              as: :authorization_server_registration_endpoint
-      element :'ns1:authorizationServerTokenEndpoint',
-              as: :authorization_server_token_endpoint
-      element :'ns1:token_endpoint_auth_method',
-              as: :token_endpoint_auth_method
-      element :'ns1:client_name', as: :client_name
-      element :'ns1:client_id', as: :client_id
-      element :'ns1:client_secret', as: :client_secret
-      element :'ns1:client_id_issued_at', class: Integer,
-              as: :client_id_issued_at
-      element :'ns1:client_secret_expires_at', class: Integer,
-              as: :client_secret_expires_at
-      element :'ns1:redirect_uri', as: :redirect_uri
-      element :'ns1:software_id', as: :software_id
-      element :'ns1:software_version', as: :software_version
-      element :'ns1:contacts', as: :contacts
-      element :'ns1:scope', as: :scope
-      element :'ns1:grant_types', as: :grant_types
-      element :'ns1:response_types', as: :response_types
-      element :'ns1:registration_client_uri', as: :registration_client_uri
-      element :'ns1:registration_access_token', as: :registration_access_token
     end
   end
 end

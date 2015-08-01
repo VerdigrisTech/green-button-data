@@ -31,14 +31,6 @@ module GreenButtonData
               as: :local_time_parameters
       element :'ns0:ReadingType', class: ReadingType, as: :reading_type
       element :'ns0:UsagePoint', class: UsagePoint, as: :usage_point
-      element :'ns1:ApplicationInformation', class: ApplicationInformation,
-              as: :application_information
-      element :'ns1:Authorization', class: Authorization, as: :authorization
-      element :'ns1:IntervalBlock', class: IntervalBlock, as: :interval_block
-      element :'ns1:LocalTimeParameters', class: LocalTimeParameters,
-              as: :local_time_parameters
-      element :'ns1:ReadingType', class: ReadingType, as: :reading_type
-      element :'ns1:UsagePoint', class: UsagePoint, as: :usage_point
     end
   end
 end
