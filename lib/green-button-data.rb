@@ -13,6 +13,7 @@ require 'green-button-data/parser/application_information'
 require 'green-button-data/parser/service_category'
 require 'green-button-data/parser/local_time_parameters'
 require 'green-button-data/parser/reading_type'
+require 'green-button-data/parser/content'
 
 module GreenButtonData
 end
