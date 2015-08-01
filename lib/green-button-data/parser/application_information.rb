@@ -9,25 +9,24 @@ module GreenButtonData
       element :dataCustodianId, as: :data_custodian_id
       element :dataCustodianApplicationStatus, class: Integer,
               as: :data_custodian_application_status
-      element :dataCustodianScopeSelectionUri,
-              as: :data_custodiwn_scope_selection_uri
-      element :dataCustodianBulkRequestUri,
+      element :dataCustodianScopeSelectionScreenURI,
+              as: :data_custodian_scope_selection_screen_uri
+      element :dataCustodianBulkRequestURI,
               as: :data_custodian_bulk_request_uri
       element :dataCustodianResourceEndpoint,
               as: :data_custodian_resource_endpoint
 
-      def current_application_status
-        DATA_CUSTODIAN_APPLICATION_STATUS[@data_custodian_application_status]
-      end
-
       # Third Party
-      element :thirdPartyApplicationType, as: :third_party_application_type
-      element :thirdPartyApplicationUse, as: :third_party_application_use
+      element :thirdPartyApplicationType, class: Integer,
+              as: :third_party_application_type
+      element :thirdPartyApplicationUse, class: Integer,
+              as: :third_party_application_use
       element :thirdPartyApplicationDescription,
               as: :third_party_application_description
       element :thirdPartyPhone, as: :third_party_phone
-      element :thirdPartyScopeSelectionUri, as: :third_party_scope_selection_uri
-      element :thirdPartyUserPortalScreenUri,
+      element :thirdPartyScopeSelectionScreenURI,
+              as: :third_party_scope_selection_screen_uri
+      element :thirdPartyUserPortalScreenURI,
               as: :third_party_user_portal_screen_uri
       element :thirdPartyNotifyUri, as: :third_party_notify_uri
 
@@ -64,25 +63,38 @@ module GreenButtonData
       element :registration_client_uri
       element :registration_access_token
 
+      def application_status
+        DATA_CUSTODIAN_APPLICATION_STATUS[@data_custodian_application_status]
+      end
+
+      def application_type
+        THIRD_PARTY_APPLICATION_TYPE[@third_party_application_type]
+      end
+
+      def application_use
+        THIRD_PARTY_APPLICATION_USE[@third_party_application_use]
+      end
+
       # ESPI Namespacing
       element :'espi:dataCustodianId', as: :data_custodian_id
       element :'espi:dataCustodianApplicationStatus', class: Integer,
               as: :data_custodian_application_status
-      element :'espi:dataCustodianScopeSelectionUri',
-              as: :data_custodiwn_scope_selection_uri
-      element :'espi:dataCustodianBulkRequestUri',
+      element :'espi:dataCustodianScopeSelectionScreenURI',
+              as: :data_custodian_scope_selection_screen_uri
+      element :'espi:dataCustodianBulkRequestURI',
               as: :data_custodian_bulk_request_uri
       element :'espi:dataCustodianResourceEndpoint',
               as: :data_custodian_resource_endpoint
-      element :'espi:thirdPartyApplicationType',
+      element :'espi:thirdPartyApplicationType', class: Integer,
               as: :third_party_application_type
-      element :'espi:thirdPartyApplicationUse', as: :third_party_application_use
+      element :'espi:thirdPartyApplicationUse', class: Integer,
+              as: :third_party_application_use
       element :'espi:thirdPartyApplicationDescription',
               as: :third_party_application_description
       element :'espi:thirdPartyPhone', as: :third_party_phone
-      element :'espi:thirdPartyScopeSelectionUri',
-              as: :third_party_scope_selection_uri
-      element :'espi:thirdPartyUserPortalScreenUri',
+      element :'espi:thirdPartyScopeSelectionScreenURI',
+              as: :third_party_scope_selection_screen_uri
+      element :'espi:thirdPartyUserPortalScreenURI',
               as: :third_party_user_portal_screen_uri
       element :'espi:thirdPartyNotifyUri', as: :third_party_notify_uri
       element :'espi:authorizationServerUri', as: :authorization_server_uri
@@ -115,21 +127,22 @@ module GreenButtonData
       element :'ns0:dataCustodianId', as: :data_custodian_id
       element :'ns0:dataCustodianApplicationStatus', class: Integer,
               as: :data_custodian_application_status
-      element :'ns0:dataCustodianScopeSelectionUri',
-              as: :data_custodiwn_scope_selection_uri
-      element :'ns0:dataCustodianBulkRequestUri',
+      element :'ns0:dataCustodianScopeSelectionScreenURI',
+              as: :data_custodian_scope_selection_screen_uri
+      element :'ns0:dataCustodianBulkRequestURI',
               as: :data_custodian_bulk_request_uri
       element :'ns0:dataCustodianResourceEndpoint',
               as: :data_custodian_resource_endpoint
-      element :'ns0:thirdPartyApplicationType',
+      element :'ns0:thirdPartyApplicationType', class: Integer,
               as: :third_party_application_type
-      element :'ns0:thirdPartyApplicationUse', as: :third_party_application_use
+      element :'ns0:thirdPartyApplicationUse', class: Integer,
+              as: :third_party_application_use
       element :'ns0:thirdPartyApplicationDescription',
               as: :third_party_application_description
       element :'ns0:thirdPartyPhone', as: :third_party_phone
-      element :'ns0:thirdPartyScopeSelectionUri',
-              as: :third_party_scope_selection_uri
-      element :'ns0:thirdPartyUserPortalScreenUri',
+      element :'ns0:thirdPartyScopeSelectionScreenURI',
+              as: :third_party_scope_selection_screen_uri
+      element :'ns0:thirdPartyUserPortalScreenURI',
               as: :third_party_user_portal_screen_uri
       element :'ns0:thirdPartyNotifyUri', as: :third_party_notify_uri
       element :'ns0:authorizationServerUri', as: :authorization_server_uri
