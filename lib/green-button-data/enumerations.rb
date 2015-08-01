@@ -314,6 +314,16 @@ module GreenButtonData
       77 => :rolling_block_5_min_interval_1_min_sub_interval
     }
 
+    TIME_PERIOD_OF_INTEREST = {
+       0 => :none,
+       8 => :billing_period,
+      11 => :daily,
+      13 => :monthly,
+      22 => :seasonal,
+      24 => :weekly,
+      32 => :specified_period
+    }
+
     UNIT_MULTIPLIER = {
       -12 => :p,      # Pico: 10^-12
        -9 => :n,      # Nano: 10^-9
