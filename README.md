@@ -12,7 +12,7 @@ in memory.
 
 ## License
 
-Distributed under [Simplified BSD](https://raw.githubusercontent.com/VerdigrisTech/green-button-data/master/LICENSE.txt)
+Distributed AS IS UNDER NO WARRANTY OR LIABILITY under [Simplified BSD](https://raw.githubusercontent.com/VerdigrisTech/green-button-data/master/LICENSE.txt)
 license.
 
 Copyright © 2015, Verdigris Technologies Inc. All rights reserved.
