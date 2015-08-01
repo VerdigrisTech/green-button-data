@@ -270,6 +270,13 @@ module GreenButtonData
       9 => :internet
     }
 
+    THIRD_PARTY_APPLICATION_STATUS = {
+      1 => :development,
+      2 => :review_test,
+      3 => :production,
+      4 => :retired
+    }
+
     TIME_ATTRIBUTE = {
        0 => :none,
        1 => :ten_minute,
