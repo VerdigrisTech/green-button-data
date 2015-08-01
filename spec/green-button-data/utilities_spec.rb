@@ -5,9 +5,14 @@ describe GreenButtonData::Utilities do
 
   describe "#parse_datetime" do
     it "should parse an ISO 8601 formatted datetime into DateTime" do
-      time = @klass.new.parse_datetime "2015-10-21T16:21:00.0-07:00"
-      expect(time.class).to eq DateTime
-      expect(time).to eq DateTime.new 2015, 10, 21, 23, 21, 0
+      datetime = @klass.new.parse_datetime "2015-10-21T16:21:00.0-07:00"
+      expect(datetime.class).to eq DateTime
+      expect(datetime).to eq DateTime.new 2015, 10, 21, 23, 21, 0
+    end
+
+    it "should warn and return nil when not a valid ISO 8601 format" do
+      datetime = @klass.new.parse_datetime "Hill Valley"
+      expect(datetime).to be_nil
     end
   end
 
