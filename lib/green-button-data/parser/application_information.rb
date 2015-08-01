@@ -2,6 +2,7 @@ module GreenButtonData
   module Parser
     class ApplicationInformation
       include SAXMachine
+      include Enumerations
       include Utilities
 
       # Data Custodian
@@ -14,6 +15,10 @@ module GreenButtonData
               as: :data_custodian_bulk_request_uri
       element :dataCustodianResourceEndpoint,
               as: :data_custodian_resource_endpoint
+
+      def current_application_status
+        DATA_CUSTODIAN_APPLICATION_STATUS[@data_custodian_application_status]
+      end
 
       # Third Party
       element :thirdPartyApplicationType, as: :third_party_application_type
