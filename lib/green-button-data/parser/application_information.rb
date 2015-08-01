@@ -7,7 +7,7 @@ module GreenButtonData
 
       # Data Custodian
       element :dataCustodianId, as: :data_custodian_id
-      element :dataCustodianApplicationStatus,
+      element :dataCustodianApplicationStatus, class: Integer,
               as: :data_custodian_application_status
       element :dataCustodianScopeSelectionUri,
               as: :data_custodiwn_scope_selection_uri
@@ -66,7 +66,7 @@ module GreenButtonData
 
       # ESPI Namespacing
       element :'espi:dataCustodianId', as: :data_custodian_id
-      element :'espi:dataCustodianApplicationStatus',
+      element :'espi:dataCustodianApplicationStatus', class: Integer,
               as: :data_custodian_application_status
       element :'espi:dataCustodianScopeSelectionUri',
               as: :data_custodiwn_scope_selection_uri
@@ -113,7 +113,7 @@ module GreenButtonData
 
       # Special case for PG&E which uses generic namespacing
       element :'ns0:dataCustodianId', as: :data_custodian_id
-      element :'ns0:dataCustodianApplicationStatus',
+      element :'ns0:dataCustodianApplicationStatus', class: Integer,
               as: :data_custodian_application_status
       element :'ns0:dataCustodianScopeSelectionUri',
               as: :data_custodiwn_scope_selection_uri
