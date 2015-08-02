@@ -2,6 +2,7 @@ module GreenButtonData
   module Parser
     class Feed
       include SAXMachine
+      include Utilities
 
       element :id, as: :feed_id
 
