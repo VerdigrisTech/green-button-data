@@ -66,8 +66,8 @@ module GreenButtonData
         month = (byte & BITMASK_MONTH) >> BITSHIFT_MONTH
 
         # Raise an error unless all the values are in valid range
-        second.between?(0, 3599) and hour.between?(0, 23) and
-        weekday.between?(1, 7) and day.between?(1, 31) and
+        seconds.between?(0, 3599) and hour.between?(0, 23) and
+        weekday.between?(1, 7) and day.between?(0, 31) and
         dst_rule.between?(0, 7) and month.between?(1, 12) or
         raise RangeError, 'Invalid value range'
 
