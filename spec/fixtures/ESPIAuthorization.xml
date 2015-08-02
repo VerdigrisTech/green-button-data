@@ -1,0 +1,25 @@
+<entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+      <id>urn:uuid:403cba0c-46f5-4e64-816c-5d11c06deb7a</id>
+      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Authorization" rel="up"/>
+      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Authorization/4" rel="self"/>
+      <content>
+            <espi:Authorization>
+                  <espi:authorizedPeriod>
+                        <espi:duration>0</espi:duration>
+                        <espi:start>0</espi:start>
+                  </espi:authorizedPeriod>
+                  <espi:publishedPeriod>
+                        <espi:duration>0</espi:duration>
+                        <espi:start>0</espi:start>
+                  </espi:publishedPeriod>
+                  <espi:status>1</espi:status>
+                  <espi:expires_at>1747076581</espi:expires_at>
+                  <espi:scope>FB=36_40</espi:scope>
+                  <espi:token_type>Bearer</espi:token_type>
+                  <espi:resourceURI>https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/2</espi:resourceURI>
+                  <espi:authorizationURI>https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization/4</espi:authorizationURI>
+            </espi:Authorization>
+      </content>
+      <published>2015-05-15T19:03:02Z</published>
+      <updated>2015-05-15T19:03:02Z</updated>
+</entry>
