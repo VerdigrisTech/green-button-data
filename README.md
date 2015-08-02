@@ -1,6 +1,7 @@
 # Green Button Data
 
 [![CI Results](https://img.shields.io/circleci/project/VerdigrisTech/green-button-data.svg)](https://circleci.com/gh/VerdigrisTech/green-button-data)
+[![Gem Version](https://img.shields.io/gem/v/green-button-data.svg)](https://rubygems.org/gems/green-button-data)
 [![Dependencies](https://img.shields.io/gemnasium/VerdigrisTech/green-button-data.svg)](https://gemnasium.com/VerdigrisTech/green-button-data)
 [![Code Coverage](https://img.shields.io/codecov/c/github/VerdigrisTech/green-button-data.svg)](https://codecov.io/github/VerdigrisTech/green-button-data)
 [![Code Climate](https://img.shields.io/codeclimate/github/VerdigrisTech/green-button-data.svg)](https://codeclimate.com/github/VerdigrisTech/green-button-data)
