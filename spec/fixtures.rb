@@ -1,7 +1,8 @@
 module Fixtures
   FIXTURES = {
     espi_application_information: "ESPIApplicationInformation.xml",
-    espi_authorization: "ESPIAuthorization.xml"
+    espi_authorization: "ESPIAuthorization.xml",
+    espi_usage_point: "ESPIUsagePoint.xml"
   }
 
   ##
