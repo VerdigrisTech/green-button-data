@@ -7,10 +7,10 @@
 
 Green Button Data is a Ruby gem that can quickly parse the Green Button data
 standard. It uses an event-driven <abbr title="Simple API for XML">SAX</abbr>
-parser which does not build the <abbr title="Document Object Model">DOM</abbr>
+parser which does not build the entire <abbr title="Document Object Model">DOM</abbr>
 in memory.
 
-## Install
+## Getting Started
 
 Add the Green Button Data gem to your Gemfile:
 
@@ -22,6 +22,34 @@ Then run Bundler:
 
 ```bash
 $ bundle
+```
+
+## Usage
+
+Almost all of the functionality for parsing data is wrapped in the
+`GreenButtonData::Feed` class.
+
+To parse a Green Button Atom feed, simply call the `parse` method and pass in
+the entire XML document:
+
+```ruby
+require 'green-button-data'
+
+xml_text = File.read "#{File.dirname __FILE__}/gb_example_interval_block.xml"
+data = GreenButtonData::Feed.parse xml_text
+```
+
+You can then access the data like this:
+
+```ruby
+# Print all the interval readings from the feed
+data.entries.each do |entry|
+  p "Entry: #{entry.title}"
+  entry.content.interval_block.interval_readings.each do |reading|
+    time_period = reading.time_period
+    p "[#{time_period.starts_at} - #{time_period.ends_at}]: #{reading.value}"
+  end
+end
 ```
 
 ## License
