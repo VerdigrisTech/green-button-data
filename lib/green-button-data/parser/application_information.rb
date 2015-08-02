@@ -123,8 +123,8 @@ module GreenButtonData
       element :'espi:software_version', as: :software_version
       element :'espi:contacts', as: :contacts
       elements :'espi:scope', as: :scopes
-      element :'espi:grant_types', as: :grant_types
-      element :'espi:response_types', as: :response_types
+      elements :'espi:grant_types', as: :grant_types
+      elements :'espi:response_types', as: :response_types
       element :'espi:registration_client_uri', as: :registration_client_uri
       element :'espi:registration_access_token', as: :registration_access_token
 
@@ -171,8 +171,8 @@ module GreenButtonData
       element :'ns0:software_version', as: :software_version
       element :'ns0:contacts', as: :contacts
       elements :'ns0:scope', as: :scopes
-      element :'ns0:grant_types', as: :grant_types
-      element :'ns0:response_types', as: :response_types
+      elements :'ns0:grant_types', as: :grant_types
+      elements :'ns0:response_types', as: :response_types
       element :'ns0:registration_client_uri', as: :registration_client_uri
       element :'ns0:registration_access_token', as: :registration_access_token
     end
