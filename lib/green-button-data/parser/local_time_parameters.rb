@@ -35,14 +35,14 @@ module GreenButtonData
       # ESPI Namespacing
       element :'espi:dstStartRule', as: :dst_start_rule
       element :'espi:dstEndRule', as: :dst_end_rule
-      element :'espi:dstOffset', as: :dst_offset
-      element :'espi:tzOffset', as: :tz_offset
+      element :'espi:dstOffset', class: Integer, as: :dst_offset
+      element :'espi:tzOffset', class: Integer, as: :tz_offset
 
       # Special case for PG&E which uses generic namespacing
       element :'ns0:dstStartRule', as: :dst_start_rule
       element :'ns0:dstEndRule', as: :dst_end_rule
-      element :'ns0:dstOffset', as: :dst_offset
-      element :'ns0:tzOffset', as: :tz_offset
+      element :'ns0:dstOffset', class: Integer, as: :dst_offset
+      element :'ns0:tzOffset', class: Integer, as: :tz_offset
 
       private
 
