@@ -289,6 +289,7 @@ module GreenButtonData
       512 => :s1,
       528 => :s1_n,
       768 => :s1_2,
+      769 => :s12_n,
       784 => :s1_2_n
     }
 
