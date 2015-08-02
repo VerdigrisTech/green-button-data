@@ -3,6 +3,7 @@ module Fixtures
     espi_application_information: "ESPIApplicationInformation.xml",
     espi_authorization: "ESPIAuthorization.xml",
     espi_interval_block: "ESPIIntervalBlock.xml",
+    espi_reading_type: "ESPIReadingType.xml",
     espi_usage_point: "ESPIUsagePoint.xml"
   }
 
