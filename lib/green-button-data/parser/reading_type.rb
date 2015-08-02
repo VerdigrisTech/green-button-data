@@ -30,7 +30,7 @@ module GreenButtonData
       end
 
       def argument
-        unless @argument.denominator == 0
+        if @argument && @argument.denominator != 0
           @argument.numerator / @argument.denominator
         end
       end
@@ -57,7 +57,7 @@ module GreenButtonData
 
       def interharmonic
         # Prevent blackholes from forming
-        unless @interharmonic.denominator == 0
+        if @interharmonic && @interharmonic.denominator != 0
           @interharmonic.numerator / @interharmonic.denominator
         end
       end
