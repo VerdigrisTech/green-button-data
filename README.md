@@ -1,9 +1,9 @@
 # Green Button Data
 
-![CI Results](https://img.shields.io/circleci/project/VerdigrisTech/green-button-data.svg)
-![Dependencies](https://img.shields.io/gemnasium/VerdigrisTech/green-button-data.svg)
-![Code Coverage](https://img.shields.io/codecov/c/github/VerdigrisTech/green-button-data.svg)
-![Code Climate](https://img.shields.io/codeclimate/github/VerdigrisTech/green-button-data.svg)
+[![CI Results](https://img.shields.io/circleci/project/VerdigrisTech/green-button-data.svg)](https://circleci.com/gh/VerdigrisTech/green-button-data)
+[![Dependencies](https://img.shields.io/gemnasium/VerdigrisTech/green-button-data.svg)](https://gemnasium.com/VerdigrisTech/green-button-data)
+[![Code Coverage](https://img.shields.io/codecov/c/github/VerdigrisTech/green-button-data.svg)](https://codecov.io/github/VerdigrisTech/green-button-data)
+[![Code Climate](https://img.shields.io/codeclimate/github/VerdigrisTech/green-button-data.svg)](https://codeclimate.com/github/VerdigrisTech/green-button-data)
 
 Green Button Data is a Ruby gem that can quickly parse the Green Button data
 standard. It uses an event-driven <abbr title="Simple API for XML">SAX</abbr>
