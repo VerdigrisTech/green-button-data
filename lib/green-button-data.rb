@@ -18,6 +18,7 @@ require 'green-button-data/parser/usage_point'
 require 'green-button-data/parser/content'
 require 'green-button-data/parser/entry'
 require 'green-button-data/parser/feed'
+require 'green-button-data/feed'
 
 module GreenButtonData
 end
