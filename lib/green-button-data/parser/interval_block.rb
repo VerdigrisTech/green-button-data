@@ -20,12 +20,12 @@ module GreenButtonData
 
       # Standard ESPI namespacing
       element :'espi:interval', class: Interval, as: :interval
-      element :'espi:IntervalReading', class: IntervalReading,
+      elements :'espi:IntervalReading', class: IntervalReading,
               as: :interval_readings
 
       # Special case for PG&E which uses generic namespacing
       element :'ns0:interval', class: Interval, as: :interval
-      element :'ns0:IntervalReading', class: IntervalReading,
+      elements :'ns0:IntervalReading', class: IntervalReading,
               as: :interval_readings
     end
   end
