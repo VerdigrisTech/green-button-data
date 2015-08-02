@@ -60,7 +60,7 @@ module GreenButtonData
       element :software_version
       element :contacts
 
-      element :scope
+      element :scope, as: :scopes
 
       element :grant_types
       element :response_types
@@ -122,7 +122,7 @@ module GreenButtonData
       element :'espi:software_id', as: :software_id
       element :'espi:software_version', as: :software_version
       element :'espi:contacts', as: :contacts
-      element :'espi:scope', as: :scope
+      element :'espi:scope', as: :scopes
       element :'espi:grant_types', as: :grant_types
       element :'espi:response_types', as: :response_types
       element :'espi:registration_client_uri', as: :registration_client_uri
@@ -170,7 +170,7 @@ module GreenButtonData
       element :'ns0:software_id', as: :software_id
       element :'ns0:software_version', as: :software_version
       element :'ns0:contacts', as: :contacts
-      element :'ns0:scope', as: :scope
+      element :'ns0:scope', as: :scopes
       element :'ns0:grant_types', as: :grant_types
       element :'ns0:response_types', as: :response_types
       element :'ns0:registration_client_uri', as: :registration_client_uri
