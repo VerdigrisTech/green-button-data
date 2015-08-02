@@ -22,7 +22,7 @@ module GreenButtonData
 
     COMMODITY = {
        0 => :none,                          # NA
-       1 => :electricity_seconday_metered,  # Secondary electricity meter
+       1 => :electricity_secondary_metered, # Secondary electricity meter
        2 => :electricity_primary_metered,   # Primary electricity meter
        3 => :communication,                 # A measurement of the communication infrastructure itself
        4 => :air,                           # Air
