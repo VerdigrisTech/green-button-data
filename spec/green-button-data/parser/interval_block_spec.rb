@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe GreenButtonData::Parser::IntervalBlock do
   context "espi namespace" do
-    let(:feed) { GreenButtonData::Parser::Feed }
+    let(:feed) { GreenButtonData::Feed }
     let :interval_block do
       feed.parse(espi_interval_block).entries.first.content.interval_block
     end

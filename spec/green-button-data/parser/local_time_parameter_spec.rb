@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe GreenButtonData::Parser::LocalTimeParameters do
   context "espi namespace" do
-    let(:feed) { GreenButtonData::Parser::Feed }
+    let(:feed) { GreenButtonData::Feed }
     let :local_time_parameters do
       feed.parse(espi_local_time_parameters)
           .entries

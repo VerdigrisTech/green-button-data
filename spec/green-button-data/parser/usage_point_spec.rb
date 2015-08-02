@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe GreenButtonData::Parser::UsagePoint do
   context "espi namespace" do
-    let(:feed) { GreenButtonData::Parser::Feed }
+    let(:feed) { GreenButtonData::Feed }
     let :usage_point do
       feed.parse(espi_usage_point).entries.first.content.usage_point
     end

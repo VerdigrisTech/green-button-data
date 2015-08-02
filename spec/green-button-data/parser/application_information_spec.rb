@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe GreenButtonData::Parser::ApplicationInformation do
   context "espi namespace" do
-    let(:feed) { GreenButtonData::Parser::Feed }
+    let(:feed) { GreenButtonData::Feed }
     let :application_information do
       feed.parse(espi_application_information)
           .entries
