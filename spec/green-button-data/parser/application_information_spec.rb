@@ -6,6 +6,7 @@ describe GreenButtonData::Parser::ApplicationInformation do
     let :application_information do
       feed.parse(espi_application_information)
           .entries
+          .first
           .content
           .application_information
     end

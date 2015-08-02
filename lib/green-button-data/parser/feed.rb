@@ -24,7 +24,7 @@ module GreenButtonData
         @feed_url ||= links.first
       end
 
-      element :entry, class: Entry, as: :entries
+      elements :entry, class: Entry, as: :entries
 
       element :updated
 

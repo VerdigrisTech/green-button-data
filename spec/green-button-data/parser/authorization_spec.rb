@@ -6,6 +6,7 @@ describe GreenButtonData::Parser::Authorization do
     let :authorization do
       feed.parse(espi_authorization)
           .entries
+          .first
           .content
           .authorization
     end
