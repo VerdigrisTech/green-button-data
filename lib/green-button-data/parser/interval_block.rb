@@ -4,7 +4,7 @@ module GreenButtonData
       include SAXMachine
 
       element :interval, class: Interval
-      element :IntervalReading, class: IntervalReading, as: :interval_readings
+      elements :IntervalReading, class: IntervalReading, as: :interval_readings
 
       def duration
         @interval.duration
