@@ -1,6 +1,5 @@
 module GreenButtonData
   module Utilities
-    include Enumerable
 
     def parse_datetime(string)
       begin
