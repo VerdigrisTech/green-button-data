@@ -10,7 +10,7 @@ standard. It uses an event-driven <abbr title="Simple API for XML">SAX</abbr>
 parser which does not build the <abbr title="Document Object Model">DOM</abbr>
 in memory.
 
-## Usage
+## Install
 
 Add the Green Button Data gem to your Gemfile:
 
