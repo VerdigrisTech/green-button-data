@@ -12,7 +12,9 @@ in memory.
 
 ## License
 
-Distributed AS IS UNDER NO WARRANTY OR LIABILITY under [Simplified BSD](https://raw.githubusercontent.com/VerdigrisTech/green-button-data/master/LICENSE.txt)
-license.
+This software is distributed AS IS WITHOUT WARRANTY under [Simplified BSD](https://raw.githubusercontent.com/VerdigrisTech/green-button-data/master/LICENSE.txt)
+license. Verdigris Technologies Inc. assumes NO RESPONSIBILITY OR LIABILITY
+UNDER ANY CIRCUMSTANCES for usage of this software. See the LICENSE.txt file for
+detailed legal information.
 
 Copyright © 2015, Verdigris Technologies Inc. All rights reserved.
