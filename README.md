@@ -52,6 +52,14 @@ data.entries.each do |entry|
 end
 ```
 
+## Contributing
+
+1. Fork this project
+2. Create a feature branch: `git checkout -b my-awesome-feature`
+3. Make changes and commit: `git commit -am "Add awesome feature"`
+4. Push the branch: `git push origin my-awesome-feature`
+5. Submit a pull request
+
 ## License
 
 This software is distributed AS IS WITHOUT WARRANTY under [Simplified BSD](https://raw.githubusercontent.com/VerdigrisTech/green-button-data/master/LICENSE.txt)
