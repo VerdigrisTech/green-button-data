@@ -4,8 +4,6 @@ class Date
   end
 
   def local
-    dest = new_offset(DateTime.now.offset - offset)
-    Time.send :local, dest.year, dest.month, dest.day, dest.hour, dest.min,
-              dest.sec, dest.zone
+    new_offset(DateTime.now.offset - offset)
   end
 end
