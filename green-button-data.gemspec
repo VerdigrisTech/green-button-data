@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Andrew Jo']
   s.email       = 'engineering@verdigris.co'
   s.homepage    = 'http://verdigris.co'
+  s.licenses    = ['BSD-2-Clause']
 
   s.summary     = 'Parser for Green Button data format'
   s.description = 'A library to parse large Green Button feed quickly'
