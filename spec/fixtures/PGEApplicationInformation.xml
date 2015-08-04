@@ -1,0 +1,43 @@
+<ns1:entry xmlns:ns1="http://www.w3.org/2005/Atom">
+   <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">11111111-2222-3333-4444-555555555555</ns1:id>
+   <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/ApplicationInformation" rel="up" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/ApplicationInformation/00000000-2222-4444-6666-8888aaaacccc" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <ns1:title type="text" xsi:type="ns1:textType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">GreenButtonData.org  DataCustodian Application</ns1:title>
+   <ns1:published xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-10-21T16:21:21.532Z</ns1:published>
+   <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-10-21T16:21:21.533Z</ns1:updated>
+   <ns1:content xsi:type="ns1:contentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns0:ApplicationInformation xmlns:ns0="http://naesb.org/espi">
+         <ns0:dataCustodianId>PGE</ns0:dataCustodianId>
+         <ns0:dataCustodianApplicationStatus>2</ns0:dataCustodianApplicationStatus>
+         <ns0:thirdPartyApplicationDescription>Verdigris is an energy intelligence solution that shows facilities managers how their buildings use energy at the equipment level--all in real time.</ns0:thirdPartyApplicationDescription>
+         <ns0:thirdPartyApplicationType>1</ns0:thirdPartyApplicationType>
+         <ns0:thirdPartyPhone>6502273888</ns0:thirdPartyPhone>
+         <ns0:authorizationServerUri>https://api.pge.com</ns0:authorizationServerUri>
+         <ns0:thirdPartyNotifyUri>https://api.example.com/espi/pge/notify</ns0:thirdPartyNotifyUri>
+         <ns0:authorizationServerAuthorizationEndpoint>https://api.pge.com/datacustodian/oauth/v2/authorize</ns0:authorizationServerAuthorizationEndpoint>
+         <ns0:authorizationServerTokenEndpoint>https://api.pge.com/datacustodian/oauth/v2/token</ns0:authorizationServerTokenEndpoint>
+         <ns0:dataCustodianBulkRequestURI>https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Batch/Bulk/0</ns0:dataCustodianBulkRequestURI>
+         <ns0:dataCustodianResourceEndpoint>https://api.pge.com/GreenButtonConnect/espi/1_1/resource</ns0:dataCustodianResourceEndpoint>
+         <ns0:thirdPartyScopeSelectionScreenURI>http://api.example.com/espi/pge</ns0:thirdPartyScopeSelectionScreenURI>
+         <ns0:thirdPartyUserPortalScreenURI>https://www.example.com</ns0:thirdPartyUserPortalScreenURI>
+         <ns0:client_secret>foobar</ns0:client_secret>
+         <ns0:client_name>Verdigris Technologies, Inc.</ns0:client_name>
+         <ns0:redirect_uri>http://api.example.com/espi/pge/callback</ns0:redirect_uri>
+         <ns0:client_id>verdigris</ns0:client_id>
+         <ns0:software_id>NA</ns0:software_id>
+         <ns0:software_version>NA</ns0:software_version>
+         <ns0:client_id_issued_at>1445444481075</ns0:client_id_issued_at>
+         <ns0:client_secret_expires_at>0</ns0:client_secret_expires_at>
+         <ns0:contacts>info@verdigris.co</ns0:contacts>
+         <ns0:token_endpoint_auth_method>client_secret_basic</ns0:token_endpoint_auth_method>
+         <ns0:scope>FB=1_3_4_5_8_13_14_15_18_19_31_32_35_37_38_39_40;IntervalDuration=900_3600;BlockDuration=Daily;HistoryLength=63072000;SubscriptionFrequency=Daily;</ns0:scope>
+         <ns0:grant_types>authorization_code</ns0:grant_types>
+         <ns0:grant_types>client_credentials</ns0:grant_types>
+         <ns0:grant_types>refresh_token</ns0:grant_types>
+         <ns0:response_types>code</ns0:response_types>
+         <ns0:registration_client_uri>https://api.pge.com/GreenButtonConnect/espi/1_1/resource/ApplicationInformation/00000000-2222-4444-6666-8888aaaacccc</ns0:registration_client_uri>
+         <ns0:registration_access_token xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">00001111-2222-3333-4444-cccceeeeffff</ns0:registration_access_token>
+         <ns0:dataCustodianScopeSelectionScreenURI xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">https://sharemydata.pge.com/myAuthorization/?clientId=0&amp;verified=true</ns0:dataCustodianScopeSelectionScreenURI>
+      </ns0:ApplicationInformation>
+   </ns1:content>
+</ns1:entry>
