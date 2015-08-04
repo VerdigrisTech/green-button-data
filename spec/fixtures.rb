@@ -10,7 +10,8 @@ module Fixtures
     pge_authorization: "PGEAuthorization.xml",
     pge_interval_block: "PGEIntervalBlock.xml",
     pge_local_time_parameters: "PGELocalTimeParameters.xml",
-    pge_reading_type: "PGEReadingType.xml"
+    pge_reading_type: "PGEReadingType.xml",
+    pge_usage_point: "PGEUsagePoint.xml"
   }
 
   ##

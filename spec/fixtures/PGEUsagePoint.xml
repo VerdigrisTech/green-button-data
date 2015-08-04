@@ -1,0 +1,24 @@
+<ns1:feed xmlns:ns1="http://www.w3.org/2005/Atom">
+   <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000001</ns1:id>
+   <ns1:title type="text" xsi:type="ns1:textType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Green Button Usage Feed</ns1:title>
+   <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-04T16:02:03.151Z</ns1:updated>
+   <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/0/UsagePoint" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <ns1:entry>
+      <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000002</ns1:id>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/0/UsagePoint" rel="up" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/0/UsagePoint/1" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/0/UsagePoint/1/MeterReading" rel="related" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/0/UsagePoint/1/UsageSummary" rel="related" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/LocalTimeParameters/1" rel="related" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:title type="text" xsi:type="ns1:textType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Green Button Data File</ns1:title>
+      <ns1:published xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-04T16:02:03.16Z</ns1:published>
+      <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-04T16:02:03.16Z</ns1:updated>
+      <ns1:content xsi:type="ns1:contentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <ns0:UsagePoint xmlns:ns0="http://naesb.org/espi">
+            <ns0:ServiceCategory>
+               <ns0:kind>0</ns0:kind>
+            </ns0:ServiceCategory>
+         </ns0:UsagePoint>
+      </ns1:content>
+   </ns1:entry>
+</ns1:feed>
