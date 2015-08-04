@@ -7,7 +7,8 @@ module Fixtures
     espi_reading_type: "ESPIReadingType.xml",
     espi_usage_point: "ESPIUsagePoint.xml",
     pge_application_information: "PGEApplicationInformation.xml",
-    pge_authorization: "PGEAuthorization.xml"
+    pge_authorization: "PGEAuthorization.xml",
+    pge_interval_block: "PGEIntervalBlock.xml"
   }
 
   ##
