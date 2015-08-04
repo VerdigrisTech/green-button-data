@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="GreenButtonDataStyleSheet.xslt"?>
+<ns1:feed xmlns="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns1:id>urn:uuid:37ef9651-afd6-4e80-94a2-b4451f6aba65</ns1:id>
+  <ns1:title>Green Button Usage Feed</ns1:title>
+  <ns1:updated>2015-07-31T23:43:24Z</ns1:updated>
+  <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="self"/>
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:0f64c8da-d125-45b6-a9c0-ae56cc5b8938</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/11" rel="self"/>
+        <ns1:title>Energy Delivered (Wh)</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>300</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2013-04-04T03:35:38Z</ns1:published>
+        <ns1:updated>2013-04-04T03:35:38Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:13fb2ac6-0d67-4c72-85e0-89e15db46b1d</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/3" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:17c58ea4-b833-4804-8b5a-8237848e70ef</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/14" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>12</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>4</ns0:kind>
+                    <ns0:phase>128</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>5</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:24c66449-1231-4d0d-ae4e-e82007d66332</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/17" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>12</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>37</ns0:kind>
+                    <ns0:phase>229</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>38</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:2557def0-8321-11e0-9d78-0800200c9a20</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/22" rel="self"/>
+        <ns1:title>Energy Delivered (kWh)</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:defaultQuality>0</ns0:defaultQuality>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2002-11-02T13:00:00Z</ns1:published>
+        <ns1:updated>2002-11-02T13:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:2ccb84b0-d94a-4e9c-9ed7-b79d5cbb8eb4</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/5" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:2f36559c-0e4b-4f70-bdfb-efcac5c8b52b</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/20" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>12</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>54</ns0:kind>
+                    <ns0:phase>65</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>29</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:5568f5a2-62cf-4190-aff3-131fe661fb27</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/13" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>229</ns0:phase>
+                    <ns0:powerOfTenMultiplier>3</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:6b2cc266-4437-4e3b-909f-c79d494efc6b</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/10" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:752d8f78-8ee8-4b15-a7f0-3a20bbfd1a00</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/9" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:8b423daf-311a-4e1c-a60c-8dc7f1f0bd13</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/4" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:99b292fc-55f7-4f27-a3b9-cddab97cca90</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/1" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>86400</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2013-09-19T04:00:00Z</ns1:published>
+        <ns1:updated>2013-09-19T04:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:a73882c2-816c-49ff-afd7-cad73d56de24</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/6" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:b76154ef-7880-4177-a2d3-4482675edfe7</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/12" rel="self"/>
+        <ns1:title>Energy Delivered (Wh)</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>300</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2013-04-04T03:35:38Z</ns1:published>
+        <ns1:updated>2013-04-04T03:35:38Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:ba9bcb55-48db-4430-ac4d-fdd22305c437</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/18" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>12</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>38</ns0:kind>
+                    <ns0:phase>229</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>65</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:c0e9c7a7-4942-4eb3-bba5-d31ce921812e</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/2" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2013-09-19T04:00:00Z</ns1:published>
+        <ns1:updated>2013-09-19T04:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:c24fa771-c579-4c3a-981b-3018d7f00586</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/15" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>12</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>4</ns0:kind>
+                    <ns0:phase>64</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>5</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:ca52f200-ac39-4adb-a722-bf9ff4bc4f5a</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/8" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:cafa2ccf-38d8-4f79-85fe-e3394be1f3ee</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/21" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>12</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>54</ns0:kind>
+                    <ns0:phase>33</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>29</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:d9b4323d-35fa-4ff3-befc-11371ddefa27</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/19" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>12</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>54</ns0:kind>
+                    <ns0:phase>129</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>29</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:e461cea2-d729-467c-8e24-edaaa76441ac</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/7" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>4</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>3600</ns0:intervalLength>
+                    <ns0:kind>12</ns0:kind>
+                    <ns0:phase>769</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>0</ns0:timeAttribute>
+                    <ns0:uom>72</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+
+  <ns1:entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <ns1:id>urn:uuid:f1149a79-2f3a-4a6f-959e-d45a3d1960ad</ns1:id>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType" rel="up"/>
+        <ns1:link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/16" rel="self"/>
+        <ns1:title>Type of Meter Reading Data</ns1:title>
+        <ns1:content>
+              <ns0:ReadingType>
+                    <ns0:accumulationBehaviour>12</ns0:accumulationBehaviour>
+                    <ns0:commodity>1</ns0:commodity>
+                    <ns0:currency>840</ns0:currency>
+                    <ns0:dataQualifier>12</ns0:dataQualifier>
+                    <ns0:flowDirection>1</ns0:flowDirection>
+                    <ns0:intervalLength>900</ns0:intervalLength>
+                    <ns0:kind>4</ns0:kind>
+                    <ns0:phase>32</ns0:phase>
+                    <ns0:powerOfTenMultiplier>0</ns0:powerOfTenMultiplier>
+                    <ns0:timeAttribute>53</ns0:timeAttribute>
+                    <ns0:uom>5</ns0:uom>
+              </ns0:ReadingType>
+        </ns1:content>
+        <ns1:published>2012-10-24T07:00:00Z</ns1:published>
+        <ns1:updated>2012-10-24T07:00:00Z</ns1:updated>
+  </ns1:entry>
+</ns1:feed>
