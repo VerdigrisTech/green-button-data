@@ -1,0 +1,16 @@
+<ns1:entry xmlns:ns1="http://www.w3.org/2005/Atom">
+   <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">00000000-eeee-6666-9999-beefdead1337</ns1:id>
+   <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/LocalTimeParameters" rel="up" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/LocalTimeParameters/1" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <ns1:title type="text" xsi:type="ns1:textType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">DST FOR PACIFIC TIMEZONE</ns1:title>
+   <ns1:published xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-04T07:23:52.443Z</ns1:published>
+   <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-04T07:23:52.444Z</ns1:updated>
+   <ns1:content xsi:type="ns1:contentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns0:LocalTimeParameters xmlns:ns0="http://naesb.org/espi">
+         <ns0:dstEndRule>B40E2000</ns0:dstEndRule>
+         <ns0:dstOffset>3600</ns0:dstOffset>
+         <ns0:dstStartRule>360E2000</ns0:dstStartRule>
+         <ns0:tzOffset>-28800</ns0:tzOffset>
+      </ns0:LocalTimeParameters>
+   </ns1:content>
+</ns1:entry>
