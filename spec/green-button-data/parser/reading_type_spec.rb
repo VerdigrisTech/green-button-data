@@ -95,7 +95,7 @@ describe GreenButtonData::Parser::ReadingType do
     end
 
     it "should parse currency" do
-      expect(subject.currency).to eq :usd
+      expect(subject.currency).to eq nil
     end
 
     it "should parse data qualifier" do
@@ -107,7 +107,7 @@ describe GreenButtonData::Parser::ReadingType do
     end
 
     it "should parse interval length" do
-      expect(subject.interval_length).to eq 300
+      expect(subject.interval_length).to eq 900
     end
 
     it "should parse measurement kind" do
@@ -119,7 +119,7 @@ describe GreenButtonData::Parser::ReadingType do
     end
 
     it "should parse power of ten multiplier" do
-      expect(subject.power_of_ten_multiplier).to eq 1
+      expect(subject.power_of_ten_multiplier).to eq 1000
     end
 
     it "should parse time attribute" do
@@ -139,7 +139,7 @@ describe GreenButtonData::Parser::ReadingType do
     end
 
     it "should parse measuring period" do
-      expect(subject.measuring_period).to eq nil
+      expect(subject.measuring_period).to eq :fifteen_minute
     end
 
     it "should parse argument" do
