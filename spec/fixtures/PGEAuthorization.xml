@@ -1,0 +1,25 @@
+<ns1:entry xmlns:ns1="http://www.w3.org/2005/Atom">
+   <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">aaaabbbb-cccc-dddd-eeee-ffff01234567</ns1:id>
+   <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Authorization" rel="up" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Authorization/0" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <ns1:published xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-10-21T16:21:21.016Z</ns1:published>
+   <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-10-21T16:21:21.017Z</ns1:updated>
+   <ns1:content xsi:type="ns1:contentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns0:Authorization xmlns:ns0="http://naesb.org/espi">
+         <ns0:authorizedPeriod>
+            <ns0:duration>251963658000000</ns0:duration>
+            <ns0:start>1440585200000</ns0:start>
+         </ns0:authorizedPeriod>
+         <ns0:publishedPeriod>
+            <ns0:duration>252026730000000</ns0:duration>
+            <ns0:start>1395513200000</ns0:start>
+         </ns0:publishedPeriod>
+         <ns0:status>1</ns0:status>
+         <ns0:expires_at>1440670029</ns0:expires_at>
+         <ns0:scope>FB=1_3_4_5_8_13_14_15_18_19_31_32_35_37_38_39_40;IntervalDuration=900_3600;BlockDuration=Daily;HistoryLength=63072000;SubscriptionFrequency=Daily;AccountCollection=1;</ns0:scope>
+         <ns0:token_type>Bearer</ns0:token_type>
+         <ns0:resourceURI>https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/0</ns0:resourceURI>
+         <ns0:authorizationURI>https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Authorization/0</ns0:authorizationURI>
+      </ns0:Authorization>
+   </ns1:content>
+</ns1:entry>

@@ -40,7 +40,7 @@ module GreenButtonData
       element :'ns1:link', as: :url, value: :href, with: { type: 'text/html' }
       element :'ns1:link', as: :feed_url, value: :href, with: { rel: 'self' }
       element :'ns1:links', as: :links, value: :href
-      element :'ns1:entry', class: Entry, as: :entries
+      elements :'ns1:entry', class: Entry, as: :entries
       element :'ns1:updated', as: :updated
     end
   end
