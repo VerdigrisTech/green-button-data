@@ -23,5 +23,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'faraday', '~> 0.9'
 
   s.add_development_dependency 'rspec', '~> 3.0'
+  s.add_development_dependency 'webmock', '~> 1.21'
   s.add_development_dependency 'guard', '~>2.13'
 end
