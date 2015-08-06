@@ -1,5 +1,7 @@
 module GreenButtonData
-  class Authorization < GreenButtonData::Model
+  class Authorization
+    include Fetchable
+
     def initialize(attributes)
       if attributes.is_a?(Hash)
         @authorized_period = attributes[:authorized_period]
