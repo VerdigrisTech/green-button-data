@@ -41,6 +41,7 @@ require 'green-button-data/parser/feed'
 require 'green-button-data/feed'
 require 'green-button-data/model'
 require 'green-button-data/application_information'
+require 'green-button-data/authorization'
 
 module GreenButtonData
 end
