@@ -1,4 +1,5 @@
 require 'sax-machine'
+require 'faraday'
 
 require 'green-button-data/core_ext'
 require 'green-button-data/dst'
