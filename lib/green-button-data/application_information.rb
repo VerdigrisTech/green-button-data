@@ -18,6 +18,7 @@ module GreenButtonData
                 :authorization_server_token_endpoint,
                 :token_endpoint_auth_method,
                 :client_name,
+                :client_id,
                 :client_secret,
                 :client_id_issued_at,
                 :client_secret_expires_at,
@@ -68,12 +69,12 @@ module GreenButtonData
         @registration_access_token = attributes[:registration_access_token]
       elsif attributes.is_a?(GreenButtonData::Parser::ApplicationInformation)
         @data_custodian_id = attributes.data_custodian_id
-        @data_custodian_application_status = attributes.data_custodian_application_status
+        @data_custodian_application_status = attributes.application_status
         @data_custodian_scope_selection_screen_uri = attributes.data_custodian_scope_selection_screen_uri
         @data_custodian_bulk_request_uri = attributes.data_custodian_bulk_request_uri
         @data_custodian_resource_endpoint = attributes.data_custodian_resource_endpoint
-        @third_party_application_type = attributes.third_party_application_type
-        @third_party_application_use = attributes.third_party_application_use
+        @third_party_application_type = attributes.application_type
+        @third_party_application_use = attributes.application_use
         @third_party_application_description = attributes.third_party_application_description
         @third_party_phone = attributes.third_party_phone
         @third_party_scope_selection_screen_uri = attributes.third_party_scope_selection_screen_uri
