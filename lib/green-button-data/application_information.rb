@@ -31,12 +31,80 @@ module GreenButtonData
                 :registration_client_uri,
                 :registration_access_token
 
-    def self.get(url = nil, options = nil)
-      self.new
+    attr_accessor :status
 
+    def initialize(attributes)
+      if attributes.is_a?(Hash)
+        @data_custodian_id = attributes[:data_custodian_id]
+        @data_custodian_application_status = attributes[:data_custodian_application_status]
+        @data_custodian_scope_selection_screen_uri = attributes[:data_custodian_scope_selection_screen_uri]
+        @data_custodian_bulk_request_uri = attributes[:data_custodian_bulk_request_uri]
+        @data_custodian_resource_endpoint = attributes[:data_custodian_resource_endpoint]
+        @third_party_application_type = attributes[:third_party_application_type]
+        @third_party_application_use = attributes[:third_party_application_use]
+        @third_party_application_description = attributes[:third_party_application_description]
+        @third_party_phone = attributes[:third_party_phone]
+        @third_party_scope_selection_screen_uri = attributes[:third_party_scope_selection_screen_uri]
+        @third_party_user_portal_screen_uri = attributes[:third_party_user_portal_screen_uri]
+        @third_party_notify_uri = attributes[:third_party_notify_uri]
+        @authorization_server_uri = attributes[:authorization_server_uri]
+        @authorization_server_authorization_endpoint = attributes[:authorization_server_authorization_endpoint]
+        @authorization_server_registration_endpoint = attributes[:authorization_server_registration_endpoint]
+        @authorization_server_token_endpoint = attributes[:authorization_server_token_endpoint]
+        @token_endpoint_auth_method = attributes[:token_endpoint_auth_method]
+        @client_name = attributes[:client_name]
+        @client_id = attributes[:client_id]
+        @client_secret = attributes[:client_secret]
+        @client_id_issued_at = attributes[:client_id_issued_at]
+        @client_secret_expires_at = attributes[:client_secret_expires_at]
+        @redirect_uri = attributes[:redirect_uri]
+        @software_id = attributes[:software_id]
+        @software_version = attributes[:software_version]
+        @contacts = attributes[:contacts]
+        @scopes = attributes[:scopes]
+        @grant_types = attributes[:grant_types]
+        @response_types = attributes[:response_types]
+        @registration_client_uri = attributes[:registration_client_uri]
+        @registration_access_token = attributes[:registration_access_token]
+      elsif attributes.is_a?(GreenButtonData::Parser::ApplicationInformation)
+        @data_custodian_id = attributes.data_custodian_id
+        @data_custodian_application_status = attributes.data_custodian_application_status
+        @data_custodian_scope_selection_screen_uri = attributes.data_custodian_scope_selection_screen_uri
+        @data_custodian_bulk_request_uri = attributes.data_custodian_bulk_request_uri
+        @data_custodian_resource_endpoint = attributes.data_custodian_resource_endpoint
+        @third_party_application_type = attributes.third_party_application_type
+        @third_party_application_use = attributes.third_party_application_use
+        @third_party_application_description = attributes.third_party_application_description
+        @third_party_phone = attributes.third_party_phone
+        @third_party_scope_selection_screen_uri = attributes.third_party_scope_selection_screen_uri
+        @third_party_user_portal_screen_uri = attributes.third_party_user_portal_screen_uri
+        @third_party_notify_uri = attributes.third_party_notify_uri
+        @authorization_server_uri = attributes.authorization_server_uri
+        @authorization_server_authorization_endpoint = attributes.authorization_server_authorization_endpoint
+        @authorization_server_registration_endpoint = attributes.authorization_server_registration_endpoint
+        @authorization_server_token_endpoint = attributes.authorization_server_token_endpoint
+        @token_endpoint_auth_method = attributes.token_endpoint_auth_method
+        @client_name = attributes.client_name
+        @client_id = attributes.client_id
+        @client_secret = attributes.client_secret
+        @client_id_issued_at = attributes.client_id_issued_at
+        @client_secret_expires_at = attributes.client_secret_expires_at
+        @redirect_uri = attributes.redirect_uri
+        @software_id = attributes.software_id
+        @software_version = attributes.software_version
+        @contacts = attributes.contacts
+        @scopes = attributes.scopes
+        @grant_types = attributes.grant_types
+        @response_types = attributes.response_types
+        @registration_client_uri = attributes.registration_client_uri
+        @registration_access_token = attributes.registration_access_token
+      end
+    end
+
+    def self.get(url = nil, options = nil)
       @url = url or raise ArgumentError "url is required to fetch data"
-      @token = options.token
-      @client_ssl = options.client_ssl
+      @token = options[:token]
+      @client_ssl = options[:client_ssl]
 
       @connection_options = {}
       @connection_options.ssl = @client_ssl if @client_ssl
@@ -46,50 +114,24 @@ module GreenButtonData
 
       response = conn.get(@url)
 
-      if response.status == 200
+      application_information = if response.status == 200
         feed = GreenButtonData::Parser::Feed.parse response.body
-        info = find_application_information(feed) or raise Error "invalid response"
+        info = find_application_information(feed) or raise "invalid response"
 
-        @data_custodian_id = info.data_custodian_id
-        @data_custodian_application_status = info.data_custodian_application_status
-        @data_custodian_scope_selection_screen_uri = info.data_custodian_scope_selection_screen_uri
-        @data_custodian_bulk_request_uri = info.data_custodian_bulk_request_uri
-        @data_custodian_resource_endpoint = info.data_custodian_resource_endpoint
-        @third_party_application_type = info.third_party_application_type
-        @third_party_application_use = info.third_party_application_use
-        @third_party_application_description = info.third_party_application_description
-        @third_party_phone = info.third_party_phone
-        @third_party_scope_selection_screen_uri = info.third_party_scope_selection_screen_uri
-        @third_party_user_portal_screen_uri = info.third_party_user_portal_screen_uri
-        @third_party_notify_uri = info.third_party_notify_uri
-        @authorization_server_uri = info.authorization_server_uri
-        @authorization_server_authorization_endpoint = info.authorization_server_authorization_endpoint
-        @authorization_server_registration_endpoint = info.authorization_server_registration_endpoint
-        @authorization_server_token_endpoint = info.authorization_server_token_endpoint
-        @token_endpoint_auth_method = info.token_endpoint_auth_method
-        @client_name = info.client_name
-        @client_id = info.client_id
-        @client_secret = info.client_secret
-        @client_id_issued_at = info.client_id_issued_at
-        @client_secret_expires_at = info.client_secret_expires_at
-        @redirect_uri = info.redirect_uri
-        @software_id = info.software_id
-        @software_version = info.software_version
-        @contacts = info.contacts
-        @scopes = info.scopes
-        @grant_types = info.grant_types
-        @response_types = info.response_types
-        @registration_client_uri = info.registration_client_uri
-        @registration_access_token = info.registration_access_token
+        self.new info
+      else
+        self.new
       end
+
+      application_information.status = response.status
+      application_information
     end
 
-    private
-    def find_application_information(feed)
+    def self.find_application_information(feed)
       application_information = nil
 
       feed.entries.each do |entry|
-        if entry.self =~ /applicationinformation/
+        if entry.self.downcase =~ /applicationinformation/
           application_information = entry.content.application_information
         end
       end
