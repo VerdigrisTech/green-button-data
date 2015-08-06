@@ -15,7 +15,8 @@ require 'fixtures'
 require 'support/custom_expectations/warn_expectation'
 
 # Disable network connections
-WebMock.disable_net_connect! allow_localhost: true
+WebMock.disable_net_connect! allow_localhost: true,
+                             allow: /codecov/
 
 SAXMachine.handler = ENV['HANDLER'].to_sym if ENV['HANDLER']
 
