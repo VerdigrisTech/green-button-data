@@ -5,6 +5,8 @@ module GreenButtonData
     end
 
     module ClassMethods
+      include Utilities
+
       def all(url = nil, options = nil)
         @url = url
         @options = options
@@ -58,8 +60,10 @@ module GreenButtonData
         feed.entries.each do |entry|
           match_data = /\/(\w+)(\/(\d+))*$/.match(entry.self.downcase)
 
-          entry_content = unless match_data.nil?
-            case match_data[1]
+          unless match_data.nil?
+            id = match_data[3] || entry.id
+            entry_content = case match_data[1]
+
             when 'applicationinformation'
               entry.content.application_information
             when 'authorization'
@@ -75,17 +79,20 @@ module GreenButtonData
             else
               nil
             end
-          end
 
-          yield entry_content
+            yield id, entry_content
+          end
         end
       end
 
       def populate_model(feed)
         models = GreenButtonData::ModelCollection.new
 
-        each_entry_content feed do |content|
-          models << self.new(content)
+        each_entry_content feed do |id, content|
+          attributes_hash = attributes_to_hash(content)
+          attributes_hash[:id] = id
+
+          models << self.new(attributes_hash)
         end
 
         return models
