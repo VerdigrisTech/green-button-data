@@ -12,15 +12,11 @@ module GreenButtonData
       end
 
       def first(url = nil, options = nil)
-        @url = url
-        @options = options
-        return records.first
+        return all(url, options).first
       end
 
       def last(url = nil, options = nil)
-        @url = url
-        @options = options
-        return records.last
+        return all(url, options).last
       end
 
       def fetch(url = nil, options = nil)
