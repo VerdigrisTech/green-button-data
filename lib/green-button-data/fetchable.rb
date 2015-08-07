@@ -1,63 +1,99 @@
 module GreenButtonData
   module Fetchable
-    def self.all(url = nil, options = nil)
-      feed = fetch url, options and populate_model feed
+    def self.included(base)
+      base.extend ClassMethods
     end
 
-    def self.fetch(url = nil, options = nil)
-      url or raise ArgumentError.new "url is required to fetch data"
+    module ClassMethods
+      def all(url = nil, options = nil)
+        @url = url
+        @options = options
+        return records
+      end
 
-      connection_options = {}
+      def first(url = nil, options = nil)
+        @url = url
+        @options = options
+        return records.first
+      end
 
-      options ||= {}
-      connection_options[:ssl] = options[:client_ssl] if options[:client_ssl]
+      def last(url = nil, options = nil)
+        @url = url
+        @options = options
+        return records.last
+      end
 
-      conn = Faraday.new connection_options
-      conn.token_auth(options[:token]) if options[:token]
+      def fetch(url = nil, options = nil)
+        url or raise ArgumentError.new "url is required to fetch data"
 
-      response = conn.get url
-      response.status == 200 and GreenButtonData::Feed.parse response.body
-    end
+        connection_options = {}
 
-    private
+        options ||= {}
+        connection_options[:ssl] = options[:client_ssl] if options[:client_ssl]
 
-    def self.each_entry_content(feed)
-      entry_content = nil
+        conn = Faraday.new connection_options
+        conn.token_auth(options[:token]) if options[:token]
 
-      feed.entries.each do |entry|
-        match_data = /\/(\w+)(\/(\d+))*$/.match(entry.self.downcase)
+        response = conn.get url
+        response.status == 200 and GreenButtonData::Feed.parse response.body
+      end
 
-        entry_content = unless match_data.nil?
-          case match_data[1]
-          when 'applicationinformation'
-            entry.content.application_information
-          when 'authorization'
-            entry.content.authorization
-          when 'intervalblock'
-            entry.content.interval_block
-          when 'localtimeparameters'
-            entry.content.local_time_parameters
-          when 'readingtype'
-            entry.content.reading_type
-          when 'usagepoint'
-            entry.usage_point
-          else
-            nil
+      def feed
+        @feed ||= fetch url, options
+      end
+
+      def records
+        @records ||= populate_model(feed)
+      end
+
+      def options
+        @options
+      end
+
+      def url
+        @url
+      end
+
+      private
+
+      def each_entry_content(feed)
+        entry_content = nil
+
+        feed.entries.each do |entry|
+          match_data = /\/(\w+)(\/(\d+))*$/.match(entry.self.downcase)
+
+          entry_content = unless match_data.nil?
+            case match_data[1]
+            when 'applicationinformation'
+              entry.content.application_information
+            when 'authorization'
+              entry.content.authorization
+            when 'intervalblock'
+              entry.content.interval_block
+            when 'localtimeparameters'
+              entry.content.local_time_parameters
+            when 'readingtype'
+              entry.content.reading_type
+            when 'usagepoint'
+              entry.usage_point
+            else
+              nil
+            end
           end
+
+          yield entry_content
+        end
+      end
+
+      def populate_model(feed)
+        models = GreenButtonData::ModelCollection.new
+
+        each_entry_content feed do |content|
+          models << self.new(content)
         end
 
-        yield entry_content
+        return models
       end
-    end
-
-    def self.populate_model(feed)
-      models = GreenButtonData::ModelCollection.new
-
-      each_entry_content feed do |content|
-        models << self.new(content)
-      end
-
-      return models
-    end
-  end
-end
+    end # ClassMethods
+  end # Fetchable
+end # GreenButtonData
