@@ -10,6 +10,17 @@ describe GreenButtonData::Authorization do
     stub_request(:get, url).to_return status: 200, body: espi_authorization
   end
 
+  describe "Constructor" do
+    it "should be a valid instance of Authorization" do
+      auth = subject.new id: "1", status: :active, authorization_uri: "http://foo"
+      expect(auth).to be_a GreenButtonData::Authorization
+      expect(auth.id).to eq "1"
+      expect(auth.status).to eq :active
+      expect(auth.authorization_uri).to eq "http://foo"
+      expect(auth.resource_uri).to be_nil
+    end
+  end
+
   describe "#all" do
     context "valid authorization" do
       let(:collection) { subject.all(url, token: token) }
