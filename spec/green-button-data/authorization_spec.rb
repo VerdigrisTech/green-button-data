@@ -12,12 +12,21 @@ describe GreenButtonData::Authorization do
 
   describe "#all" do
     context "valid authorization" do
+      let(:collection) { subject.all(url, token: token) }
+
       it "should return a ModelCollection" do
-        expect(subject.all(url, token: token)).to be_a GreenButtonData::ModelCollection
+        expect(collection).to be_a GreenButtonData::ModelCollection
       end
 
       it "should be a collection of GreenButtonData::Authorization instances" do
-        expect(subject.all(url, token: token).first).to be_a GreenButtonData::Authorization
+        expect(collection.first).to be_a GreenButtonData::Authorization
+      end
+
+      it "should populate attributes" do
+        expect(collection.first.id).to eq "4"
+        expect(collection.first.status).to eq :active
+        expect(collection.first.resource_uri).to eq "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/2"
+        expect(collection.first.authorization_uri).to eq "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization/4"
       end
     end
   end
