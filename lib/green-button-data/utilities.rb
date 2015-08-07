@@ -102,5 +102,22 @@ module GreenButtonData
 
       last_day - day_offset
     end
+
+    ##
+    # Returns a hash representation of object instance's attributes
+    #
+    # ==== Arguments
+    #
+    # * +obj+ - an object
+    def attributes_to_hash(obj)
+      attributes_hash = {}
+
+      obj.instance_variables.each do |var|
+        attr_name = var.to_s.delete('@').to_sym
+        attributes_hash[attr_name] = obj.instance_variable_get(var)
+      end
+
+      return attributes_hash
+    end
   end
 end
