@@ -12,7 +12,7 @@ module GreenButtonData
 
       element :link, as: :up, value: :href, with: { rel: 'up' }
       element :link, as: :self, value: :href, with: { rel: 'self' }
-      element :link, as: :related, value: :href, with: { rel: 'related' }
+      elements :link, as: :related, value: :href, with: { rel: 'related' }
 
       element :content, class: Content, as: :content
 
@@ -38,7 +38,7 @@ module GreenButtonData
       element :'ns1:id', as: :entry_id
       element :'ns1:link', as: :up, value: :href, with: { rel: 'up' }
       element :'ns1:link', as: :self, value: :href, with: { rel: 'self' }
-      element :'ns1:link', as: :related, value: :href, with: { rel: 'related' }
+      elements :'ns1:link', as: :related, value: :href, with: { rel: 'related' }
       element :'ns1:content', class: Content, as: :content
       element :'ns1:published', as: :published
       element :'ns1:updated', as: :updated
