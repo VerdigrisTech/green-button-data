@@ -43,6 +43,7 @@ require 'green-button-data/model_collection'
 require 'green-button-data/fetchable'
 require 'green-button-data/application_information'
 require 'green-button-data/authorization'
+require 'green-button-data/usage_point'
 
 module GreenButtonData
 end
