@@ -5,6 +5,7 @@ module GreenButtonData
     end
 
     module ClassMethods
+      include Relations
       include Utilities
 
       def all(url = nil, options = nil)
@@ -62,6 +63,7 @@ module GreenButtonData
 
           unless match_data.nil?
             id = match_data[3] || entry.id
+
             entry_content = case match_data[1]
 
             when 'applicationinformation'
@@ -80,7 +82,7 @@ module GreenButtonData
               nil
             end
 
-            yield id, entry_content
+            yield id, entry_content, entry
           end
         end
       end
@@ -88,9 +90,12 @@ module GreenButtonData
       def populate_model(feed)
         models = GreenButtonData::ModelCollection.new
 
-        each_entry_content feed do |id, content|
+        each_entry_content feed do |id, content, entry|
           attributes_hash = attributes_to_hash(content)
           attributes_hash[:id] = id
+
+          related_urls = construct_related_urls entry
+          p attributes_hash.merge(related_urls)
 
           models << self.new(attributes_hash)
         end

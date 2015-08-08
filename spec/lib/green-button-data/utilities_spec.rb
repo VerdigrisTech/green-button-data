@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/../spec_helper"
+require "spec_helper"
 
 describe GreenButtonData::Utilities do
   before(:each) { @klass = Class.new { include GreenButtonData::Utilities } }
