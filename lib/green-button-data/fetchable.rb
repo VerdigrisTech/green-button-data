@@ -75,7 +75,7 @@ module GreenButtonData
             when 'readingtype'
               entry.content.reading_type
             when 'usagepoint'
-              entry.usage_point
+              entry.content.usage_point
             else
               nil
             end
