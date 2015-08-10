@@ -49,4 +49,12 @@ require 'green-button-data/authorization'
 require 'green-button-data/usage_point'
 
 module GreenButtonData
+  class << self
+    attr_accessor :configuration
+  end
+
+  def self.configure
+    self.configuration ||= Configuration.new
+    yield configuration
+  end
 end
