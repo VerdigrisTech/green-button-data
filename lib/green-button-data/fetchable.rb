@@ -9,6 +9,13 @@ module GreenButtonData
       include Utilities
 
       def all(url = nil, options = nil)
+        if url.is_a?(Hash)
+          # Assume it is an options Hash
+          options = url
+          url = GreenButtonData.configuration
+                               .send("#{class_name.underscore}_url")
+        end
+
         @url = url
         @options = options
         return records
@@ -54,6 +61,10 @@ module GreenButtonData
       end
 
       private
+
+      def class_name
+        self.name.split('::').last
+      end
 
       def each_entry_content(feed)
         entry_content = nil
