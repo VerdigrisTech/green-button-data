@@ -2,6 +2,7 @@ require 'sax-machine'
 require 'faraday'
 
 require 'green-button-data/core_ext'
+require 'green-button-data/configuration'
 require 'green-button-data/dst'
 require 'green-button-data/enumerations'
 require 'green-button-data/enumerations/accumulation'
@@ -50,11 +51,14 @@ require 'green-button-data/usage_point'
 
 module GreenButtonData
   class << self
-    attr_accessor :configuration
+    attr_writer :configuration
+  end
+
+  def self.configuration
+    @configuration ||= Configuration.new
   end
 
   def self.configure
-    self.configuration ||= Configuration.new
     yield configuration
   end
 end
