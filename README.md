@@ -25,7 +25,32 @@ Then run Bundler:
 $ bundle
 ```
 
-## Usage
+Green Button Data gem follows semantic versioning so if you wish to stay up to
+date without backwards breaking changes, you can add a pessimistic version
+
+## Configuration
+
+You can add configuration options like the following:
+
+```ruby
+GreenButtonData.configure do |config|
+  config.base_url = "https://services.greenbuttondata.org/"
+  config.application_information_path = "DataCustodian/espi/1_1/resource/ApplicationInformation"
+  config.authorization_path = "DataCustodian/espi/1_1/resource/Authorization"
+  config.interval_block_path = "DataCustodian/espi/1_1/resource/IntervalBlock"
+  config.meter_reading_path = "DataCustodian/espi/1_1/resource/MeterReading"
+  config.usage_point_path = "DataCustodian/espi/1_1/resource/UsagePoint"
+  config.usage_summary_path = "DataCustodian/espi/1_1/resource/UsageSummary"
+end
+```
+
+### Rails
+
+If you are developing a Rails app, create a file at
+`config/initializers/green_button_data.rb` from your Rails project root and
+add the configuration there.
+
+## Parsing
 
 Almost all of the functionality for parsing data is wrapped in the
 `GreenButtonData::Feed` class.
