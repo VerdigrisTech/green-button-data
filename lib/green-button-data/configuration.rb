@@ -12,7 +12,7 @@ module GreenButtonData
                   :usage_summary_path
 
     def application_information_url
-      return URI.join @base_url, @application_information_path
+      return URI.join(@base_url, @application_information_path).to_s
     end
 
     def application_information_url=(url)
@@ -22,7 +22,7 @@ module GreenButtonData
     end
 
     def authorization_url
-      return URI.join @base_url, @authorization_url
+      return URI.join(@base_url, @authorization_path).to_s
     end
 
     def authorization_url=(url)
@@ -32,7 +32,7 @@ module GreenButtonData
     end
 
     def interval_block_url
-      return URI.join @base_url, @interval_block_path
+      return URI.join(@base_url, @interval_block_path).to_s
     end
 
     def interval_block_url=(url)
@@ -42,7 +42,7 @@ module GreenButtonData
     end
 
     def meter_reading_url
-      return URI.join @base_url, @meter_reading_path
+      return URI.join(@base_url, @meter_reading_path).to_s
     end
 
     def meter_reading_url=(url)
@@ -52,7 +52,7 @@ module GreenButtonData
     end
 
     def reading_type_url
-      return URI.join @base_url, @reading_type_path
+      return URI.join(@base_url, @reading_type_path).to_s
     end
 
     def reading_type_url=(url)
@@ -62,7 +62,7 @@ module GreenButtonData
     end
 
     def usage_point_url
-      return URI.join @base_url, @usage_point_path
+      return URI.join(@base_url, @usage_point_path).to_s
     end
 
     def usage_point_url=(url)
@@ -72,7 +72,7 @@ module GreenButtonData
     end
 
     def usage_summary_url
-      return URI.join @base_url, @usage_summary_path
+      return URI.join(@base_url, @usage_summary_path).to_s
     end
 
     def usage_summary_url=(url)
