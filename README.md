@@ -25,10 +25,13 @@ Then run Bundler:
 $ bundle
 ```
 
-Green Button Data gem follows semantic versioning so if you wish to stay up to
-date without backwards breaking changes, you can add a pessimistic version
+## Integrating GreenButtonData Into Your Application
 
-## Configuration
+GreenButtonData gem provides a familiar interface to consuming API endpoints.
+Method names are similar to Rails' ActiveRecord models and can be easily
+integrated into existing applications.
+
+### Configuration
 
 You can add configuration options like the following:
 
@@ -44,16 +47,16 @@ GreenButtonData.configure do |config|
 end
 ```
 
-### Rails
+#### Rails Integration
 
 If you are developing a Rails app, create a file at
 `config/initializers/green_button_data.rb` from your Rails project root and
 add the configuration there.
 
-## Fetching Data from an API Endpoint
+## Green Button Data API Client
 
 Green Button Data specification states that all API endpoints be secured with
-OAuth2 which means most of the fetch operation will require an auth token.
+OAuth2 which means most fetch operations will require auth tokens.
 
 Some endpoints are secured further by utilizing client SSL certificates (e.g.
 Pacific Gas & Electric). You may pass in `client_ssl` options in addition to
@@ -61,7 +64,7 @@ the `token` option in this case.
 
 > **DISCLAIMER:** Green Button Data is **_NOT_** responsible for managing OAuth
 tokens to make authenticated requests. There are other gems that provide mature,
-production proven OAuth 2 functionalities such as OmniAuth.
+production proven OAuth 2 functionalities such as [OmniAuth]().
 
 ### List all entries
 
@@ -141,6 +144,17 @@ end
 3. Make changes and commit: `git commit -am "Add awesome feature"`
 4. Push the branch: `git push origin my-awesome-feature`
 5. Submit a pull request
+
+## Versioning
+
+Green Button Data gem follows [Semantic Versioning 2.0](http://semver.org/). As
+such, you can specify a pessimistic version constraint on this gem with two
+digits of precision and be guaranteed latest features and bug fixes without
+backwards breaking changes:
+
+```ruby
+gem 'green-button-data', '~> 0.2'
+```
 
 ## License
 
