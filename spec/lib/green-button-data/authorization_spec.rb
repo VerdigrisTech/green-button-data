@@ -7,6 +7,11 @@ describe GreenButtonData::Authorization do
   subject { GreenButtonData::Authorization }
 
   before do
+    GreenButtonData.configure do |config|
+      config.base_url = "https://services.greenbuttondata.org/"
+      config.authorization_path = "DataCustodian/espi/1_1/resource/Authorization"
+    end
+
     stub_request(:get, url).to_return status: 200, body: espi_authorization
   end
 
@@ -38,6 +43,23 @@ describe GreenButtonData::Authorization do
         expect(collection.first.status).to eq :active
         expect(collection.first.resource_uri).to eq "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/2"
         expect(collection.first.authorization_uri).to eq "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization/4"
+      end
+    end
+  end
+
+  describe "#find" do
+    context "valid authorization" do
+      it "is an instance of Authorization" do
+        expect(subject.find(4, token: token)).to be_a GreenButtonData::Authorization
+        expect(subject.find("https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization/4", token: token)).to be_a GreenButtonData::Authorization
+      end
+
+      it "should populate attributes" do
+        authorization = subject.find(4, token: token)
+        expect(authorization.id).to eq "4"
+        expect(authorization.status).to eq :active
+        expect(authorization.resource_uri).to eq "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/2"
+        expect(authorization.authorization_uri).to eq "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization/4"
       end
     end
   end
