@@ -1,9 +1,9 @@
 <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
       <id>urn:uuid:c8c34b3a-d175-447b-bd00-176f60194de0</id>
       <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint" rel="up"/>
-      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1" rel="self"/>
-      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/MeterReading" rel="related"/>
-      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/ElectricPowerUsageSummary" rel="related"/>
+      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2" rel="self"/>
+      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading" rel="related"/>
+      <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/ElectricPowerUsageSummary" rel="related"/>
       <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/1" rel="related"/>
       <title>Green Button Sample Data File</title>
       <content>
