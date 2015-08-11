@@ -73,8 +73,15 @@ describe GreenButtonData::UsagePoint do
       "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading"
     end
 
+    before do
+      stub_request(:get, meter_readings_url).
+      to_return status: 200, body: espi_usage_point_meter_readings
+    end
+
     it "should lazy load related resources" do
-      expect(usage_point.meter_readings)
+      expect(usage_point.meter_readings).to be_a GreenButtonData::ModelCollection
+      expect(usage_point.meter_readings.size).to eq 1
+      expect(usage_point.meter_readings.first).to be_a GreenButtonData::MeterReading
     end
   end
 end
