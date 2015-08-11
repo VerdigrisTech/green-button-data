@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="GreenButtonDataStyleSheet.xslt"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id>urn:uuid:26f2239b-3bff-497c-a6c6-bc2dd2a6d2af</id>
+  <title>Green Button Usage Feed</title>
+  <updated>2015-08-11T00:09:08Z</updated>
+  <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/UsagePoint" rel="self"/>
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:c8c34b3a-d175-447b-bd00-176f60194de0</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/1" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/1/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/1/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/1" rel="related"/>
+        <title>Green Button Sample Data File</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2013-09-19T04:00:00Z</published>
+        <updated>2013-09-19T04:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:e2dcf5f0-810b-443f-9a2e-805bfa52d897</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/2" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/2/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/2/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/1" rel="related"/>
+        <title>Green Button Sample Data File</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+                    <espi:ServiceDeliveryPoint>
+                          <espi:name>sample tariff showing block and tier pricing</espi:name>
+                          <espi:tariffProfile>./TariffSample.xml</espi:tariffProfile>
+                    </espi:ServiceDeliveryPoint>
+              </espi:UsagePoint>
+        </content>
+        <published>2013-09-19T04:00:00Z</published>
+        <updated>2013-09-19T04:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:c4b46b5d-d4ac-4cd3-9e29-13717dd04140</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/3" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/3/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/3/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/2" rel="related"/>
+        <title>Coastal Multi-Family 12hr</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:baecdd3b-0a00-4ccb-88f7-ae576f642c7f</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/4" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/4/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/4/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/3" rel="related"/>
+        <title>Coastal Multi-Family Daily</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:dae2a527-3662-4066-85a8-c073762a1790</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/5" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/5/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/5/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/4" rel="related"/>
+        <title>Coastal Multi-Family</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:0a0d0efb-c9e0-4740-93a9-763b54e1e58e</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/6" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/6/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/6/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/5" rel="related"/>
+        <title>Desert Multi-Family</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:a14ca776-1b2f-4a23-812d-2389d6e59e8e</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/7" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/7/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/7/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/6" rel="related"/>
+        <title>Desert Single-Family</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:f6d25f4a-bc69-43ca-9545-ef56d3deb801</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/8" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/8/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/8/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/7" rel="related"/>
+        <title>Inland Multi-Family</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:bf72563a-cb21-479b-ba68-6ded9c940ca6</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/9" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/9/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/9/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/8" rel="related"/>
+        <title>Inland Single-Family</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:a30d9bf2-b5e7-42fe-86a3-680ea1843a87</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/10" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/10/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/10/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/9" rel="related"/>
+        <title>Mountain Multi-family</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:9c226002-f1e7-4f56-98b0-cbf227660b48</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/11" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/11/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/11/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/10" rel="related"/>
+        <title>Customer 11</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2013-04-04T03:35:38Z</published>
+        <updated>2013-04-04T03:35:38Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:41103d29-4967-4231-bd01-2c537770be44</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/12" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/12/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/12/ElectricPowerUsageSummary" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/11" rel="related"/>
+        <title>Customer 12</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2013-04-04T03:35:38Z</published>
+        <updated>2013-04-04T03:35:38Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:0def27bb-038c-4829-a23d-98ef17af5249</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/13" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/13/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZA12</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:765d337d-3869-443c-b281-a1a277319c85</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/14" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/14/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZA13</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:4dd005bd-5366-4427-b4f4-9d5eb76b124f</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/15" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/15/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZA14</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:eb2f329e-c5c9-4740-8580-d996dfa99dfe</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/16" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/16/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZA17</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:cf599ef2-63f5-4560-9b37-9eb28d5b0602</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/17" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/17/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZA22</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:0eb76fed-df0d-45e2-be28-d19aa3e7c21b</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/18" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/18/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZA23</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:78d56798-de57-4bce-9707-7749949300f3</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/19" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/19/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZB12</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:a3051af4-4038-4d76-9ec3-9d97992fac7a</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/20" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/20/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZB13</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:cfeeb141-b72f-417b-8185-635e22ce6dd8</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/21" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/21/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZB14</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:799f14f8-0a77-4baf-a8d2-6cf5ac69863f</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/22" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/22/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZB17</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:93835a58-3155-403f-b5da-95edf10af5d2</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/23" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/23/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZB23</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:85264b97-3120-4876-94ba-61a6050985fd</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/24" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/24/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZB28</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:070d521f-0833-4e59-b48c-decaf1c8d82b</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/25" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/25/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>NZBA22</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:0cd77c47-4fa7-4db8-8adf-165ecdff3952</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/26" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/26/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>SZD11</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:852fc0c7-286f-4251-8a83-986289ec08f7</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/27" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/27/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>SZD12</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:c1377001-ff58-4845-a6ed-14b059fe9679</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/28" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/28/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>SZD14</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:2a98b92d-3152-467e-9f4f-2f28e74298a7</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/29" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/29/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>SZE13</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:0b03d4b7-bce3-4fe6-8173-3ab63962af6f</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/30" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/30/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>SZE14</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:e0e11188-b373-4814-82bc-06b8d865b0af</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/31" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/31/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>SZE22</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:b822a4a4-86ba-49ea-a5fa-7d44a32dc7bd</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/32" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/32/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>WZC11</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:d3d0df03-9aea-45c9-a6cf-bbef5f23256f</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/33" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/33/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>WZC12</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:3c1e0bd5-a58b-492b-ac22-eb42134d1455</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/34" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/34/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>WZC14</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:041ffbe4-a144-4ade-9b7f-61ac96dd97d5</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/35" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/35/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>WZC22</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:5c17e966-185c-4385-821e-7b70060d98f6</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/36" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/36/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>WZC24</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:3d9e7c07-8b33-42f7-92dd-c3d9f567aeef</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/37" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/37/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/13" rel="related"/>
+        <link href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01" rel="related"/>
+        <title>WZC25</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2012-10-24T07:00:00Z</published>
+        <updated>2012-10-24T07:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:046638c0-8701-11e0-9d78-0800200c9a02</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/38" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/38/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/14" rel="related"/>
+        <title>6479-1</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2002-11-02T13:00:00Z</published>
+        <updated>2002-11-02T13:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:046638c0-8701-11e0-9d78-0800200c9a05</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/39" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/39/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/14" rel="related"/>
+        <title>7521840-1</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2011-04-14T12:15:00Z</published>
+        <updated>2011-04-14T12:15:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:046638c0-8701-11e0-9d78-0800200c9a08</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/40" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/40/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/14" rel="related"/>
+        <title>7521841-1</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2011-04-18T12:00:00Z</published>
+        <updated>2011-04-18T12:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:046638c0-8701-11e0-9d78-0800200c9a11</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/41" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/41/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/14" rel="related"/>
+        <title>7521844-1</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2011-04-14T12:15:00Z</published>
+        <updated>2011-04-14T12:15:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:046638c0-8701-11e0-9d78-0800200c9a14</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/42" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/42/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/14" rel="related"/>
+        <title>6822-1</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2002-11-02T13:00:00Z</published>
+        <updated>2002-11-02T13:00:00Z</updated>
+  </entry>
+
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:046638c0-8701-11e0-9d78-0800200c9a17</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/43" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/1/UsagePoint/43/MeterReading" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/LocalTimeParameters/14" rel="related"/>
+        <title>7225-1</title>
+        <content>
+              <espi:UsagePoint>
+                    <espi:ServiceCategory>
+                          <espi:kind>0</espi:kind>
+                    </espi:ServiceCategory>
+              </espi:UsagePoint>
+        </content>
+        <published>2002-11-02T13:00:00Z</published>
+        <updated>2002-11-02T13:00:00Z</updated>
+  </entry>
+</feed>
