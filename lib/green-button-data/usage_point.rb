@@ -15,8 +15,12 @@ module GreenButtonData
       SERVICE[@kind]
     end
 
-    def meter_readings
-      @meter_readings ||= MeterReading.all @meter_reading_url
+    def meter_readings(id = nil)
+      if id.nil?
+        @meter_readings ||= MeterReading.all @meter_reading_url
+      else
+        @meter_readings and @meter_readings.find_by_id(id) or MeterReading.find "#{@meter_reading_url}/#{id}"
+      end
     end
 
     def usage_summary
