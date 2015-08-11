@@ -25,5 +25,11 @@ module GreenButtonData
     def size
       @models.size
     end
+
+    def find_by_id(id)
+      self.each do |model|
+        model.id == id and return model
+      end
+    end
   end
 end
