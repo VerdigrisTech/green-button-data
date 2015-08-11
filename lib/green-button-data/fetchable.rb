@@ -155,9 +155,7 @@ module GreenButtonData
           attributes_hash = attributes_to_hash(content)
           attributes_hash[:id] = id
 
-          related_urls = construct_related_urls entry
-          p attributes_hash.merge(related_urls)
-
+          attributes_hash[:related_urls] = construct_related_urls entry
           models << self.new(attributes_hash)
         end
 

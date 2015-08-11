@@ -28,7 +28,7 @@ describe GreenButtonData::Authorization do
 
   describe "#all" do
     context "valid authorization" do
-      let(:collection) { subject.all(url, token: token) }
+      let(:collection) { subject.all(token: token) }
 
       it "should return a ModelCollection" do
         expect(collection).to be_a GreenButtonData::ModelCollection
