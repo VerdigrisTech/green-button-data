@@ -72,7 +72,7 @@ module GreenButtonData
           "#{path_prefix}/#{id}"
         end
 
-        return first(url, options)
+        return populate_models(fetch(url, options)).first
       end
 
       def last(url = nil, options = nil)
