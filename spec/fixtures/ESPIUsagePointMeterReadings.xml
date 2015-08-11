@@ -4,12 +4,12 @@
   <id>urn:uuid:3d929239-f58c-4a3a-aba1-9417978b26a4</id>
   <title>Green Button Usage Feed</title>
   <updated>2015-08-11T01:06:02Z</updated>
-  <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/MeterReading" rel="self"/>
+  <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading" rel="self"/>
   <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
         <id>urn:uuid:4234ae39-fb6d-48ca-8856-ac9f41fb3d34</id>
-        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/MeterReading" rel="up"/>
-        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/MeterReading/1" rel="self"/>
-        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/MeterReading/1/IntervalBlock" rel="related"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading/1" rel="self"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading/1/IntervalBlock" rel="related"/>
         <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/ReadingType/1" rel="related"/>
         <title>Monthly Electricity Consumption</title>
         <content>
