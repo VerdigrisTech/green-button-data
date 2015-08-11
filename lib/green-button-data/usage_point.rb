@@ -16,7 +16,7 @@ module GreenButtonData
     end
 
     def meter_readings
-      @meter_readings ||= MeterReadings.all @meter_reading_url
+      @meter_readings ||= MeterReading.all @meter_reading_url
     end
 
     def usage_summary
