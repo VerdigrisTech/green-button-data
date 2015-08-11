@@ -21,5 +21,9 @@ module GreenButtonData
     def last
       @models.last
     end
+
+    def size
+      @models.size
+    end
   end
 end
