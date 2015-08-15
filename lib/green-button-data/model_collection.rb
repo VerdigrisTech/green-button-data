@@ -28,7 +28,7 @@ module GreenButtonData
 
     def find_by_id(id)
       self.each do |model|
-        model.id == id and return model
+        model.id.to_s == id.to_s and return model
       end
     end
   end
