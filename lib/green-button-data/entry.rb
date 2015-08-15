@@ -3,6 +3,7 @@ module GreenButtonData
     include Fetchable
 
     attr_reader :id
+    attr_accessor :token
 
     def initialize(attributes)
       attributes.each do |key, value|
