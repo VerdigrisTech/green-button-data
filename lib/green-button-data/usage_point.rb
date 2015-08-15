@@ -18,8 +18,23 @@ module GreenButtonData
     def meter_readings(id = nil)
       if id.nil?
         @meter_readings ||= MeterReading.all @meter_reading_url
+
+        return @meter_readings
       else
-        @meter_readings and @meter_readings.find_by_id(id) or MeterReading.find "#{@meter_reading_url}/#{id}"
+        # Try returning cached results first
+        @meter_readings and meter_reading = @meter_readings.find_by_id(id)
+        cache_miss = meter_reading.nil?
+
+        # Cache-miss; send API request
+        meter_reading ||= MeterReading.find("#{@meter_reading_url}/#{id}")
+
+        # Cache the result
+        unless @meter_readings
+          @meter_readings = ModelCollection.new
+          @meter_readings << meter_reading if cache_miss
+        end
+
+        return meter_reading
       end
     end
 

@@ -73,15 +73,49 @@ describe GreenButtonData::UsagePoint do
       "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading"
     end
 
-    before do
-      stub_request(:get, meter_readings_url).
-      to_return status: 200, body: espi_usage_point_meter_readings
+    let :meter_reading_url do
+      "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading/1"
     end
 
-    it "should lazy load related resources" do
-      expect(usage_point.meter_readings).to be_a GreenButtonData::ModelCollection
-      expect(usage_point.meter_readings.size).to eq 1
-      expect(usage_point.meter_readings.first).to be_a GreenButtonData::MeterReading
+    context "id of related resource is not specified" do
+      before do
+        stub_request(:get, meter_readings_url).
+        to_return status: 200, body: espi_usage_point_meter_readings
+      end
+
+      it "should lazy load all related resources" do
+        expect(usage_point.meter_readings).to be_a GreenButtonData::ModelCollection
+        expect(WebMock).to have_requested :get, meter_readings_url
+        expect(usage_point.meter_readings.size).to eq 1
+        expect(usage_point.meter_readings.first).to be_a GreenButtonData::MeterReading
+        expect(usage_point.meter_readings.first.id).to eq "1"
+      end
+
+      it "should use cached results on subsequent calls" do
+        expect(usage_point.meter_readings).to be_a GreenButtonData::ModelCollection
+        expect(WebMock).not_to have_requested :get, meter_readings_url
+      end
+    end
+
+    context "id of related resource is specified" do
+      before do
+        stub_request(:get, meter_reading_url).
+        to_return status: 200, body: espi_usage_point_meter_reading
+      end
+
+      it "should lazy load a related resource that matches id" do
+        expect(usage_point.meter_readings(1)).to be_a GreenButtonData::MeterReading
+        expect(WebMock).to have_requested :get, meter_reading_url
+        expect(usage_point.meter_readings.size).to eq 1
+        expect(usage_point.meter_readings.first).to be_a GreenButtonData::MeterReading
+        expect(usage_point.meter_readings.first.id).to eq "1"
+      end
+
+      it "should use cached results on subsequent calls" do
+        expect(usage_point.meter_readings(1)).to be_a GreenButtonData::MeterReading
+        expect(usage_point.meter_readings(1)).to be_a GreenButtonData::MeterReading
+        expect(a_request(:get, meter_reading_url)).to have_been_made.once
+      end
     end
   end
 end
