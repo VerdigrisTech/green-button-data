@@ -1,7 +1,10 @@
 require "spec_helper"
 
 describe GreenButtonData::Authorization do
-  let(:url) { "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization" }
+  let(:all_url) { GreenButtonData.configuration.authorization_url }
+  let :find_url do
+    "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization/4"
+  end
   let(:token) { "53520584-d640-4812-a721-8a1afa459ff7" }
 
   subject { GreenButtonData::Authorization }
@@ -12,7 +15,8 @@ describe GreenButtonData::Authorization do
       config.authorization_path = "DataCustodian/espi/1_1/resource/Authorization"
     end
 
-    stub_request(:get, url).to_return status: 200, body: espi_authorization
+    stub_request(:get, all_url).to_return status: 200, body: espi_authorization
+    stub_request(:get, find_url).to_return status: 200, body: espi_authorization
   end
 
   describe "Constructor" do
@@ -67,7 +71,7 @@ describe GreenButtonData::Authorization do
   describe "#first" do
     context "valid authorization" do
       it "should return the first Authorization entry" do
-        expect(subject.first(url, token: token)).to be_a GreenButtonData::Authorization
+        expect(subject.first(all_url, token: token)).to be_a GreenButtonData::Authorization
       end
     end
   end
@@ -75,7 +79,7 @@ describe GreenButtonData::Authorization do
   describe "#last" do
     context "valid authorization" do
       it "should return the last Authorization entry" do
-        expect(subject.last(url, token: token)).to be_a GreenButtonData::Authorization
+        expect(subject.last(all_url, token: token)).to be_a GreenButtonData::Authorization
       end
     end
   end

@@ -19,7 +19,7 @@ describe GreenButtonData::Parser::Entry do
     end
 
     it "should parse self" do
-      expect(subject.self).to eq "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1"
+      expect(subject.self).to eq "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2"
     end
 
     it "should parse related" do
