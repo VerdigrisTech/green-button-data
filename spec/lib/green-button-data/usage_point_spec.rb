@@ -77,6 +77,10 @@ describe GreenButtonData::UsagePoint do
       "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading/1"
     end
 
+    let :interval_blocks_url do
+      "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading/1/IntervalBlock"
+    end
+
     context "id of related resource is not specified" do
       before do
         stub_request(:get, meter_readings_url).
@@ -101,6 +105,9 @@ describe GreenButtonData::UsagePoint do
       before do
         stub_request(:get, meter_reading_url).
         to_return status: 200, body: espi_usage_point_meter_reading
+
+        stub_request(:get, interval_blocks_url).
+        to_return status: 200, body: espi_interval_block
       end
 
       it "should lazy load a related resource that matches id" do
@@ -115,6 +122,11 @@ describe GreenButtonData::UsagePoint do
         expect(usage_point.meter_readings(1)).to be_a GreenButtonData::MeterReading
         expect(usage_point.meter_readings(1)).to be_a GreenButtonData::MeterReading
         expect(a_request(:get, meter_reading_url)).to have_been_made.once
+      end
+
+      it "should lazy load a related resource two levels deep" do
+        expect(usage_point.meter_readings(1).interval_blocks).to be_a GreenButtonData::ModelCollection
+        expect(usage_point.meter_readings(1).interval_blocks.first).to be_a GreenButtonData::IntervalBlock
       end
     end
   end
