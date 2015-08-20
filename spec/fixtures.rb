@@ -2,6 +2,7 @@ module Fixtures
   FIXTURES = {
     espi_application_information: "ESPIApplicationInformation.xml",
     espi_authorization: "ESPIAuthorization.xml",
+    espi_electric_power_usage_summary: "ESPIElectricPowerUsageSummary.xml",
     espi_interval_block: "ESPIIntervalBlock.xml",
     espi_local_time_parameters: "ESPILocalTimeParameters.xml",
     espi_reading_type: "ESPIReadingType.xml",
@@ -9,12 +10,15 @@ module Fixtures
     espi_usage_point_meter_reading: "ESPIUsagePointMeterReading.xml",
     espi_usage_point_meter_readings: "ESPIUsagePointMeterReadings.xml",
     espi_usage_points: "ESPIUsagePoints.xml",
+    espi_usage_summaries: "ESPIUsageSummaries.xml",
     pge_application_information: "PGEApplicationInformation.xml",
     pge_authorization: "PGEAuthorization.xml",
     pge_interval_block: "PGEIntervalBlock.xml",
     pge_local_time_parameters: "PGELocalTimeParameters.xml",
     pge_reading_type: "PGEReadingType.xml",
-    pge_usage_point: "PGEUsagePoint.xml"
+    pge_usage_point: "PGEUsagePoint.xml",
+    pge_usage_summaries: "PGEUsageSummaries.xml",
+    pge_usage_summary: "PGEUsageSummary.xml"
   }
 
   ##

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="GreenButtonDataStyleSheet.xslt"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id>urn:uuid:177d2bf1-264e-462d-9529-35de03737bd3</id>
+  <title>Green Button Usage Feed</title>
+  <updated>2015-08-20T19:52:40Z</updated>
+  <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/ElectricPowerUsageSummary" rel="self"/>
+  <entry xmlns:espi="http://naesb.org/espi" xmlns="http://www.w3.org/2005/Atom">
+        <id>urn:uuid:923a7143-263e-421b-bea2-e41b7e240013</id>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/ElectricPowerUsageSummary" rel="up"/>
+        <link href="https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/1/ElectricPowerUsageSummary/1" rel="self"/>
+        <title>Usage Summary</title>
+        <content>
+              <espi:ElectricPowerUsageSummary>
+                    <espi:billingPeriod>
+                          <espi:duration>2419200</espi:duration>
+                          <espi:start>1391230800</espi:start>
+                    </espi:billingPeriod>
+                    <espi:billLastPeriod>6752000</espi:billLastPeriod>
+                    <espi:billToDate>4807000</espi:billToDate>
+                    <espi:costAdditionalLastPeriod>0</espi:costAdditionalLastPeriod>
+                    <espi:currency>840</espi:currency>
+                    <espi:overallConsumptionLastPeriod>
+                          <espi:powerOfTenMultiplier>0</espi:powerOfTenMultiplier>
+                          <espi:uom>72</espi:uom>
+                          <espi:value>625716</espi:value>
+                    </espi:overallConsumptionLastPeriod>
+                    <espi:currentBillingPeriodOverAllConsumption>
+                          <espi:powerOfTenMultiplier>0</espi:powerOfTenMultiplier>
+                          <espi:timeStamp>1395374400</espi:timeStamp>
+                          <espi:uom>72</espi:uom>
+                          <espi:value>447993</espi:value>
+                    </espi:currentBillingPeriodOverAllConsumption>
+                    <espi:qualityOfReading>14</espi:qualityOfReading>
+                    <espi:statusTimeStamp>1395374400</espi:statusTimeStamp>
+              </espi:ElectricPowerUsageSummary>
+        </content>
+        <published>2014-03-01T05:00:00Z</published>
+        <updated>2014-03-01T05:00:00Z</updated>
+  </entry>
+</feed>
