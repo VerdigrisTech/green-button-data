@@ -13,7 +13,9 @@ module Fixtures
     pge_interval_block: "PGEIntervalBlock.xml",
     pge_local_time_parameters: "PGELocalTimeParameters.xml",
     pge_reading_type: "PGEReadingType.xml",
-    pge_usage_point: "PGEUsagePoint.xml"
+    pge_usage_point: "PGEUsagePoint.xml",
+    pge_usage_summaries: "PGEUsageSummaries.xml",
+    pge_usage_summary: "PGEUsageSummary.xml"
   }
 
   ##

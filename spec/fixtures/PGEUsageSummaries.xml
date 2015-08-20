@@ -1,0 +1,81 @@
+<ns1:feed xmlns:ns1="http://www.w3.org/2005/Atom">
+   <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">69012c37-7172-4c83-91d7-d2e0ed54cedc</ns1:id>
+   <ns1:title type="text" xsi:type="ns1:textType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Green Button Usage Feed</ns1:title>
+   <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-20T22:32:37.982Z</ns1:updated>
+   <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/LocalTimeParameters" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   <ns1:entry>
+      <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">d79c8624-1166-4f7c-b479-c73a5f98866a</ns1:id>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/1/UsagePoint/1/UsageSummary" rel="up" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/1/UsagePoint/1/UsageSummary/1,436,684,400,000" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:title type="text" xsi:type="ns1:textType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">UsageSummary_1436684400000</ns1:title>
+      <ns1:published xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-20T22:32:37.976Z</ns1:published>
+      <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-20T22:32:37.978Z</ns1:updated>
+      <ns1:content xsi:type="ns1:contentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <ns0:UsageSummary xmlns:ns0="http://naesb.org/espi">
+            <ns0:billingPeriod>
+               <ns0:duration>2505600</ns0:duration>
+               <ns0:start>1434006000</ns0:start>
+            </ns0:billingPeriod>
+            <ns0:overallConsumptionLastPeriod>
+               <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
+               <ns0:uom>72</ns0:uom>
+               <ns0:value>146000000</ns0:value>
+               <ns0:readingTypeRef>https://api.pge.com/GreenButtonConnect/espi/1_1/resource/ReadingType/NzI6bnVsbDpudWxsOjQ=</ns0:readingTypeRef>
+            </ns0:overallConsumptionLastPeriod>
+            <ns0:qualityOfReading>17</ns0:qualityOfReading>
+            <ns0:statusTimeStamp>1440109957976</ns0:statusTimeStamp>
+            <ns0:commodity>1</ns0:commodity>
+         </ns0:UsageSummary>
+      </ns1:content>
+   </ns1:entry>
+   <ns1:entry>
+      <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">7a83a6b0-8e12-4b5e-b1ea-6707e0ee4a3e</ns1:id>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/1/UsagePoint/1/UsageSummary" rel="up" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/1/UsagePoint/1/UsageSummary/1,434,092,400,000" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:title type="text" xsi:type="ns1:textType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">UsageSummary_1434092400000</ns1:title>
+      <ns1:published xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-20T22:32:37.979Z</ns1:published>
+      <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-20T22:32:37.979Z</ns1:updated>
+      <ns1:content xsi:type="ns1:contentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <ns0:UsageSummary xmlns:ns0="http://naesb.org/espi">
+            <ns0:billingPeriod>
+               <ns0:duration>2592000</ns0:duration>
+               <ns0:start>1431414000</ns0:start>
+            </ns0:billingPeriod>
+            <ns0:overallConsumptionLastPeriod>
+               <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
+               <ns0:uom>72</ns0:uom>
+               <ns0:value>128000000</ns0:value>
+               <ns0:readingTypeRef>https://api.pge.com/GreenButtonConnect/espi/1_1/resource/ReadingType/NzI6bnVsbDpudWxsOjQ=</ns0:readingTypeRef>
+            </ns0:overallConsumptionLastPeriod>
+            <ns0:qualityOfReading>17</ns0:qualityOfReading>
+            <ns0:statusTimeStamp>1440109957979</ns0:statusTimeStamp>
+            <ns0:commodity>1</ns0:commodity>
+         </ns0:UsageSummary>
+      </ns1:content>
+   </ns1:entry>
+   <ns1:entry>
+      <ns1:id xsi:type="ns1:idType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">9dc44d9b-e352-426e-b4b8-7324eda7ba47</ns1:id>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/1/UsagePoint/1/UsageSummary" rel="up" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Subscription/1/UsagePoint/1/UsageSummary/1,431,586,800,000" rel="self" xsi:type="ns1:linkType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <ns1:title type="text" xsi:type="ns1:textType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">UsageSummary_1431586800000</ns1:title>
+      <ns1:published xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-20T22:32:37.98Z</ns1:published>
+      <ns1:updated xsi:type="ns1:dateTimeType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2015-08-20T22:32:37.981Z</ns1:updated>
+      <ns1:content xsi:type="ns1:contentType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <ns0:UsageSummary xmlns:ns0="http://naesb.org/espi">
+            <ns0:billingPeriod>
+               <ns0:duration>1123200</ns0:duration>
+               <ns0:start>1430290800</ns0:start>
+            </ns0:billingPeriod>
+            <ns0:overallConsumptionLastPeriod>
+               <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
+               <ns0:uom>72</ns0:uom>
+               <ns0:value>55000000</ns0:value>
+               <ns0:readingTypeRef>https://api.pge.com/GreenButtonConnect/espi/1_1/resource/ReadingType/NzI6bnVsbDpudWxsOjQ=</ns0:readingTypeRef>
+            </ns0:overallConsumptionLastPeriod>
+            <ns0:qualityOfReading>17</ns0:qualityOfReading>
+            <ns0:statusTimeStamp>1440109957980</ns0:statusTimeStamp>
+            <ns0:commodity>1</ns0:commodity>
+         </ns0:UsageSummary>
+      </ns1:content>
+   </ns1:entry>
+</ns1:feed>
