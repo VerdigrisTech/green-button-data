@@ -3,6 +3,7 @@ module GreenButtonData
     class UsageSummary
       include SAXMachine
       include Enumerations
+      include Utilities
 
       element :billingPeriod, class: Interval, as: :billing_period
       element :billLastPeriod, class: Integer, as: :bill_last_period
@@ -36,12 +37,20 @@ module GreenButtonData
       element :statusTimeStamp, class: Integer, as: :status_time_stamp
       element :commodity, class: Integer
 
+      def currency
+        CURRENCY[@currency]
+      end
+
       def quality_of_reading
-        QUALITY_OF_READING[@quality_of_reading] if @quality_of_reading
+        QUALITY_OF_READING[@quality_of_reading]
       end
 
       def commodity
-        COMMODITY[@commodity] if @commodity
+        COMMODITY[@commodity]
+      end
+
+      def status_time_stamp
+        Time.at(normalize_epoch(@status_time_stamp)).utc.to_datetime
       end
 
       # ESPI Namespacing
