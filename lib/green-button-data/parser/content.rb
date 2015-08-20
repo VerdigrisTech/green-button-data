@@ -6,6 +6,11 @@ module GreenButtonData
       element :ApplicationInformation, class: ApplicationInformation,
               as: :application_information
       element :Authorization, class: Authorization, as: :authorization
+      element :ElectricPowerUsageSummary, class: UsageSummary,
+              as: :electric_power_usage_summary do |electric_power_usage_summary|
+        warn "[DEPRECATED] ElectricPowerUsageSummary element is deprecated by OpenESPI Green Button Data standards. Please migrate to UsageSummary in the future."
+        electric_power_usage_summary
+      end
       element :IntervalBlock, class: IntervalBlock, as: :interval_block
       element :LocalTimeParameters, class: LocalTimeParameters,
               as: :local_time_parameters
@@ -17,6 +22,11 @@ module GreenButtonData
       element :'espi:ApplicationInformation', class: ApplicationInformation,
               as: :application_information
       element :'espi:Authorization', class: Authorization, as: :authorization
+      element :'espi:ElectricPowerUsageSummary', class: UsageSummary,
+              as: :electric_power_usage_summary do |electric_power_usage_summary|
+        warn "[DEPRECATED] ElectricPowerUsageSummary element is deprecated by OpenESPI Green Button Data standards. Please migrate to UsageSummary in the future."
+        electric_power_usage_summary
+      end
       element :'espi:IntervalBlock', class: IntervalBlock, as: :interval_block
       element :'espi:LocalTimeParameters', class: LocalTimeParameters,
               as: :local_time_parameters
