@@ -1,8 +1,9 @@
 require "spec_helper"
 
 describe GreenButtonData::Parser::UsageSummary do
+  let(:feed) { GreenButtonData::Feed }
+
   context "espi namespace" do
-    let(:feed) { GreenButtonData::Feed }
     let :usage_summary do
       feed.parse(espi_usage_summaries).entries.first.content.usage_summary
     end
@@ -30,7 +31,7 @@ describe GreenButtonData::Parser::UsageSummary do
     end
 
     it "should parse overall consumption last period" do
-      expect(subject.overall_comsumption_last_period).
+      expect(subject.overall_consumption_last_period).
       to be_a GreenButtonData::Parser::SummaryMeasurement
     end
 
@@ -48,8 +49,38 @@ describe GreenButtonData::Parser::UsageSummary do
     end
   end
 
+  context "PG&E namespace" do
+    let :usage_summary do
+      feed.parse(pge_usage_summaries).entries.first.content.usage_summary
+    end
+
+    subject { usage_summary }
+
+    it "should parse billing period" do
+      expect(subject.billing_period).to be_a GreenButtonData::Parser::Interval
+    end
+
+    it "should parse overall consumption last period" do
+      expect(subject.overall_consumption_last_period).
+      to be_a GreenButtonData::Parser::SummaryMeasurement
+    end
+
+    it "should parse quality of reading" do
+      expect(subject.quality_of_reading).
+      to eq :validated
+    end
+
+    it "should parse status time stamp" do
+      expect(subject.status_time_stamp).
+      to eq DateTime.new 2015, 8, 20, 22, 32, 37
+    end
+
+    it "should parse commodity" do
+      expect(subject.commodity).to eq :electricity_secondary_metered
+    end
+  end
+
   context "deprecated element name" do
-    let(:feed) { GreenButtonData::Feed }
     let :electric_power_usage_summary do
       feed.parse(espi_electric_power_usage_summary).entries.first.content.electric_power_usage_summary
     end
