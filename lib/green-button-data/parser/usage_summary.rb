@@ -14,7 +14,7 @@ module GreenButtonData
               as: :cost_additional_detail_last_period
       element :currency, class: Integer
       element :overallConsumptionLastPeriod, class: SummaryMeasurement,
-              as: :overall_comsumption_last_period
+              as: :overall_consumption_last_period
       element :currentBillingPeriodOverAllConsumption,
               class: SummaryMeasurement,
               as: :current_billing_period_over_all_consumption
@@ -63,7 +63,7 @@ module GreenButtonData
               as: :cost_additional_detail_last_period
       element :'espi:currency', class: Integer, as: :currency
       element :'espi:overallConsumptionLastPeriod', class: SummaryMeasurement,
-              as: :overall_comsumption_last_period
+              as: :overall_consumption_last_period
       element :'espi:currentBillingPeriodOverAllConsumption',
               class: SummaryMeasurement,
               as: :current_billing_period_over_all_consumption
@@ -100,7 +100,7 @@ module GreenButtonData
               as: :cost_additional_detail_last_period
       element :'ns0:currency', class: Integer, as: :currency
       element :'ns0:overallConsumptionLastPeriod', class: SummaryMeasurement,
-              as: :overall_comsumption_last_period
+              as: :overall_consumption_last_period
       element :'ns0:currentBillingPeriodOverAllConsumption',
               class: SummaryMeasurement,
               as: :current_billing_period_over_all_consumption
