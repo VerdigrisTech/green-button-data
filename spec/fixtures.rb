@@ -6,6 +6,7 @@ module Fixtures
     espi_local_time_parameters: "ESPILocalTimeParameters.xml",
     espi_reading_type: "ESPIReadingType.xml",
     espi_usage_point: "ESPIUsagePoint.xml",
+    espi_usage_summaries: "ESPIUsageSummaries.xml",
     pge_application_information: "PGEApplicationInformation.xml",
     pge_authorization: "PGEAuthorization.xml",
     pge_interval_block: "PGEIntervalBlock.xml",
