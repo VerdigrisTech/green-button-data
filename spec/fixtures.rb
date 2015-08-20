@@ -2,6 +2,7 @@ module Fixtures
   FIXTURES = {
     espi_application_information: "ESPIApplicationInformation.xml",
     espi_authorization: "ESPIAuthorization.xml",
+    espi_electric_power_usage_summary: "ESPIPowerUsageSummary.xml",
     espi_interval_block: "ESPIIntervalBlock.xml",
     espi_local_time_parameters: "ESPILocalTimeParameters.xml",
     espi_reading_type: "ESPIReadingType.xml",
