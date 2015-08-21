@@ -131,6 +131,8 @@ module GreenButtonData
               entry.content.application_information
             when 'authorization'
               entry.content.authorization
+            when 'electricpowerusagesummary'
+              entry.content.electric_power_usage_summary
             when 'intervalblock'
               entry.content.interval_block
             when 'localtimeparameters'
@@ -139,6 +141,8 @@ module GreenButtonData
               entry.content.reading_type
             when 'usagepoint'
               entry.content.usage_point
+            when 'usagesummary'
+              entry.content.usage_summary
             else
               nil
             end
