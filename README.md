@@ -64,7 +64,7 @@ the `token` option in this case.
 
 > **DISCLAIMER:** Green Button Data is **_NOT_** responsible for managing OAuth
 tokens to make authenticated requests. There are other gems that provide mature,
-production proven OAuth 2 functionalities such as [OmniAuth]().
+production proven OAuth 2 functionalities such as [OmniAuth](https://github.com/intridea/omniauth).
 
 ### List all entries
 
