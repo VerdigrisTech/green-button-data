@@ -11,6 +11,7 @@ module Fixtures
     espi_usage_point_meter_readings: "ESPIUsagePointMeterReadings.xml",
     espi_usage_points: "ESPIUsagePoints.xml",
     espi_usage_summaries: "ESPIUsageSummaries.xml",
+    espi_usage_summary: "ESPIUsageSummary.xml",
     pge_application_information: "PGEApplicationInformation.xml",
     pge_authorization: "PGEAuthorization.xml",
     pge_interval_block: "PGEIntervalBlock.xml",
