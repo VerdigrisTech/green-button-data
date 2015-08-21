@@ -77,6 +77,14 @@ describe GreenButtonData::UsagePoint do
       "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading/1"
     end
 
+    let :usage_summaries_url do
+      "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/ElectricPowerUsageSummary"
+    end
+
+    let :usage_summary_url do
+      "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/ElectricPowerUsageSummary/1"
+    end
+
     let :interval_blocks_url do
       "https://services.greenbuttondata.org//DataCustodian/espi/1_1/resource/Subscription/5/UsagePoint/2/MeterReading/1/IntervalBlock"
     end
@@ -85,19 +93,29 @@ describe GreenButtonData::UsagePoint do
       before do
         stub_request(:get, meter_readings_url).
         to_return status: 200, body: espi_usage_point_meter_readings
+
+        stub_request(:get, usage_summaries_url).
+        to_return status: 200, body: espi_usage_summaries
       end
 
       it "should lazy load all related resources" do
         expect(usage_point.meter_readings).to be_a GreenButtonData::ModelCollection
-        expect(WebMock).to have_requested :get, meter_readings_url
         expect(usage_point.meter_readings.size).to eq 1
         expect(usage_point.meter_readings.first).to be_a GreenButtonData::MeterReading
         expect(usage_point.meter_readings.first.id).to eq "1"
+        expect(a_request(:get, meter_readings_url)).to have_been_made.once
+
+        expect(usage_point.usage_summaries).to be_a GreenButtonData::ModelCollection
+        expect(usage_point.usage_summaries.first).to be_a GreenButtonData::UsageSummary
+        expect(usage_point.usage_summaries.first.id).to eq "1"
+        expect(a_request(:get, usage_summaries_url)).to have_been_made.once
       end
 
       it "should use cached results on subsequent calls" do
         expect(usage_point.meter_readings).to be_a GreenButtonData::ModelCollection
         expect(WebMock).not_to have_requested :get, meter_readings_url
+        expect(usage_point.usage_summaries).to be_a GreenButtonData::ModelCollection
+        expect(WebMock).not_to have_requested :get, usage_summaries_url
       end
     end
 
@@ -108,6 +126,9 @@ describe GreenButtonData::UsagePoint do
 
         stub_request(:get, interval_blocks_url).
         to_return status: 200, body: espi_interval_block
+
+        stub_request(:get, usage_summary_url).
+        to_return status: 200, body: espi_usage_summary
       end
 
       it "should lazy load a related resource that matches id" do
@@ -116,6 +137,12 @@ describe GreenButtonData::UsagePoint do
         expect(usage_point.meter_readings.size).to eq 1
         expect(usage_point.meter_readings.first).to be_a GreenButtonData::MeterReading
         expect(usage_point.meter_readings.first.id).to eq "1"
+
+        expect(usage_point.usage_summaries(1)).to be_a GreenButtonData::UsageSummary
+        expect(WebMock).to have_requested :get, usage_summary_url
+        expect(usage_point.usage_summaries.size).to eq 1
+        expect(usage_point.usage_summaries.first).to be_a GreenButtonData::UsageSummary
+        expect(usage_point.usage_summaries.first.id).to eq "1"
       end
 
       it "should use cached results on subsequent calls" do

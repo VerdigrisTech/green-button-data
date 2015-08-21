@@ -38,8 +38,31 @@ module GreenButtonData
       end
     end
 
-    def usage_summary
-      # @usage_summary ||= UsageSummary.all
+    def usage_summary_url
+      return @usage_summary_url || @electric_power_usage_summary_url
+    end
+
+    def usage_summaries(id = nil)
+      if id.nil?
+        @usage_summaries ||= UsageSummary.all(usage_summary_url)
+
+        return @usage_summaries
+      else
+        # Try returning cached results first
+        @usage_summaries and usage_summary = @usage_summaries.find_by_id(id)
+        cache_miss = usage_summary.nil?
+
+        # Cache-miss; send API request
+        usage_summary ||= UsageSummary.find("#{usage_summary_url}/#{id}")
+
+        # Cache the result
+        unless @usage_summaries
+          @usage_summaries = ModelCollection.new
+          @usage_summaries << usage_summary if cache_miss
+        end
+
+        return usage_summary
+      end
     end
   end
 end
