@@ -19,6 +19,7 @@ require 'green-button-data/authorization'
 require 'green-button-data/interval_block'
 require 'green-button-data/meter_reading'
 require 'green-button-data/usage_point'
+require 'green-button-data/usage_summary'
 
 module GreenButtonData
   class << self
