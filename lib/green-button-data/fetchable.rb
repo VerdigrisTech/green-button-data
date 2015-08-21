@@ -85,13 +85,17 @@ module GreenButtonData
         connection_options = {}
 
         options ||= {}
-        connection_options[:ssl] = options[:client_ssl] if options[:client_ssl]
+        connection_options[:ssl] = options[:ssl] if options[:ssl]
 
         conn = Faraday.new connection_options
-        conn.token_auth(options[:token]) if options[:token]
+        conn.authorization :Bearer, options[:token] if options[:token]
 
         response = conn.get url
-        response.status == 200 and GreenButtonData::Feed.parse response.body
+        if response.status == 200
+          GreenButtonData::Feed.parse response.body
+        else
+          raise "Status: #{response.status}"
+        end
       end
 
       def feed
