@@ -30,6 +30,8 @@ module GreenButtonData
       self.each do |model|
         model.id.to_s == id.to_s and return model
       end
+
+      return nil
     end
   end
 end
