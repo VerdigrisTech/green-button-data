@@ -130,7 +130,8 @@ module GreenButtonData
         entry_content = nil
 
         feed.entries.each do |entry|
-          match_data = /\/(([a-zA-Z]+)|([a-zA-Z]+)\/(\w+=*))\/*\z/.match(entry.self)
+          match_data = /\/(([a-zA-Z]+)|([a-zA-Z]+)\/(\w+=*|(\d+,*\d*)+))\/*\z/.
+                       match(entry.self)
 
           unless match_data.nil?
             id = match_data[4] || entry.id
