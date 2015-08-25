@@ -4,7 +4,6 @@ gemspec
 
 group :deveopment do
   gem 'guard-rspec', require: false
-  gem 'byebug'
 end
 
 group :test do
