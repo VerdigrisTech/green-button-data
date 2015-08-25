@@ -22,9 +22,11 @@ module GreenButtonData
         if url.is_a?(Hash)
           # Assume it is an options Hash
           options = url
-          url = GreenButtonData.configuration
-                               .send("#{class_name.underscore}_url")
+          url = nil
         end
+
+        url ||= GreenButtonData.configuration
+                               .send("#{class_name.underscore}_url")
 
         @url = url
         @options = options
@@ -93,6 +95,10 @@ module GreenButtonData
         response = conn.get url
         if response.status == 200
           GreenButtonData::Feed.parse response.body
+        elsif response.status == 401
+          raise "Unauthorized API call; check authorization token and try again"
+        elsif response.status == 500
+          raise "500 Server Error:\n#{response.body}"
         else
           raise "Status: #{response.status}"
         end
@@ -124,12 +130,13 @@ module GreenButtonData
         entry_content = nil
 
         feed.entries.each do |entry|
-          match_data = /\/(\w+)(\/(\d+))*$/.match(entry.self.downcase)
+          match_data = /\/(([a-zA-Z]+)|([a-zA-Z]+)\/(\w+=*))\/*\z/.match(entry.self)
 
           unless match_data.nil?
-            id = match_data[3] || entry.id
+            id = match_data[4] || entry.id
+            type = match_data[2] || match_data[3]
 
-            entry_content = case match_data[1]
+            entry_content = case type.downcase
 
             when 'applicationinformation'
               entry.content.application_information
