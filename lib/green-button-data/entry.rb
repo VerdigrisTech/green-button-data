@@ -45,7 +45,7 @@ module GreenButtonData
             {}
           end
 
-          if id.is_a?(Numeric) || id.is_a?(String) || id.is_a?(Symbol)
+          result = if id.is_a?(Numeric) || id.is_a?(String) || id.is_a?(Symbol)
             # Try returning cached results first
             collection and instance = collection.find_by_id(id)
             cache_miss = instance.nil?
@@ -56,14 +56,15 @@ module GreenButtonData
             # Cache the result
             collection ||= ModelCollection.new
             collection << instance if cache_miss
-            self.instance_variable_set :"@#{key.to_s.pluralize}", collection
 
-            return instance
+            instance
           else
             collection ||= klazz.all url, options
-
-            return collection
           end
+
+          self.instance_variable_set :"@#{key.to_s.pluralize}", collection
+
+          return result
         end
       end
     end
