@@ -14,7 +14,7 @@ module GreenButtonData
         match_data = /\/(\w+)(\/(\d+))*$/.match(related_url)
 
         unless match_data.nil?
-          related_urls[:"#{match_data[1].underscore}_url"] = related_url
+          related_urls[:"#{match_data[1].underscore}"] = related_url
         end
       end
 
