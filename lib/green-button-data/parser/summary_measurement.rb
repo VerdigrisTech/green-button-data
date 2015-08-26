@@ -19,6 +19,18 @@ module GreenButtonData
         UNIT_SYMBOL[@uom]
       end
 
+      def raw_value
+        @value
+      end
+
+      def value
+        @value * 10.0 ** @power_of_ten_multiplier
+      end
+
+      def to_s
+        "#{value} #{uom.to_s}"
+      end
+
       # ESPI Namespacing
       element :'espi:powerOfTenMultiplier', class: Integer,
               as: :power_of_ten_multiplier
