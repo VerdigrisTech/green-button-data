@@ -34,6 +34,16 @@ module GreenButtonData
       end
     end
 
+    def epoch_to_time(epoch, kwargs = {})
+      time = Time.at normalize_epoch(epoch)
+
+      if kwargs[:local] == true
+        return time.localtime
+      else
+        return time.utc
+      end
+    end
+
     ##
     # Retrieves the first Sunday of the month
     #
