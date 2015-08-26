@@ -2,8 +2,7 @@ module GreenButtonData
   class UsagePoint < Entry
     include Enumerations
 
-    attr_accessor :id,
-                  :service_category
+    attr_accessor :service_category
 
     def initialize(attributes)
       super
