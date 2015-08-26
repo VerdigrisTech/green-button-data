@@ -50,8 +50,12 @@ module GreenButtonData
             collection and instance = collection.find_by_id(id)
             cache_miss = instance.nil?
 
-            # On cache miss, send API request
-            instance ||= klazz.find "#{url}/#{id}", options
+            # On cache miss or forced reload, send API request
+            instance = if !options[:reload] && instance
+              instance
+            else
+              klazz.find "#{url}/#{id}", options
+            end
 
             # Cache the result
             collection ||= ModelCollection.new
@@ -59,7 +63,11 @@ module GreenButtonData
 
             instance
           else
-            collection ||= klazz.all url, options
+            if !options[:reload] && collection
+              collection
+            else
+              collection = klazz.all url, options
+            end
           end
 
           self.instance_variable_set :"@#{key.to_s.pluralize}", collection
@@ -67,6 +75,6 @@ module GreenButtonData
           return result
         end
       end
-    end
-  end
-end
+    end # initialize
+  end # Entry
+end # GreenButtonData

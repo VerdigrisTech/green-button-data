@@ -89,10 +89,18 @@ module GreenButtonData
         options ||= {}
         connection_options[:ssl] = options[:ssl] if options[:ssl]
 
-        conn = Faraday.new connection_options
+        conn = Faraday.new connection_options do |connection|
+          connection.response :logger
+          connection.adapter Faraday.default_adapter
+        end
         conn.authorization :Bearer, options[:token] if options[:token]
 
-        response = conn.get url
+        response = conn.get do |req|
+          req.url url
+          req.params['published-min'] = options[:published_min] if options[:published_min]
+          req.params['published-max'] = options[:published_max] if options[:published_max]
+        end
+
         if response.status == 200
           GreenButtonData::Feed.parse response.body
         elsif response.status == 401
@@ -105,11 +113,19 @@ module GreenButtonData
       end
 
       def feed
-        @feed ||= fetch url, options
+        if !options[:reload] && @feed
+          @feed
+        else
+          @feed = fetch url, options
+        end
       end
 
       def records
-        @records ||= populate_models(feed)
+        if !options[:reload] && @records
+          @records
+        else
+          @records = populate_models(feed)
+        end
       end
 
       def options
