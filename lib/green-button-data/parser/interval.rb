@@ -12,12 +12,16 @@ module GreenButtonData
         normalize_epoch t
       end
 
-      def starts_at
-        Time.at(normalize_epoch(@start)).utc.to_datetime
+      def starts_at(kwargs = {})
+        epoch_to_time @start, kwargs
       end
 
-      def ends_at
-        Time.at(normalize_epoch(@start + @duration)).utc.to_datetime
+      def ends_at(kwargs = {})
+        epoch_to_time @start + @duration, kwargs
+      end
+
+      def to_s
+        "#{starts_at} - #{ends_at}"
       end
 
       # Standard ESPI namespacing

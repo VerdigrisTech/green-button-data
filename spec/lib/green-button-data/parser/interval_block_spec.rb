@@ -26,13 +26,13 @@ describe GreenButtonData::Parser::IntervalBlock do
 
     describe "#starts_at" do
       it "should return the start datetime" do
-        expect(subject.starts_at).to eq DateTime.new 2013, 1, 1, 5
+        expect(subject.starts_at).to eq DateTime.new(2013, 1, 1, 5).to_time
       end
     end
 
     describe "#ends_at" do
       it "should return the end datetime" do
-        expect(subject.ends_at).to eq DateTime.new 2013, 2, 1, 5
+        expect(subject.ends_at).to eq DateTime.new(2013, 2, 1, 5).to_time
       end
     end
   end
@@ -62,13 +62,13 @@ describe GreenButtonData::Parser::IntervalBlock do
 
     describe "#starts_at" do
       it "should return the start datetime" do
-        expect(subject.starts_at).to eq DateTime.new 2015, 4, 30, 7
+        expect(subject.starts_at).to eq DateTime.new(2015, 4, 30, 7).to_time
       end
     end
 
     describe "#ends_at" do
       it "should return the end datetime" do
-        expect(subject.ends_at).to eq DateTime.new 2015, 8, 3, 7
+        expect(subject.ends_at).to eq DateTime.new(2015, 8, 3, 7).to_time
       end
     end
   end
