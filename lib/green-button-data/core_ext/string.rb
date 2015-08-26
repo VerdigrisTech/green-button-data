@@ -28,4 +28,8 @@ class String
       return result
     end
   end
+
+  def dasherize
+    self.tr('_', '-')
+  end
 end
