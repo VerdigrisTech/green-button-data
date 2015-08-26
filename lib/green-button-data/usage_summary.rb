@@ -30,7 +30,7 @@ module GreenButtonData
     end
 
     def to_s
-      ": #{@overall_consumption_last_period}"
+      "#{@billing_period}: #{@overall_consumption_last_period}"
     end
   end
 end
