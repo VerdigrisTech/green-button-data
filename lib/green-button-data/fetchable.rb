@@ -97,8 +97,7 @@ module GreenButtonData
 
         response = conn.get do |req|
           req.url url
-          req.params['published-min'] = options[:published_min] if options[:published_min]
-          req.params['published-max'] = options[:published_max] if options[:published_max]
+          req.params = build_query_params options
         end
 
         if response.status == 200
@@ -192,6 +191,16 @@ module GreenButtonData
         end
 
         return models
+      end
+
+      def build_query_params(options)
+        params = {}
+
+        options.each do |key, value|
+          params[key.to_s.dasherize] = value
+        end
+
+        return params
       end
     end # ClassMethods
   end # Fetchable
