@@ -3,7 +3,9 @@ module GreenButtonData
     include Enumerations
     include Utilities
 
-    attr_reader :billing_period
+    attr_reader :billing_period,
+                :overall_consumption_last_period
+
     attr_writer :commodity,
                 :quality_of_reading
 
@@ -24,13 +26,11 @@ module GreenButtonData
     end
 
     def status_timestamp(kwargs = {})
-      datetime = Time.at normalize_epoch(@status_time_stamp)
+      epoch_to_time @status_time_stamp, kwargs
+    end
 
-      if kwargs[:local] == true
-        return datetime.localtime
-      else
-        return datetime.utc
-      end
+    def to_s
+      ": #{@overall_consumption_last_period}"
     end
   end
 end
