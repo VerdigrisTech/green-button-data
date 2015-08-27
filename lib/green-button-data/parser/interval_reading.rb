@@ -4,7 +4,10 @@ module GreenButtonData
       include SAXMachine
       include Enumerations
 
-      element :cost, class: Integer
+      element :cost, class: Integer do |cost|
+        cost / 100000.0
+      end
+
       element :quality, class: Integer
       element :timePeriod, class: Interval, as: :time_period
       element :value, class: Integer
