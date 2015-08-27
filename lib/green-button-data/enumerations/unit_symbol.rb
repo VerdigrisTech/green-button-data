@@ -50,6 +50,7 @@ module GreenButtonData
        70 => :A2s,
        71 => :VAh,
        72 => :Wh,
+       73 => :VAhr,
        74 => :V_per_Hz,
        75 => :Hz_per_sec,
        76 => :char,
