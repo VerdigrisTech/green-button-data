@@ -19,12 +19,17 @@ module GreenButtonData
       result = []
 
       @interval_readings.each do |interval_reading|
-        result << {
+        reading = {
           starts_at: interval_reading.time_period.starts_at(local: true),
           ends_at: interval_reading.time_period.ends_at(local: true),
           duration: interval_reading.time_period.duration,
           value: interval_reading.value
         }
+
+        reading[:cost] = interval_reading.cost if interval_reading.cost
+        reading[:quality] = interval_reading.quality if interval_reading.quality
+
+        result << reading
       end
 
       return result
