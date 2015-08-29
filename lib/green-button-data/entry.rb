@@ -73,5 +73,15 @@ module GreenButtonData
         end
       end
     end # initialize
+
+    protected
+
+    def get_enum_symbol(enum, value)
+      if value.is_a? Numeric
+        enum[value]
+      else
+        value
+      end
+    end
   end # Entry
 end # GreenButtonData
