@@ -26,10 +26,10 @@ describe GreenButtonData::ApplicationInformation do
   end
 
   let(:client_id) { "third_party" }
-  let(:client_id_issued_at) { Time.new(2014, 6, 19, 8).utc }
+  let(:client_id_issued_at) { Time.at(1403190000) }
   let(:client_name) { "Green Button Third Party" }
   let(:client_secret) { "secret" }
-  let(:client_secret_expires_at) { Time.new(146138514283, 6, 19, 0, 45, 3).utc }
+  let(:client_secret_expires_at) { Time.at(2 ** (0.size * 8 - 2) - 1) }
 
   let :contacts do
     "john.teeter@energyos.org," +
