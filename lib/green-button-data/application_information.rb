@@ -1,143 +1,112 @@
 module GreenButtonData
-  class ApplicationInformation
-    attr_reader :data_custodian_id,
-                :data_custodian_application_status,
-                :data_custodian_scope_selection_screen_uri,
-                :data_custodian_bulk_request_uri,
-                :data_custodian_resource_endpoint,
-                :third_party_application_type,
-                :third_party_application_use,
-                :third_party_application_description,
-                :third_party_phone,
-                :third_party_scope_selection_screen_uri,
-                :third_party_user_portal_screen_uri,
-                :third_party_notify_uri,
-                :authorization_server_uri,
-                :authorization_server_authorization_endpoint,
-                :authorization_server_registration_endpoint,
-                :authorization_server_token_endpoint,
-                :token_endpoint_auth_method,
-                :client_name,
-                :client_id,
-                :client_secret,
-                :client_id_issued_at,
-                :client_secret_expires_at,
-                :redirect_uri,
-                :software_id,
-                :software_version,
-                :contacts,
-                :scopes,
-                :grant_types,
-                :response_types,
-                :registration_client_uri,
-                :registration_access_token
+  class ApplicationInformation < Entry
+    include Enumerations
+    include Utilities
 
-    attr_accessor :status
+    attr_accessor :authorization_server_authorization_endpoint,
+                  :authorization_server_registration_endpoint,
+                  :authorization_server_token_endpoint,
+                  :authorization_server_uri,
+                  :contacts,
+                  :client_id,
+                  :client_name,
+                  :client_secret,
+                  :data_custodian_bulk_request_uri,
+                  :data_custodian_id,
+                  :data_custodian_resource_endpoint,
+                  :data_custodian_scope_selection_screen_uri,
+                  :grant_types,
+                  :redirect_uri,
+                  :registration_access_token,
+                  :registration_client_uri,
+                  :response_types,
+                  :scopes,
+                  :software_id,
+                  :software_version,
+                  :third_party_application_description,
+                  :third_party_notify_uri,
+                  :third_party_phone,
+                  :third_party_scope_selection_screen_uri,
+                  :third_party_user_portal_screen_uri,
+                  :token_endpoint_auth_method
 
-    def initialize(attributes)
-      if attributes.is_a?(Hash)
-        @data_custodian_id = attributes[:data_custodian_id]
-        @data_custodian_application_status = attributes[:data_custodian_application_status]
-        @data_custodian_scope_selection_screen_uri = attributes[:data_custodian_scope_selection_screen_uri]
-        @data_custodian_bulk_request_uri = attributes[:data_custodian_bulk_request_uri]
-        @data_custodian_resource_endpoint = attributes[:data_custodian_resource_endpoint]
-        @third_party_application_type = attributes[:third_party_application_type]
-        @third_party_application_use = attributes[:third_party_application_use]
-        @third_party_application_description = attributes[:third_party_application_description]
-        @third_party_phone = attributes[:third_party_phone]
-        @third_party_scope_selection_screen_uri = attributes[:third_party_scope_selection_screen_uri]
-        @third_party_user_portal_screen_uri = attributes[:third_party_user_portal_screen_uri]
-        @third_party_notify_uri = attributes[:third_party_notify_uri]
-        @authorization_server_uri = attributes[:authorization_server_uri]
-        @authorization_server_authorization_endpoint = attributes[:authorization_server_authorization_endpoint]
-        @authorization_server_registration_endpoint = attributes[:authorization_server_registration_endpoint]
-        @authorization_server_token_endpoint = attributes[:authorization_server_token_endpoint]
-        @token_endpoint_auth_method = attributes[:token_endpoint_auth_method]
-        @client_name = attributes[:client_name]
-        @client_id = attributes[:client_id]
-        @client_secret = attributes[:client_secret]
-        @client_id_issued_at = attributes[:client_id_issued_at]
-        @client_secret_expires_at = attributes[:client_secret_expires_at]
-        @redirect_uri = attributes[:redirect_uri]
-        @software_id = attributes[:software_id]
-        @software_version = attributes[:software_version]
-        @contacts = attributes[:contacts]
-        @scopes = attributes[:scopes]
-        @grant_types = attributes[:grant_types]
-        @response_types = attributes[:response_types]
-        @registration_client_uri = attributes[:registration_client_uri]
-        @registration_access_token = attributes[:registration_access_token]
-      elsif attributes.is_a?(GreenButtonData::Parser::ApplicationInformation)
-        @data_custodian_id = attributes.data_custodian_id
-        @data_custodian_application_status = attributes.application_status
-        @data_custodian_scope_selection_screen_uri = attributes.data_custodian_scope_selection_screen_uri
-        @data_custodian_bulk_request_uri = attributes.data_custodian_bulk_request_uri
-        @data_custodian_resource_endpoint = attributes.data_custodian_resource_endpoint
-        @third_party_application_type = attributes.application_type
-        @third_party_application_use = attributes.application_use
-        @third_party_application_description = attributes.third_party_application_description
-        @third_party_phone = attributes.third_party_phone
-        @third_party_scope_selection_screen_uri = attributes.third_party_scope_selection_screen_uri
-        @third_party_user_portal_screen_uri = attributes.third_party_user_portal_screen_uri
-        @third_party_notify_uri = attributes.third_party_notify_uri
-        @authorization_server_uri = attributes.authorization_server_uri
-        @authorization_server_authorization_endpoint = attributes.authorization_server_authorization_endpoint
-        @authorization_server_registration_endpoint = attributes.authorization_server_registration_endpoint
-        @authorization_server_token_endpoint = attributes.authorization_server_token_endpoint
-        @token_endpoint_auth_method = attributes.token_endpoint_auth_method
-        @client_name = attributes.client_name
-        @client_id = attributes.client_id
-        @client_secret = attributes.client_secret
-        @client_id_issued_at = attributes.client_id_issued_at
-        @client_secret_expires_at = attributes.client_secret_expires_at
-        @redirect_uri = attributes.redirect_uri
-        @software_id = attributes.software_id
-        @software_version = attributes.software_version
-        @contacts = attributes.contacts
-        @scopes = attributes.scopes
-        @grant_types = attributes.grant_types
-        @response_types = attributes.response_types
-        @registration_client_uri = attributes.registration_client_uri
-        @registration_access_token = attributes.registration_access_token
-      end
+    def client_id_issued_at(kwargs = {})
+      epoch_to_time @client_id_issued_at, kwargs
     end
 
-    def self.get(url = nil, options = nil)
-      @url = url or raise ArgumentError "url is required to fetch data"
-      @token = options[:token]
-      @client_ssl = options[:client_ssl]
+    def client_secret_expires_at(kwargs = {})
+      if @client_secret_expires_at == 0
+        # Maximum Fixnum = 4611686018427387903
+        max_fixnum = 2 ** (@client_secret_expires_at.size * 8 - 2) - 1
 
-      @connection_options = {}
-      @connection_options.ssl = @client_ssl if @client_ssl
+        # Roughly 146 billion years into the future; Sun would be long dead by
+        # this time; so for all intents and purposes, never expires
+        time = Time.at(max_fixnum)
 
-      conn = Faraday.new @connection_options
-      conn.token_auth(@token) if @token
-
-      response = conn.get(@url)
-
-      application_information = if response.status == 200
-        feed = GreenButtonData::Parser::Feed.parse response.body
-        info = find_application_information(feed) or raise "invalid response"
-
-        self.new info
-      else
-        self.new
-      end
-
-      application_information.status = response.status
-      application_information
-    end
-
-    def self.find_application_information(feed)
-      application_information = nil
-
-      feed.entries.each do |entry|
-        if entry.self.downcase =~ /applicationinformation/
-          application_information = entry.content.application_information
+        if kwargs[:local] == true
+          return time.localtime
+        else
+          return time.utc
         end
+      else
+        epoch_to_time(@client_secret_expires_at, kwargs)
       end
+    end
 
-      application_information
+    def data_custodian_application_status
+      get_enum_symbol DATA_CUSTODIAN_APPLICATION_STATUS,
+                      @data_custodian_application_status
+    end
+
+    def third_party_application_type
+      get_enum_symbol THIRD_PARTY_APPLICATION_TYPE,
+                      @third_party_application_type
+    end
+
+    def third_party_application_use
+      get_enum_symbol THIRD_PARTY_APPLICATION_USE, @third_party_application_use
+    end
+
+    def to_h
+      {
+        authorization_server_authorization_endpoint:
+          authorization_server_authorization_endpoint,
+        authorization_server_registration_endpoint:
+          authorization_server_registration_endpoint,
+        authorization_server_token_endpoint:
+          authorization_server_token_endpoint,
+        authorization_server_uri: authorization_server_uri,
+        contacts: contacts,
+        client_id: client_id,
+        client_id_issued_at: client_id_issued_at,
+        client_name: client_name,
+        client_secret: client_secret,
+        client_secret_expires_at: client_secret_expires_at,
+        data_custodian_application_status: data_custodian_application_status,
+        data_custodian_bulk_request_uri: data_custodian_bulk_request_uri,
+        data_custodian_id: data_custodian_id,
+        data_custodian_resource_endpoint: data_custodian_resource_endpoint,
+        data_custodian_scope_selection_screen_uri:
+          data_custodian_scope_selection_screen_uri,
+        grant_types: grant_types,
+        redirect_uri: redirect_uri,
+        registration_access_token: registration_access_token,
+        registration_client_uri: registration_client_uri,
+        response_types: response_types,
+        scopes: scopes,
+        software_id: software_id,
+        software_version: software_version,
+        third_party_application_description:
+          third_party_application_description,
+        third_party_application_type: third_party_application_type,
+        third_party_application_use: third_party_application_use,
+        third_party_notify_uri: third_party_notify_uri,
+        third_party_phone: third_party_phone,
+        third_party_scope_selection_screen_uri:
+          third_party_scope_selection_screen_uri,
+        third_party_user_portal_screen_uri: third_party_user_portal_screen_uri,
+        token_endpoint_auth_method: token_endpoint_auth_method
+      }
     end
   end
 end
