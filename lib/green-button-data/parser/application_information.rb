@@ -44,17 +44,8 @@ module GreenButtonData
       element :client_name
       element :client_id
       element :client_secret
-      element :client_id_issued_at, class: Integer do |epoch|
-        Time.at(normalize_epoch(epoch)).utc.to_datetime
-      end
-      element :client_secret_expires_at, class: Integer do |epoch|
-        if epoch == 0
-          # 0 means don't expire; set it to distant future
-          DateTime.new 9999, 12, 31, 23, 59, 59
-        else
-          Time.at(normalize_epoch(epoch)).utc.to_datetime
-        end
-      end
+      element :client_id_issued_at, class: Integer
+      element :client_secret_expires_at, class: Integer
       element :redirect_uri
       element :software_id
       element :software_version

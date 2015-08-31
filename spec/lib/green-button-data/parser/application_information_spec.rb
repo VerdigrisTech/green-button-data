@@ -90,11 +90,11 @@ describe GreenButtonData::Parser::ApplicationInformation do
     end
 
     it "should parse date when client ID was issued" do
-      expect(subject.client_id_issued_at).to eq DateTime.new 2014, 6, 19, 15
+      expect(subject.client_id_issued_at).to eq 1403190000
     end
 
     it "should parse when client secret expires" do
-      expect(subject.client_secret_expires_at).to eq DateTime.new 9999, 12, 31, 23, 59, 59
+      expect(subject.client_secret_expires_at).to eq 0
     end
 
     it "should parse redirect URI" do
@@ -245,11 +245,11 @@ describe GreenButtonData::Parser::ApplicationInformation do
     end
 
     it "should parse date when client ID was issued" do
-      expect(subject.client_id_issued_at).to eq DateTime.new 2015, 10, 21, 16, 21, 21
+      expect(subject.client_id_issued_at).to eq 1445444481075
     end
 
     it "should parse when client secret expires" do
-      expect(subject.client_secret_expires_at).to eq DateTime.new 9999, 12, 31, 23, 59, 59
+      expect(subject.client_secret_expires_at).to eq 0
     end
 
     it "should parse redirect URI" do
