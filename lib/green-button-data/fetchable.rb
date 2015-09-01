@@ -203,7 +203,7 @@ module GreenButtonData
             end
           end
 
-          unless key == :ssl || key == :token
+          unless key == :ssl || key == :token || key == :subscription_id
             params[key.to_s.dasherize] = value
           end
         end
