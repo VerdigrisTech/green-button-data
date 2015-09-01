@@ -37,13 +37,11 @@ You can add configuration options like the following:
 
 ```ruby
 GreenButtonData.configure do |config|
-  config.base_url = "https://services.greenbuttondata.org/"
-  config.application_information_path = "DataCustodian/espi/1_1/resource/ApplicationInformation"
-  config.authorization_path = "DataCustodian/espi/1_1/resource/Authorization"
-  config.interval_block_path = "DataCustodian/espi/1_1/resource/IntervalBlock"
-  config.meter_reading_path = "DataCustodian/espi/1_1/resource/MeterReading"
-  config.usage_point_path = "DataCustodian/espi/1_1/resource/UsagePoint"
-  config.usage_summary_path = "DataCustodian/espi/1_1/resource/UsageSummary"
+  config.base_url = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/"
+  config.application_information_path = "ApplicationInformation/"
+  config.authorization_path = "Authorization/"
+  config.subscription_path = "Subscription/"
+  config.usage_point_path = "UsagePoint/"
 end
 ```
 
