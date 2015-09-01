@@ -115,10 +115,10 @@ describe GreenButtonData::ApplicationInformation do
 
   before do
     GreenButtonData.configure do |config|
-      config.base_url                     = "https://services.greenbuttondata" +
-                                            ".org/"
-      config.application_information_path = "DataCustodian/espi/1_1/resource/" +
-                                            "ApplicationInformation/"
+      config.base_url = "https://services.greenbuttondata.org/DataCustodian/" +
+                        "espi/1_1/resource/"
+
+      config.application_information_path = "ApplicationInformation/"
     end
 
     stub_request(:get, all_url).to_return status: 200, body: espi_application_information
