@@ -1,24 +1,31 @@
 require "spec_helper"
 
 describe GreenButtonData::UsagePoint do
-  let(:all_url) { GreenButtonData.configuration.usage_point_url }
+  let(:all_url) { GreenButtonData.configuration.usage_point_url subscription_id: 5 }
   let :find_url do
-    "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/UsagePoint/2"
+    "#{all_url}2"
   end
   let(:token) { "53520584-d640-4812-a721-8a1afa459ff7" }
 
   subject { GreenButtonData::UsagePoint }
 
-  let(:usage_point) { subject.find(2, token: token) }
+  let(:usage_point) { subject.find(2, subscription_id: 5, token: token) }
 
   before do
     GreenButtonData.configure do |config|
-      config.base_url = "https://services.greenbuttondata.org/"
-      config.usage_point_path = "DataCustodian/espi/1_1/resource/UsagePoint"
+      config.base_url = "https://services.greenbuttondata.org/DataCustodian/" +
+                        "espi/1_1/resource"
+      config.subscription_path = "Subscription/"
+      config.usage_point_path = "UsagePoint/"
     end
 
     stub_request(:get, all_url).to_return status: 200, body: espi_usage_points
+
     stub_request(:get, find_url).to_return status: 200, body: espi_usage_point
+
+    stub_request(
+      :get, "#{find_url}/"
+    ).to_return status: 200, body: espi_usage_point
   end
 
   describe "Constructor" do
@@ -31,7 +38,7 @@ describe GreenButtonData::UsagePoint do
 
   describe "#all" do
     context "valid authorization" do
-      let(:collection) { subject.all(token: token) }
+      let(:collection) { subject.all(subscription_id: 5, token: token) }
 
       it "should return a ModelCollection" do
         expect(collection).to be_a GreenButtonData::ModelCollection
@@ -55,7 +62,7 @@ describe GreenButtonData::UsagePoint do
     context "valid authorization" do
       it "is an instance of UsagePoint" do
         expect(usage_point).to be_a GreenButtonData::UsagePoint
-        expect(WebMock).to have_requested(:get, find_url)
+        expect(WebMock).to have_requested(:get, "#{find_url}/")
       end
 
       it "should populate attributes" do

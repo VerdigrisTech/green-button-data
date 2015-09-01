@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe GreenButtonData::ApplicationInformation do
   let(:all_url) { GreenButtonData.configuration.application_information_url }
-  let(:find_url) { "#{all_url}/2" }
+  let(:find_url) { "#{all_url}2" }
   let(:token) { "c66b0854-ea1f-4e24-afb7-afab9e0f6c5e" }
 
   subject { GreenButtonData::ApplicationInformation }
@@ -121,8 +121,17 @@ describe GreenButtonData::ApplicationInformation do
       config.application_information_path = "ApplicationInformation/"
     end
 
-    stub_request(:get, all_url).to_return status: 200, body: espi_application_information
-    stub_request(:get, find_url).to_return status: 200, body: espi_application_information
+    stub_request(
+      :get, all_url
+    ).to_return status: 200, body: espi_application_information
+
+    stub_request(
+      :get, find_url
+    ).to_return status: 200, body: espi_application_information
+
+    stub_request(
+      :get, "#{find_url}/"
+    ).to_return status: 200, body: espi_application_information
   end
 
   describe "Constructor" do
@@ -231,7 +240,7 @@ describe GreenButtonData::ApplicationInformation do
     context "valid authorization" do
       it "is an instance of ApplicationInformation" do
         expect(application_information).to be_a subject
-        expect(WebMock).to have_requested(:get, find_url)
+        expect(WebMock).to have_requested(:get, "#{find_url}/")
       end
 
       it "should populate attributes" do
