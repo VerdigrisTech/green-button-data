@@ -25,6 +25,15 @@ Then run Bundler:
 $ bundle
 ```
 
+Unless you have a project that auto loads all gems in the Gemfile (e.g. a Rails
+project), you will need to require it:
+
+```ruby
+require 'green-button-data'
+```
+
+This will expose the GreenButtonData module namespace.
+
 ## Integrating GreenButtonData Into Your Application
 
 GreenButtonData gem provides a familiar interface to consuming API endpoints.
@@ -44,6 +53,8 @@ GreenButtonData.configure do |config|
   config.usage_point_path = "UsagePoint/"
 end
 ```
+
+Note that each path _must_ end with a trailing slash.
 
 #### Rails Integration
 
