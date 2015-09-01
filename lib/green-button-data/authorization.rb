@@ -1,6 +1,7 @@
 module GreenButtonData
   class Authorization < Entry
     include Enumerations
+    include Utilities
 
     attr_reader :id
 
@@ -11,18 +12,24 @@ module GreenButtonData
                   :resource_uri,
                   :authorization_uri
 
-    def initialize(attributes)
-      super
+    def active?
+      @status > 0
+    end
 
-      if attributes[:status].is_a? Numeric
-        @status = AUTHORIZATION_STATUS[attributes[:status]]
-      elsif attributes[:status].is_a? Symbol
-        @status = attributes[:status]
+    def expires_at
+      if @expires_at.is_a? Numeric
+        epoch_to_time @expires_at
+      elsif @expires_at.is_a? String
+        parse_datetime(@expires_at).to_time
+      elsif @expires_at.respond_to? :to_time
+        @expires_at.to_time
+      else
+        raise "Invalid expires_at type"
       end
     end
 
-    def active?
-      @status > 0
+    def status
+      get_enum_symbol AUTHORIZATION_STATUS, @status
     end
   end
 end

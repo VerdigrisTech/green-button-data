@@ -11,12 +11,17 @@ describe GreenButtonData::Authorization do
 
   before do
     GreenButtonData.configure do |config|
-      config.base_url = "https://services.greenbuttondata.org/"
-      config.authorization_path = "DataCustodian/espi/1_1/resource/Authorization"
+      config.base_url = "https://services.greenbuttondata.org/DataCustodian/" +
+                        "espi/1_1/resource/"
+
+      config.authorization_path = "Authorization/"
     end
 
     stub_request(:get, all_url).to_return status: 200, body: espi_authorization
     stub_request(:get, find_url).to_return status: 200, body: espi_authorization
+    stub_request(
+      :get, "#{find_url}/"
+    ).to_return status: 200, body: espi_authorization
   end
 
   describe "Constructor" do
