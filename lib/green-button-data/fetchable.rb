@@ -86,7 +86,7 @@ module GreenButtonData
             GreenButtonData.configuration.send "#{class_name.underscore}_url"
           end
 
-          "#{path_prefix}/#{id}"
+          URI.join path_prefix, "#{id}/"
         end
 
         return populate_models(fetch(url, options)).first
