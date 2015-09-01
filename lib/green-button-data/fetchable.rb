@@ -25,8 +25,9 @@ module GreenButtonData
           url = nil
         end
 
-        url ||= GreenButtonData.configuration
-                               .send("#{class_name.underscore}_url")
+        url ||= GreenButtonData.configuration.send(
+          "#{class_name.underscore}_url", url_options(options)
+        )
 
         @url = url
         @options = options
@@ -69,8 +70,10 @@ module GreenButtonData
         url = if id =~ /\A#{URI::regexp}\z/
           id
         else
-          path_prefix = GreenButtonData.configuration
-                                       .send("#{class_name.underscore}_url")
+          path_prefix = GreenButtonData.configuration.send(
+            "#{class_name.underscore}_url", url_options(options)
+          )
+
           "#{path_prefix}/#{id}"
         end
 
@@ -209,6 +212,18 @@ module GreenButtonData
         end
 
         return params
+      end
+
+      def url_options(options)
+        url_options = {}
+
+        options.each do |key, value|
+          if /_id$/ =~ key
+            url_options[key] = value
+          end
+        end
+
+        return url_options
       end
     end # ClassMethods
   end # Fetchable
