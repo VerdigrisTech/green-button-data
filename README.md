@@ -6,10 +6,10 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/VerdigrisTech/green-button-data.svg)](https://codeclimate.com/github/VerdigrisTech/green-button-data)
 [![Code Coverage](https://img.shields.io/codecov/c/github/VerdigrisTech/green-button-data.svg)](https://codecov.io/github/VerdigrisTech/green-button-data)
 
-Green Button Data is a Ruby gem that can quickly parse the Green Button data
-standard. It uses an event-driven <abbr title="Simple API for XML">SAX</abbr>
-parser which does not build the entire <abbr title="Document Object Model">DOM</abbr>
-in memory.
+Green Button Data is a Ruby gem that can consume Green Button APIs and parse
+the Green Button data XML schema very quickly. It uses an event-driven
+<abbr title="Simple API for XML">SAX</abbr> parser which parses XML data without
+building an entire <abbr title="Document Object Model">DOM</abbr> in memory.
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ You can add configuration options like the following:
 
 ```ruby
 GreenButtonData.configure do |config|
-  config.base_url = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/"
+  config.base_url = "https://api.example.com/DataCustodian/espi/1_1/resource/"
   config.application_information_path = "ApplicationInformation/"
   config.authorization_path = "Authorization/"
   config.subscription_path = "Subscription/"
@@ -57,7 +57,7 @@ Green Button Data specification states that all API endpoints be secured with
 OAuth2 which means most fetch operations will require auth tokens.
 
 Some endpoints are secured further by utilizing client SSL certificates (e.g.
-Pacific Gas & Electric). You may pass in `client_ssl` options in addition to
+Pacific Gas & Electric). You may pass in `ssl` options in addition to
 the `token` option in this case.
 
 > **DISCLAIMER:** Green Button Data is **_NOT_** responsible for managing OAuth
