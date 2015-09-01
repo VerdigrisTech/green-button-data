@@ -78,7 +78,7 @@ module GreenButtonData
         else
           url_options = url_options options
 
-          path_prefix = if url_options.keys.size > 1
+          path_prefix = if url_options.keys.size > 0
             GreenButtonData.configuration.send(
               "#{class_name.underscore}_url", url_options(options)
             )
@@ -86,7 +86,7 @@ module GreenButtonData
             GreenButtonData.configuration.send "#{class_name.underscore}_url"
           end
 
-          URI.join path_prefix, "#{id}/"
+          URI.join(path_prefix, "#{id}/").to_s
         end
 
         return populate_models(fetch(url, options)).first
