@@ -76,8 +76,11 @@ module GreenButtonData
       return uri.to_s
     end
 
-    def reading_type_url
-      return URI.join(@base_url, @reading_type_path).to_s
+    def reading_type_url(id)
+      uri = URI.join @base_url, @reading_type_path
+      uri = URI.join uri, "#{id}/" if id
+
+      return uri.to_s
     end
 
     def subscription_url(id)
