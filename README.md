@@ -162,8 +162,12 @@ digits of precision and be guaranteed latest features and bug fixes without
 backwards breaking changes:
 
 ```ruby
-gem 'green-button-data', '~> 0.2'
+gem 'green-button-data', '~> 0.1'
 ```
+
+Exception to this rule as per the SemVer specification is major version zero for
+initial development. This gem's API should NOT be considered stable until 1.0
+release.
 
 ## License
 
