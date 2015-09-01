@@ -25,9 +25,15 @@ module GreenButtonData
           url = nil
         end
 
-        url ||= GreenButtonData.configuration.send(
-          "#{class_name.underscore}_url", url_options(options)
-        )
+        url_options = url_options(options)
+
+        url ||= if url_options.keys.size > 0
+          GreenButtonData.configuration.send(
+            "#{class_name.underscore}_url", url_options(options)
+          )
+        else
+          GreenButtonData.configuration.send "#{class_name.underscore}_url"
+        end
 
         @url = url
         @options = options
@@ -70,9 +76,15 @@ module GreenButtonData
         url = if id =~ /\A#{URI::regexp}\z/
           id
         else
-          path_prefix = GreenButtonData.configuration.send(
-            "#{class_name.underscore}_url", url_options(options)
-          )
+          url_options = url_options options
+
+          path_prefix = if url_options.keys.size > 1
+            GreenButtonData.configuration.send(
+              "#{class_name.underscore}_url", url_options(options)
+            )
+          else
+            GreenButtonData.configuration.send "#{class_name.underscore}_url"
+          end
 
           "#{path_prefix}/#{id}"
         end
