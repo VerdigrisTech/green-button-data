@@ -20,5 +20,9 @@ module GreenButtonData
         @status = attributes[:status]
       end
     end
+
+    def active?
+      @status > 0
+    end
   end
 end

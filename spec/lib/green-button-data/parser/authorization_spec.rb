@@ -42,12 +42,6 @@ describe GreenButtonData::Parser::Authorization do
     it "should parse authorization URI" do
       expect(subject.authorization_uri).to eq "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization/4"
     end
-
-    describe "#active?" do
-      it "should return true if status is not 0" do
-        expect(subject.active?).to eq true
-      end
-    end
   end
 
   context "PG&E namespace" do
@@ -90,12 +84,6 @@ describe GreenButtonData::Parser::Authorization do
 
     it "should parse authorization URI" do
       expect(subject.authorization_uri).to eq "https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Authorization/0"
-    end
-
-    describe "#active?" do
-      it "should return true if status is not 0" do
-        expect(subject.active?).to eq true
-      end
     end
   end
 end

@@ -13,10 +13,6 @@ module GreenButtonData
 
       element :status, class: Integer
 
-      def active?
-        @status > 0
-      end
-
       # TODO: Add scope parser
       element :scope
 
