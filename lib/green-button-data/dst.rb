@@ -1,5 +1,7 @@
 module GreenButtonData
   module Dst
+    include Utilities
+
     # From ESPI XML schema:
     # [extension] Bit map encoded rule from which is calculated the start or
     # end time, within the current year, to which daylight savings time offset
