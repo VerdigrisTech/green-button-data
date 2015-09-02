@@ -45,7 +45,7 @@ describe GreenButtonData::ReadingType do
     end
   end
 
-  describe "#all" do
+  describe ".all" do
     context "valid authorization" do
       let(:collection) { subject.all token: token }
 
@@ -75,7 +75,7 @@ describe GreenButtonData::ReadingType do
     end
   end
 
-  describe "#find" do
+  describe ".find" do
     context "valid authorization" do
       it "is an instance of ReadingType" do
         expect(reading_type).to be_a subject

@@ -77,7 +77,7 @@ production proven OAuth 2 functionalities such as [OmniAuth](https://github.com/
 
 ### List all entries
 
-By default, the `#all` method attempts to use the URL path set by configuration:
+By default, the `.all` method attempts to use the URL path set by configuration:
 
 ```ruby
 require 'green-button-data'
@@ -98,7 +98,7 @@ usage_points = UsagePoint.all "https://someotherapi.org/espi/Authorization",
 
 ### Find an entry by ID
 
-If you have URL defined in configuration, the `#find` method appends the ID to
+If you have URL defined in configuration, the `.find` method appends the ID to
 the URL:
 
 ```ruby
@@ -111,7 +111,7 @@ end
 usage_point = GreenButtonData::UsagePoint.find 2, token: access_token
 ```
 
-As with `#all` method, URL can be overridden per request in `#find`:
+As with `.all` method, URL can be overridden per request in `.find`:
 
 ```ruby
 usage_point = GreenButtonData::UsagePoint.find "https://someotherapi.org/espi/UsagePoint/1",

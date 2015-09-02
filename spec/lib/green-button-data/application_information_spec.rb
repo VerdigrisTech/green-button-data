@@ -142,7 +142,7 @@ describe GreenButtonData::ApplicationInformation do
     end
   end
 
-  describe "#all" do
+  describe ".all" do
     context "valid authorization" do
       let(:collection) { subject.all(token: token) }
 
@@ -236,7 +236,7 @@ describe GreenButtonData::ApplicationInformation do
     end
   end
 
-  describe "#find" do
+  describe ".find" do
     context "valid authorization" do
       it "is an instance of ApplicationInformation" do
         expect(application_information).to be_a subject

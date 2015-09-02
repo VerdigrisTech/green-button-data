@@ -35,7 +35,7 @@ describe GreenButtonData::Authorization do
     end
   end
 
-  describe "#all" do
+  describe ".all" do
     context "valid authorization" do
       let(:collection) { subject.all(token: token) }
 
@@ -56,7 +56,7 @@ describe GreenButtonData::Authorization do
     end
   end
 
-  describe "#find" do
+  describe ".find" do
     context "valid authorization" do
       it "is an instance of Authorization" do
         expect(subject.find(4, token: token)).to be_a GreenButtonData::Authorization

@@ -36,7 +36,7 @@ describe GreenButtonData::UsagePoint do
     end
   end
 
-  describe "#all" do
+  describe ".all" do
     context "valid authorization" do
       let(:collection) { subject.all(subscription_id: 5, token: token) }
 
@@ -58,7 +58,7 @@ describe GreenButtonData::UsagePoint do
     end
   end
 
-  describe "#find" do
+  describe ".find" do
     context "valid authorization" do
       it "is an instance of UsagePoint" do
         expect(usage_point).to be_a GreenButtonData::UsagePoint
