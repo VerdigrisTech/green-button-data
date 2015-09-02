@@ -6,6 +6,7 @@ module GreenButtonData
                   :application_information_path,
                   :authorization_path,
                   :interval_block_path,
+                  :local_time_parameters_path,
                   :meter_reading_path,
                   :reading_type_path,
                   :subscription_path,
@@ -53,6 +54,10 @@ module GreenButtonData
       uri = URI.join uri, "#{interval_block_id}/" if interval_block_id
 
       return uri.to_s
+    end
+
+    def local_time_parameters_url
+      return URI.join @base_url, @local_time_parameters_path
     end
 
     def meter_reading_url(kwargs = {})
