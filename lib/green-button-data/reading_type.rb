@@ -28,6 +28,10 @@ module GreenButtonData
       get_enum_symbol FLOW_DIRECTION, @flow_direction
     end
 
+    def interval_length
+      @interval_length
+    end
+
     def kind
       get_enum_symbol MEASUREMENT, @kind
     end
