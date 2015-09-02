@@ -10,7 +10,10 @@ Gem::Specification.new do |s|
   s.licenses    = ['BSD-2-Clause']
 
   s.summary     = 'Parser for Green Button data format'
-  s.description = 'A library to parse large Green Button feed quickly'
+  s.description = 'Green Button Data is a Ruby gem that can consume Green ' +
+                  'Button APIs and parse the Green Button data XML schema ' +
+                  'very quickly. It uses an event-driven SAX parser which ' +
+                  'parses XML data without building an entire DOM in memory.'
 
   s.files         = `git ls-files`.split("\n")
   s.require_paths = ['lib']
