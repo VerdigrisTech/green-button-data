@@ -1,13 +1,13 @@
-module GreenButtonData
-  module CoreExtensions
-    module Date
-      def utc
-        self.new_offset(0)
-      end
+Date.class_eval do
+  unless Date.new.respond_to? :utc
+    def utc
+      self.new_offset(0)
+    end
+  end
 
-      def local
-        new_offset(DateTime.now.offset - offset)
-      end
-    end # Date
-  end # CoreExtensions
-end # GreenButtonData
+  unless Date.new.respond_to? :local
+    def local
+      new_offset(DateTime.now.offset - offset)
+    end
+  end
+end # Date.class_eval
