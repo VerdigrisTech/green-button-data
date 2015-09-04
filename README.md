@@ -58,6 +58,10 @@ Note that each path _must_ end with a trailing slash.
 
 #### Rails Integration
 
+> **IMPORTANT:** Version 0.3.0 has a bug which causes Rails not to boot
+correctly. Please use 0.3.1 or higher when integrating into Rails by
+running `bundle update green-button-data`.
+
 If you are developing a Rails app, create a file at
 `config/initializers/green_button_data.rb` from your Rails project root and
 add the configuration there.
