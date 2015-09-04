@@ -1,8 +1,8 @@
 require 'sax-machine'
 require 'faraday'
 
-require 'green-button-data/core_ext'
 require 'green-button-data/configuration'
+require 'green-button-data/core_extensions'
 require 'green-button-data/utilities'
 require 'green-button-data/dst'
 require 'green-button-data/enumerations'
