@@ -13,8 +13,10 @@ module GreenButtonData
                   :usage_point_path,
                   :usage_summary_path
 
-    def application_information_url
-      return URI.join(@base_url, @application_information_path).to_s
+    def application_information_url(id = nil)
+      uri = URI.join @base_url, @application_information_path
+      uri = URI.join uri, "#{id}/" if id
+      return uri.to_s
     end
 
     def application_information_url=(url)
@@ -23,8 +25,10 @@ module GreenButtonData
       @application_information_path = uri.path
     end
 
-    def authorization_url
-      return URI.join(@base_url, @authorization_path).to_s
+    def authorization_url(id = nil)
+      uri = URI.join @base_url, @authorization_path
+      uri = URI.join uri, "#{id}/" if id
+      return uri.to_s
     end
 
     def authorization_url=(url)
@@ -56,8 +60,10 @@ module GreenButtonData
       return uri.to_s
     end
 
-    def local_time_parameters_url
-      return URI.join @base_url, @local_time_parameters_path
+    def local_time_parameters_url(id = nil)
+      uri = URI.join @base_url, @local_time_parameters_path
+      uri = URI.join uri, "#{id}/" if id
+      return uri.to_s
     end
 
     def meter_reading_url(kwargs = {})
