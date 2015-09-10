@@ -36,6 +36,8 @@ module GreenButtonData
   end
 
   def self.connect(configuration = {})
-    yield Client.new configuration
+    client = Client.new configuration
+    yield client
+    return client
   end
 end
