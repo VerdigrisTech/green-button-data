@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
                   'parses XML data without building an entire DOM in memory.'
 
   s.files         = `git ls-files`.split("\n").reject {
-    |f| f.match(%r{^(test|spec|features)/})
+    |f| f.match(%r{^(test|spec|fixtures|benchmark)/})
   }
 
   s.require_paths = ['lib']
