@@ -1,6 +1,7 @@
 module GreenButtonData
   class Entry
     include Fetchable
+    include Utilities
 
     attr_reader :id
     attr_accessor :token
@@ -29,8 +30,7 @@ module GreenButtonData
           # Handle deprecations
           klazz_name.gsub! /ElectricPowerUsageSummary/, 'UsageSummary'
 
-          klazz = klazz_name.split('::')
-                            .inject(Object) { |obj, cls| obj.const_get cls }
+          klazz = class_from_name klazz_name
 
           collection = self.instance_variable_get "@#{key.to_s.pluralize}"
           url = self.instance_variable_get "@#{key}_url"
