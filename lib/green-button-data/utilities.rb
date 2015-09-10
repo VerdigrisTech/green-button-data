@@ -129,5 +129,10 @@ module GreenButtonData
 
       return attributes_hash
     end
+
+    def class_from_name(class_name)
+      class_name or raise ArgumentError.new "Class name is required"
+      class_name.split('::').inject(Object) { |obj, cls| obj.const_get cls }
+    end
   end
 end
