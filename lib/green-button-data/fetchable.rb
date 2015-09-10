@@ -37,7 +37,7 @@ module GreenButtonData
 
         @url = url
         @options = options
-        return records
+        return populate_models(fetch(url, options))
       end
 
       ##

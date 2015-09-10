@@ -119,10 +119,16 @@ describe GreenButtonData::UsagePoint do
       end
 
       it "should use cached results on subsequent calls" do
-        expect(usage_point.meter_readings).to be_a GreenButtonData::ModelCollection
-        expect(WebMock).not_to have_requested :get, meter_readings_url
-        expect(usage_point.usage_summaries).to be_a GreenButtonData::ModelCollection
-        expect(WebMock).not_to have_requested :get, usage_summaries_url
+        meter_readings = usage_point.meter_readings
+        usage_summaries = usage_point.usage_summaries
+        cached_meter_readings = usage_point.meter_readings
+        cached_usage_summaries = usage_point.usage_summaries
+
+        expect(meter_readings).to eq cached_meter_readings
+        expect(usage_summaries).to eq cached_usage_summaries
+
+        expect(a_request(:get, meter_readings_url)).to have_been_made.once
+        expect(a_request(:get, usage_summaries_url)).to have_been_made.once
       end
     end
 
