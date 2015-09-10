@@ -11,6 +11,12 @@ the Green Button data XML schema very quickly. It uses an event-driven
 <abbr title="Simple API for XML">SAX</abbr> parser which parses XML data without
 building an entire <abbr title="Document Object Model">DOM</abbr> in memory.
 
+On a 2.3 GHz Core i7 processor, this gem is capable of parsing at a rate of
+~1.7 MB/s which is fast enough to parse a 1 year 12-hour interval data in just
+over a second.
+
+You may run the benchmarks by cloning this project and running `rake benchmark`.
+
 ## Getting Started
 
 Add the Green Button Data gem to your Gemfile:
@@ -40,7 +46,7 @@ GreenButtonData gem provides a familiar interface to consuming API endpoints.
 Method names are similar to Rails' ActiveRecord models and can be easily
 integrated into existing applications.
 
-### Configuration
+### Global Configuration
 
 You can add configuration options like the following:
 
@@ -79,7 +85,153 @@ the `token` option in this case.
 tokens to make authenticated requests. There are other gems that provide mature,
 production proven OAuth 2 functionalities such as [OmniAuth](https://github.com/intridea/omniauth).
 
-### List all entries
+### Querying Data
+
+With version 0.4.0, there are two ways to query data on a remote endpoint:
+
+* Using a scoped client class
+* Calling query methods directly on resource classes
+
+#### Using API Client class
+
+This is the recommended method to query data from multiple
+[Data Custodians](http://greenbuttondata.org/developers/).
+
+Each instance of `GreenButtonData::Client` uses scoped configuration suitable
+for each Data Custodians.
+
+This allows you to make requests to different Data Custodians that have
+different URL path layouts.
+
+The example below creates two clients: one for
+ESPI Green Button Data reference API and the other for Pacific Gas & Electric:
+
+```ruby
+espi_base_url   = "https://services.greenbuttondata.org/DataCustodian/espi/" +
+                  "1_1/resources/"
+pge_base_url    = "https://api.pge.com/GreenButtonConnect/espi/1_1/resources/"
+
+espi_client = GreenButtonData.connect base_url: "https://foo.com" do |client|
+  # Override base_url configuration
+  client.configuration.base_url = espi_base_url
+
+  # Equivalent to passing in as an argument hash in connect method:
+  # GreenButtonData.connect subscription_path: "Subscription/" do |client|
+  client.configuration.subscription_path = "Subscription/"
+
+  client.configuration.usage_point_path = "UsagePoint/"
+  client.configuration.usage_summary_path = "ElectricPowerUsageSummary/"
+
+  # Set OAuth 2.0 bearer token
+  client.token = "12345678-5672-abcd-567890abcdef"
+end
+
+pge_client = GreenButtonData.connect base_url: pge_base_url do |client|
+  client.configuration.subscription_path = "Subscription/"
+  client.configuration.usage_point_path = "UsagePoint/"
+  client.configuration.usage_summary_path = "UsageSummary/"
+
+  client.token = "098765432-abcd-ef00-12345678900"
+end
+```
+
+##### Querying a resource
+
+The `Client` class provides query methods to query each resources:
+
+* `GreenButtonData::Client#application_information`
+
+  Returns a collection of `GreenButtonData::ApplicationInformation` instances if
+  id is not specified. If id is specified, returns a single instance.
+
+* `GreenButtonData::Client#authorization`
+
+  Returns a collection of `GreenButtonData::Authorization` instances if id is
+  not specified. If id is specified, returns a single instance.
+
+* `GreenButtonData::Client#interval_block`
+
+  Returns a collection of `GreenButtonData::IntervalBlock` instances if id is
+  not specified. If id is specified, returns a single instance.
+
+* `GreenButtonData::Client#local_time_parameters`
+
+  Returns a collection of `GreenButtonData::LocalTimeParameters` instances if id
+  is not specified. If id is specified, returns a single instance.
+
+* `GreenButtonData::Client#meter_reading`
+
+  Returns a collection of `GreenButtonData::MeterReading` instances if id is not
+  specified. If id is specified, returns a single instance.
+
+* `GreenButtonData::Client#reading_type`
+
+  Returns a collection of `GreenButtonData::ReadingType` instances if id is not
+  specified. If id is specified, returns a single instance.
+
+* `GreenButtonData::Client#usage_point`
+
+  Returns a collection of `GreenButtonData::UsagePoint` instances if id is not
+  specified. If id is specified, returns a single instance.
+
+* `GreenButtonData::Client#usage_summary`
+
+  Returns a collection of `GreenButtonData::UsageSummary` instances if id is not
+  specified. If id is specified, returns a single instance.
+
+Following the example from previous section, to retrieve all entries:
+
+```ruby
+# Generally, Data Custodian access token is required to do this query which you
+# can override with `token` keyword argument
+# Makes a request to:
+# https://services.greenbuttondata.org/DataCustodian/espi/1_1/resources/UsagePoint
+espi_all_usage_points = espi_client.usage_point
+```
+
+To retrieve a specific entry, specify the resource ID:
+
+```ruby
+# Get a Usage Point 2
+# Makes a request to:
+# https://services.greenbuttondata.org/DataCustodian/espi/1_1/resources/UsagePoint/2
+espi_usage_point = espi_client.usage_point 2, token: data_custodian_access_token
+
+# Get a UsagePoint 1234 for subscription 3401
+# Makes a request to:
+# https://api.pge.com/GreenButtonConnect/espi/1_1/resources/Subscription/3401/UsagePoint/1234
+pge_usage_point = pge_client.usage_point 1234, subscription_id: 3401
+```
+
+You can query for related resources as well. There are couple ways you can do
+this:
+
+```ruby
+# Gets all meter readings for this instance of UsagePoint
+meter_readings_1 = pge_usage_point.meter_readings
+
+# Same as above but requires knowledge of UsagePoint and Subscription ids
+meter_readings_2 = pge_client.meter_reading usage_point_id: 1234, subscription_id: 3401
+```
+
+#### Using resource classes
+
+This method allows you to query for data using the global configuration. This
+has limitations as you can only query data from one Data Custodian at a time
+unless you override the global configuration per method call.
+
+The resource classes are as follows:
+
+* `GreenButtonData::ApplicationInformation`
+* `GreenButtonData::Authorization`
+* `GreenButtonData::IntervalBlock`
+* `GreenButtonData::LocalTimeParameters`
+* `GreenButtonData::MeterReading`
+* `GreenButtonData::ReadingType`
+* `GreenButtonData::UsagePoint`
+* `GreenButtonData::UsageSummary`
+
+##### List all entries
 
 By default, the `.all` method attempts to use the URL path set by configuration:
 
@@ -100,7 +252,7 @@ usage_points = UsagePoint.all "https://someotherapi.org/espi/Authorization",
                               token: access_token
 ```
 
-### Find an entry by ID
+##### Find an entry by ID
 
 If you have URL defined in configuration, the `.find` method appends the ID to
 the URL:
