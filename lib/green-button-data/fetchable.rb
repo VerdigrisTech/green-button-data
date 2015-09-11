@@ -160,7 +160,27 @@ module GreenButtonData
         entry_content = nil
 
         feed.entries.each do |entry|
-          match_data = /\/(([a-zA-Z]+)|([a-zA-Z]+)\/(\w+=*|(\d+,*\d*)+))\/*\z/.
+          # Matches resource name in URL (e.g. ApplicationInformation)
+          resource = '([a-zA-Z]+)'
+
+          # Matches Base 64 encoded resource ID used by PG&E for MeterReading
+          # resource identifier
+          base64_id = '\w+=*'
+
+          # Matches numeric ID with thousands separator in commas used for
+          # UsageSummary IDs for PG&E endpoints but also matches traditional
+          # digits without comma separator
+          num_id = '(\d+,*\d*)+'
+
+          # Matches GUID as the resource ID used mainly by PG&E for
+          # ApplicationInformation resource identifier
+          guid = '[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}' +
+                 '-[0-9A-Fa-f]{12}'
+
+          # Identifier can be any of the above patterns
+          identifier = "(#{base64_id}|#{num_id}|#{guid})"
+
+          match_data = /\/(#{resource}|#{resource}\/#{identifier})\/*\z/.
                        match(entry.self)
 
           unless match_data.nil?
