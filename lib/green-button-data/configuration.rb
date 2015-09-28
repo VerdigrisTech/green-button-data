@@ -14,9 +14,7 @@ module GreenButtonData
                   :usage_summary_path
 
     def application_information_url(id = nil)
-      uri = URI.join @base_url, @application_information_path
-      uri = URI.join uri, "#{id}/" if id
-      return uri.to_s
+      return build_url @application_information_path, id
     end
 
     def application_information_url=(url)
@@ -26,9 +24,7 @@ module GreenButtonData
     end
 
     def authorization_url(id = nil)
-      uri = URI.join @base_url, @authorization_path
-      uri = URI.join uri, "#{id}/" if id
-      return uri.to_s
+      return build_url @authorization_path, id
     end
 
     def authorization_url=(url)
@@ -61,9 +57,7 @@ module GreenButtonData
     end
 
     def local_time_parameters_url(id = nil)
-      uri = URI.join @base_url, @local_time_parameters_path
-      uri = URI.join uri, "#{id}/" if id
-      return uri.to_s
+      return build_url @local_time_parameters_path, id
     end
 
     def meter_reading_url(kwargs = {})
@@ -88,16 +82,11 @@ module GreenButtonData
     end
 
     def reading_type_url(id = nil)
-      uri = URI.join @base_url, @reading_type_path
-      uri = URI.join uri, "#{id}/" if id
-
-      return uri.to_s
+      return build_url @reading_type_path, id
     end
 
     def subscription_url(id)
-      uri = URI.join @base_url, @subscription_path
-      uri = URI.join uri, "#{id}/" if id
-      return uri.to_s
+      return build_url @subscription_path, id
     end
 
     def usage_point_url(kwargs = {})
@@ -134,6 +123,15 @@ module GreenButtonData
         raise ArgumentError.new "Missing required arguments: subscription_id," +
                                 " usage_point_id"
       end
+    end
+
+    private
+
+    def build_url(path, id = nil)
+      uri = URI.join @base_url, path
+      uri = URI.join uri, "#{id}/" if id
+
+      return uri.to_s
     end
   end
 end
