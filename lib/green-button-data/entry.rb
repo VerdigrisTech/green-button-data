@@ -41,8 +41,8 @@ module GreenButtonData
       end
     end
 
-    def define_attr_accessors(key)
-      self.class.send :define_method, "#{key.to_s.pluralize}" do |*args|
+    def define_attr_accessors(resource)
+      self.class.send :define_method, "#{resource.to_s.pluralize}" do |*args|
         id = args[0]
         options = args[1]
 
@@ -54,9 +54,9 @@ module GreenButtonData
         end
 
         if id.is_a?(Numeric) || id.is_a?(String) || id.is_a?(Symbol)
-          get_or_fetch_entry id, key, options
+          get_or_fetch_entry id, resource, options
         else
-          get_or_fetch_collection key, options
+          get_or_fetch_collection resource, options
         end
       end
     end
@@ -67,10 +67,10 @@ module GreenButtonData
       return str
     end
 
-    def get_or_fetch_collection(key, options = {})
-      klazz = class_from_name klazz_name(key.to_s.camelize)
-      url = self.instance_variable_get "@#{key}_url"
-      collection = self.instance_variable_get "@#{key.to_s.pluralize}"
+    def get_or_fetch_collection(resource, options = {})
+      klazz = class_from_name klazz_name(resource.to_s.camelize)
+      url = self.instance_variable_get "@#{resource}_url"
+      collection = self.instance_variable_get "@#{resource.to_s.pluralize}"
 
       collection = if !options[:reload] && collection
         collection
@@ -78,15 +78,15 @@ module GreenButtonData
         collection = klazz.all url, options
       end
 
-      self.instance_variable_set :"@#{key.to_s.pluralize}", collection
+      self.instance_variable_set :"@#{resource.to_s.pluralize}", collection
 
       return collection
     end
 
-    def get_or_fetch_entry(id, key, options = {})
-      klazz = class_from_name klazz_name(key.to_s.camelize)
-      url = self.instance_variable_get "@#{key}_url"
-      collection = self.instance_variable_get "@#{key.to_s.pluralize}"
+    def get_or_fetch_entry(id, resource, options = {})
+      klazz = class_from_name klazz_name(resource.to_s.camelize)
+      url = self.instance_variable_get "@#{resource}_url"
+      collection = self.instance_variable_get "@#{resource.to_s.pluralize}"
 
       # Try returning cached results first
       collection and instance = collection.find_by_id(id)
@@ -103,7 +103,7 @@ module GreenButtonData
       collection ||= ModelCollection.new
       collection << instance if cache_miss
 
-      self.instance_variable_set :"@#{key.to_s.pluralize}", collection
+      self.instance_variable_set :"@#{resource.to_s.pluralize}", collection
 
       instance
     end
