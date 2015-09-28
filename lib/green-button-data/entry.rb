@@ -19,23 +19,7 @@ module GreenButtonData
         end
 
         # Define accessor methods from pluralized resource names
-        self.class.send :define_method, "#{key.to_s.pluralize}" do |*args|
-          id = args[0]
-          options = args[1]
-
-          # Make the ID argument optional
-          options ||= if id.is_a?(Hash)
-            id
-          else
-            {}
-          end
-
-          if id.is_a?(Numeric) || id.is_a?(String) || id.is_a?(Symbol)
-            get_or_fetch_entry id, key, options
-          else
-            get_or_fetch_collection key, options
-          end
-        end
+        define_attr_accessors key
       end
     end # initialize
 
@@ -54,6 +38,26 @@ module GreenButtonData
     def init_instance_vars(attributes)
       attributes.each do |key, value|
         self.instance_variable_set :"@#{key}", value
+      end
+    end
+
+    def define_attr_accessors(key)
+      self.class.send :define_method, "#{key.to_s.pluralize}" do |*args|
+        id = args[0]
+        options = args[1]
+
+        # Make the ID argument optional
+        options ||= if id.is_a?(Hash)
+          id
+        else
+          {}
+        end
+
+        if id.is_a?(Numeric) || id.is_a?(String) || id.is_a?(Symbol)
+          get_or_fetch_entry id, key, options
+        else
+          get_or_fetch_collection key, options
+        end
       end
     end
 
