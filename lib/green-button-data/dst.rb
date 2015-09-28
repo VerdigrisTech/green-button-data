@@ -76,8 +76,12 @@ module GreenButtonData
       # In Ruby, Sunday = 0 not 7
       weekday = weekday == 7 ? 0 : weekday
 
-      # Check the DST rule
-      dst_day = if dst_rule == 1
+      # Add the hour and seconds component to the day
+      dst_datetime dst_rule, year, month, weekday, day, hour, seconds
+    end
+
+    def dst_datetime(dst_rule, year, month, weekday, day, hour, seconds)
+      if dst_rule == 1
         # Rule 1: DST starts/ends on Day of Week on or after the Day of Month
         day_of_month = DateTime.new year, month, day
         day_offset = if weekday >= day_of_month.wday
@@ -97,10 +101,7 @@ module GreenButtonData
       else
         # Rule 0: DST starts/ends on the Day of Month
         DateTime.new year, month, day
-      end
-
-      # Add the hour and seconds component to the day
-      dst_day + Rational(hour * 3600 + seconds, 86400)
+      end + Rational(hour * 3600 + seconds, 86400)
     end
   end
 end
