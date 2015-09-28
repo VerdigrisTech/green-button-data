@@ -68,10 +68,7 @@ module GreenButtonData
       month = (byte & BITMASK_MONTH) >> BITSHIFT_MONTH
 
       # Raise an error unless all the values are in valid range
-      seconds.between?(0, 3599) and hour.between?(0, 23) and
-      weekday.between?(1, 7) and day.between?(0, 31) and
-      dst_rule.between?(0, 7) and month.between?(1, 12) or
-      raise RangeError, 'Invalid value range'
+      validate_dst_rules dst_rule, month, weekday, day, hour, seconds
 
       # In Ruby, Sunday = 0 not 7
       weekday = weekday == 7 ? 0 : weekday
@@ -102,6 +99,13 @@ module GreenButtonData
         # Rule 0: DST starts/ends on the Day of Month
         DateTime.new year, month, day
       end + Rational(hour * 3600 + seconds, 86400)
+    end
+
+    def validate_dst_rules(dst_rule, month, weekday, day, hour, seconds)
+      seconds.between?(0, 3599) and hour.between?(0, 23) and
+      weekday.between?(1, 7) and day.between?(0, 31) and
+      dst_rule.between?(0, 7) and month.between?(1, 12) or
+      raise RangeError, 'Invalid value range'
     end
   end
 end
