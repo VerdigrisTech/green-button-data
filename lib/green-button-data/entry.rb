@@ -9,9 +9,7 @@ module GreenButtonData
     def initialize(attributes)
       # Automagically sets instance variables from attribute hash parsed from
       # the GreenButtonData::Parser classes
-      attributes.each do |key, value|
-        self.instance_variable_set :"@#{key}", value
-      end
+      init_instance_vars attributes
 
       # Handle relations via related_urls
       @related_urls.is_a?(Hash) and @related_urls.each do |key, value|
@@ -25,16 +23,6 @@ module GreenButtonData
           id = args[0]
           options = args[1]
 
-          klazz_name = "GreenButtonData::#{key.to_s.camelize}"
-
-          # Handle deprecations
-          klazz_name.gsub! /ElectricPowerUsageSummary/, 'UsageSummary'
-
-          klazz = class_from_name klazz_name
-
-          collection = self.instance_variable_get "@#{key.to_s.pluralize}"
-          url = self.instance_variable_get "@#{key}_url"
-
           # Make the ID argument optional
           options ||= if id.is_a?(Hash)
             id
@@ -42,34 +30,11 @@ module GreenButtonData
             {}
           end
 
-          result = if id.is_a?(Numeric) || id.is_a?(String) || id.is_a?(Symbol)
-            # Try returning cached results first
-            collection and instance = collection.find_by_id(id)
-            cache_miss = instance.nil?
-
-            # On cache miss or forced reload, send API request
-            instance = if !options[:reload] && instance
-              instance
-            else
-              klazz.find "#{url}/#{id}", options
-            end
-
-            # Cache the result
-            collection ||= ModelCollection.new
-            collection << instance if cache_miss
-
-            instance
+          if id.is_a?(Numeric) || id.is_a?(String) || id.is_a?(Symbol)
+            get_or_fetch_entry id, key, options
           else
-            if !options[:reload] && collection
-              collection
-            else
-              collection = klazz.all url, options
-            end
+            get_or_fetch_collection key, options
           end
-
-          self.instance_variable_set :"@#{key.to_s.pluralize}", collection
-
-          return result
         end
       end
     end # initialize
@@ -82,6 +47,61 @@ module GreenButtonData
       else
         value
       end
+    end
+
+    private
+
+    def init_instance_vars(attributes)
+      attributes.each do |key, value|
+        self.instance_variable_set :"@#{key}", value
+      end
+    end
+
+    def klazz_name(name)
+      str = "GreenButtonData::#{name}"
+      str.gsub! /ElectricPowerUsageSummary/, 'UsageSummary'
+      return str
+    end
+
+    def get_or_fetch_collection(key, options = {})
+      klazz = class_from_name klazz_name(key.to_s.camelize)
+      url = self.instance_variable_get "@#{key}_url"
+      collection = self.instance_variable_get "@#{key.to_s.pluralize}"
+
+      collection = if !options[:reload] && collection
+        collection
+      else
+        collection = klazz.all url, options
+      end
+
+      self.instance_variable_set :"@#{key.to_s.pluralize}", collection
+
+      return collection
+    end
+
+    def get_or_fetch_entry(id, key, options = {})
+      klazz = class_from_name klazz_name(key.to_s.camelize)
+      url = self.instance_variable_get "@#{key}_url"
+      collection = self.instance_variable_get "@#{key.to_s.pluralize}"
+
+      # Try returning cached results first
+      collection and instance = collection.find_by_id(id)
+      cache_miss = instance.nil?
+
+      # On cache miss or forced reload, send API request
+      instance = if !options[:reload] && instance
+        instance
+      else
+        klazz.find "#{url}/#{id}", options
+      end
+
+      # Cache the result
+      collection ||= ModelCollection.new
+      collection << instance if cache_miss
+
+      self.instance_variable_set :"@#{key.to_s.pluralize}", collection
+
+      instance
     end
   end # Entry
 end # GreenButtonData
