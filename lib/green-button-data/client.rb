@@ -49,7 +49,7 @@ module GreenButtonData
       end
 
       id ||= options[:interval_block_id]
-      meter_reading_id = options[:meter_Reading_id]
+      meter_reading_id = options[:meter_reading_id]
       usage_point_id = options[:usage_point_id]
       subscription_id = options[:subscription_id]
 
