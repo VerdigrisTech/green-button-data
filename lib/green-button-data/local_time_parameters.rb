@@ -16,11 +16,11 @@ module GreenButtonData
       @dst_offset + @tz_offset
     end
 
-    def to_h
+    def to_h(year = Time.now.year)
       {
         dst: {
-          starts_at: dst_starts_at,
-          ends_at: dst_ends_at,
+          starts_at: dst_starts_at(year),
+          ends_at: dst_ends_at(year),
           offset: dst_offset
         },
         tz_offset: tz_offset,

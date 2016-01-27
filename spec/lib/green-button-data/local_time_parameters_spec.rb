@@ -61,8 +61,8 @@ describe GreenButtonData::LocalTimeParameters do
       it "should populate attributes" do
         instance = collection.first
         expect(instance.id).to eq "1"
-        expect(instance.dst_starts_at).to eq dst_starts_at
-        expect(instance.dst_ends_at).to eq dst_ends_at
+        expect(instance.dst_starts_at 2015).to eq dst_starts_at
+        expect(instance.dst_ends_at 2015).to eq dst_ends_at
         expect(instance.dst_offset).to eq dst_offset
         expect(instance.tz_offset).to eq tz_offset
       end
@@ -78,8 +78,8 @@ describe GreenButtonData::LocalTimeParameters do
 
       it "should populate attributes" do
         expect(local_time_parameters.id).to eq "1"
-        expect(local_time_parameters.dst_starts_at).to eq dst_starts_at
-        expect(local_time_parameters.dst_ends_at).to eq dst_ends_at
+        expect(local_time_parameters.dst_starts_at 2015).to eq dst_starts_at
+        expect(local_time_parameters.dst_ends_at 2015).to eq dst_ends_at
         expect(local_time_parameters.dst_offset).to eq dst_offset
         expect(local_time_parameters.tz_offset).to eq tz_offset
       end
@@ -92,7 +92,7 @@ describe GreenButtonData::LocalTimeParameters do
     end
 
     it "should populate attributes to Hash key values" do
-      expect(local_time_parameters.to_h).to eq({
+      expect(local_time_parameters.to_h 2015).to eq({
         dst: {
           starts_at: dst_starts_at,
           ends_at: dst_ends_at,
