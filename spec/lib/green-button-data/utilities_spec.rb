@@ -46,7 +46,9 @@ describe GreenButtonData::Utilities do
 
   describe "#nth_weekday_of" do
     it "should return the Nth weekday of a given month" do
+      first_friday = @klass.new.nth_weekday_of 2015, 10, 5, 1
       third_wednesday = @klass.new.nth_weekday_of 2015, 10, 3, 3
+      expect(first_friday.day).to eq 2
       expect(third_wednesday.day).to eq 21
     end
   end

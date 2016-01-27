@@ -59,7 +59,7 @@ module GreenButtonData
       # need to be added before hitting the first Sunday of month
       day_offset = first_weekday == 0 ? 0 : 7 - first_weekday
 
-      # Return first Monday of the month
+      # Return first Sunday of the month
       first_day + day_offset
     end
 
@@ -78,10 +78,11 @@ module GreenButtonData
     # To retrieve third Friday of July 2015,
     #     nth_weekday_of 2015, 7, 5, 3
     def nth_weekday_of(year = Time.now.year, month = Time.now.month,
-                             weekday = 0, week = 1)
+                       weekday = 0, week = 1)
+      first_day = DateTime.new year, month, 1
 
       # Day offset needed for Nth day of the week
-      first_sunday_of(year, month) + weekday + (week - 1) * 7
+      first_day + weekday_offset(first_day.wday, weekday) + (week - 1) * 7
     end
 
     ##
@@ -110,7 +111,15 @@ module GreenButtonData
         7 + last_weekday - weekday
       end
 
-      last_day - day_offset
+      last_day - weekday_offset(weekday, last_weekday)
+    end
+
+    def weekday_offset(first_weekday, second_weekday)
+      if second_weekday >= first_weekday
+        second_weekday - first_weekday
+      else
+        7 + second_weekday - first_weekday
+      end
     end
 
     ##
