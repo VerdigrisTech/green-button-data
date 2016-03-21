@@ -16,6 +16,24 @@
                <ns0:duration>2505600</ns0:duration>
                <ns0:start>1434006000</ns0:start>
             </ns0:billingPeriod>
+            <ns0:costAdditionalDetailLastPeriod>
+               <ns0:note>Total Winter Partial Peak Usage</ns0:note>
+               <ns0:measurement>
+                  <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
+                  <ns0:uom>72</ns0:uom>
+                  <ns0:value>106120600</ns0:value>
+               </ns0:measurement>
+               <ns0:itemKind>3</ns0:itemKind>
+            </ns0:costAdditionalDetailLastPeriod>
+            <ns0:costAdditionalDetailLastPeriod>
+               <ns0:note>Total Winter Off Peak Usage</ns0:note>
+               <ns0:measurement>
+                  <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
+                  <ns0:uom>72</ns0:uom>
+                  <ns0:value>398794000</ns0:value>
+               </ns0:measurement>
+               <ns0:itemKind>3</ns0:itemKind>
+            </ns0:costAdditionalDetailLastPeriod>
             <ns0:overallConsumptionLastPeriod>
                <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
                <ns0:uom>72</ns0:uom>
@@ -25,6 +43,8 @@
             <ns0:qualityOfReading>17</ns0:qualityOfReading>
             <ns0:statusTimeStamp>1440109957976</ns0:statusTimeStamp>
             <ns0:commodity>1</ns0:commodity>
+            <ns0:tariffProfile>HAG5A</ns0:tariffProfile>
+            <ns0:readCycle>Q</ns0:readCycle>
          </ns0:UsageSummary>
       </ns1:content>
    </ns1:entry>

@@ -65,6 +65,11 @@ describe GreenButtonData::Parser::UsageSummary do
       to be_a GreenButtonData::Parser::SummaryMeasurement
     end
 
+    it "should parse cost additional detail last period" do
+      expect(subject.cost_additional_detail_last_periods.first).
+      to be_an_instance_of GreenButtonData::Parser::CostAdditionalDetailLastPeriod
+    end
+
     it "should parse quality of reading" do
       expect(subject.quality_of_reading).
       to eq :validated
@@ -77,6 +82,15 @@ describe GreenButtonData::Parser::UsageSummary do
 
     it "should parse commodity" do
       expect(subject.commodity).to eq :electricity_secondary_metered
+    end
+
+
+    it "should parse tariff" do
+      expect(subject.tariff).to eq 'HAG5A'
+    end
+
+    it "should parse readCycle" do
+      expect(subject.read_cycle).to eq 'Q'
     end
   end
 

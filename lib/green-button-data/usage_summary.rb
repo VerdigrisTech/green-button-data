@@ -4,7 +4,9 @@ module GreenButtonData
     include Utilities
 
     attr_reader :billing_period,
-                :overall_consumption_last_period
+                :overall_consumption_last_period,
+                :tariff,
+                :cost_additional_detail_last_periods
 
     attr_writer :commodity,
                 :quality_of_reading
