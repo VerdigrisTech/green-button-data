@@ -57,7 +57,7 @@ module GreenButtonData
       end
 
       def cost
-        @bill_last_period/100_000.0
+        @bill_last_period / 100_000.0
       end
 
       # ESPI Namespacing
