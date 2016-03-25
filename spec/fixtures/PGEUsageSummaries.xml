@@ -16,6 +16,7 @@
                <ns0:duration>2505600</ns0:duration>
                <ns0:start>1434006000</ns0:start>
             </ns0:billingPeriod>
+            <ns0:billLastPeriod>23364000</ns0:billLastPeriod>
             <ns0:costAdditionalDetailLastPeriod>
                <ns0:note>Total Winter Partial Peak Usage</ns0:note>
                <ns0:measurement>

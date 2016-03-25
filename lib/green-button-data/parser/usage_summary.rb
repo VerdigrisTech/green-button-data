@@ -56,6 +56,10 @@ module GreenButtonData
         Time.at(normalize_epoch(@status_time_stamp)).utc.to_datetime
       end
 
+      def cost
+        @bill_last_period / 100_000.0
+      end
+
       # ESPI Namespacing
       element :'espi:billingPeriod', class: Interval, as: :billing_period
       element :'espi:billLastPeriod', class: Integer, as: :bill_last_period
