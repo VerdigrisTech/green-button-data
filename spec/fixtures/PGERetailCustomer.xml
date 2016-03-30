@@ -1,0 +1,43 @@
+<ns1:feed xmlns:ns0="http://naesb.org/espi" xmlns:ns1="http://www.w3.org/2005/Atom">
+  <ns1:id xmlns:ns1="http://www.w3.org/2005/Atom">ea1e55e9-4581-49bf-b0b6-3a50a4ba9a8d</ns1:id>
+  <ns1:title xmlns:ns1="http://www.w3.org/2005/Atom" type="text">Green Button Customer Feed</ns1:title>
+  <ns1:updated xmlns:ns1="http://www.w3.org/2005/Atom">2016-03-30T04:42:54.084Z</ns1:updated>
+  <ns1:link xmlns:ns1="http://www.w3.org/2005/Atom" href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Batch/RetailCustomer/92772" rel="self"/>
+
+  <ns1:entry xmlns:ns1="http://www.w3.org/2005/Atom">
+    <ns1:id xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:idType">334a13da-c931-4779-aaa0-1629cf1530db</ns1:id>
+    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation" rel="up" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
+    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation/ODg5NDU5MDcwNQ==" rel="self" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
+    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation/ODg5NDU5MDcwNQ==/EndDevice" rel="related" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
+    <ns1:published xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:dateTimeType">2016-03-30T04:42:54.092Z</ns1:published>
+    <ns1:updated xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:dateTimeType">2016-03-30T04:42:54.094Z</ns1:updated>
+    <ns1:content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:contentType">
+      <ns0:ServiceLocation xmlns:ns0="http://naesb.org/espi/customer">
+        <ns0:mainAddress>
+          <ns0:streetDetail>
+            <ns0:addressGeneral>140 HAN RD</ns0:addressGeneral>
+          </ns0:streetDetail>
+          <ns0:townDetail>
+            <ns0:code>95101</ns0:code>
+            <ns0:name>KING CITY</ns0:name>
+            <ns0:stateOrProvince>CA</ns0:stateOrProvince>
+          </ns0:townDetail>
+        </ns0:mainAddress>
+      </ns0:ServiceLocation>
+    </ns1:content>
+  </ns1:entry>
+
+  <ns1:entry xmlns:ns1="http://www.w3.org/2005/Atom">
+    <ns1:id xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:idType">11111124-1cb4-4944-9774-a010272db0f8</ns1:id>
+    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement" rel="up" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
+    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582" rel="self" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
+    <ns1:published xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:dateTimeType">2016-03-30T04:42:54.099Z</ns1:published>
+    <ns1:updated xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:dateTimeType">2016-03-30T04:42:54.101Z</ns1:updated>
+    <ns1:content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:contentType">
+      <ns0:CustomerAgreement xmlns:ns0="http://naesb.org/espi/customer">
+        <ns0:name>1112392222</ns0:name>
+        <ns0:signDate>1376550000</ns0:signDate>
+      </ns0:CustomerAgreement>
+    </ns1:content>
+  </ns1:entry>
+</ns1:feed>

@@ -34,5 +34,9 @@ module GreenButtonData
     def to_s
       "#{@billing_period}: #{@overall_consumption_last_period}"
     end
+
+    def cost
+      @bill_last_period / 100_000.0
+    end
   end
 end

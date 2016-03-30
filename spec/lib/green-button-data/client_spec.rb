@@ -13,7 +13,8 @@ describe GreenButtonData::Client do
       reading_type_path: "ReadingType/",
       subscription_path: "Subscription/",
       usage_point_path: "UsagePoint/",
-      usage_summary_path: "UsageSummary/"
+      usage_summary_path: "UsageSummary/",
+      retail_customer_path: "Batch/RetailCustomer"
     }
   end
 
@@ -598,6 +599,33 @@ describe GreenButtonData::Client do
     context "id is not specified" do
       it "should return a ModelCollection" do
         expect(usage_summaries).to be_a model_collection_klass
+      end
+    end
+  end
+
+  describe "#retail_customer" do
+    let(:subscription_id) { 5 }
+    let(:klazz) { GreenButtonData::RetailCustomer }
+    let(:retail_customers) {
+      client.retail_customer(
+        subscription_id: subscription_id,
+        token: token
+      )
+    }
+
+    before do
+      stub_request(
+        :get,
+        client.configuration.retail_customer_url(
+          subscription_id: subscription_id
+        )
+      ).to_return status: 200, body: pge_retail_customer
+    end
+
+    context "id is not specified" do
+      it "should return a ModelCollection of instances of RetailCustomer" do
+        expect(retail_customers).to be_a model_collection_klass
+        expect(retail_customers.first).to be_a klazz
       end
     end
   end

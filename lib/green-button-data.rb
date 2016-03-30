@@ -20,6 +20,7 @@ require 'green-button-data/meter_reading'
 require 'green-button-data/reading_type'
 require 'green-button-data/usage_point'
 require 'green-button-data/usage_summary'
+require 'green-button-data/retail_customer'
 require 'green-button-data/client'
 
 module GreenButtonData

@@ -17,6 +17,8 @@ module GreenButtonData
       element :ReadingType, class: ReadingType, as: :reading_type
       element :UsagePoint, class: UsagePoint, as: :usage_point
       element :UsageSummary, class: UsageSummary, as: :usage_summary
+      element :ServiceLocation, class: ServiceLocation, as: :service_location
+      element :CustomerAgreement, class: CustomerAgreement, as: :customer_agreement
 
       # ESPI Namespacing
       element :'espi:ApplicationInformation', class: ApplicationInformation,
@@ -33,6 +35,8 @@ module GreenButtonData
       element :'espi:ReadingType', class: ReadingType, as: :reading_type
       element :'espi:UsagePoint', class: UsagePoint, as: :usage_point
       element :'espi:UsageSummary', class: UsageSummary, as: :usage_summary
+      element :'espi:ServiceLocation', class: ServiceLocation, as: :service_location
+      element :'espi:CustomerAgreement', class: CustomerAgreement, as: :customer_agreement
 
       # Special case for PG&E generic namespaces
       element :'ns0:ApplicationInformation', class: ApplicationInformation,
@@ -44,6 +48,8 @@ module GreenButtonData
       element :'ns0:ReadingType', class: ReadingType, as: :reading_type
       element :'ns0:UsagePoint', class: UsagePoint, as: :usage_point
       element :'ns0:UsageSummary', class: UsageSummary, as: :usage_summary
+      element :'ns0:ServiceLocation', class: ServiceLocation, as: :service_location
+      element :'ns0:CustomerAgreement', class: CustomerAgreement, as: :customer_agreement
     end
   end
 end
