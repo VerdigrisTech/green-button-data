@@ -28,6 +28,7 @@ module GreenButtonData
 
         reading[:cost] = interval_reading.cost if interval_reading.cost
         reading[:quality] = interval_reading.quality if interval_reading.quality
+        reading[:tou] = interval_reading.tou if interval_reading.tou
 
         result << reading
       end
