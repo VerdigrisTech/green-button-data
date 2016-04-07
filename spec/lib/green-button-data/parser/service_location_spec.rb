@@ -19,9 +19,9 @@ describe GreenButtonData::Parser::ServiceLocation do
       expect(subject.main_address.town_detail.name).to eq 'KING CITY'
       expect(subject.main_address.town_detail.code).to eq '95101'
       expect(subject.main_address.town_detail.state_or_province).to eq 'CA'
-      expect(subject.main_address.town_detail_info).to eq 'KING CITY,95101,CA'
+      expect(subject.main_address.town_detail_info).to eq 'KING CITY,CA,95101'
       expect(subject.main_address.address_general).to eq '140 HAN RD'
-      expect(subject.main_address.to_s).to eq '140 HAN RD,KING CITY,95101,CA'
+      expect(subject.main_address.to_s).to eq '140 HAN RD,KING CITY,CA,95101'
     end
   end
 end

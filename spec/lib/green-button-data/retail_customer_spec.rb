@@ -40,7 +40,7 @@ describe GreenButtonData::UsagePoint do
       it "should populate attributes" do
         expect(retail_customers.first.has_address?).to be_truthy
         expect(retail_customers.first.has_agreement_id_map?).to be_falsey
-        expect(retail_customers.first.address_general).to eq '140 HAN RD,KING CITY,95101,CA'
+        expect(retail_customers.first.address_general).to eq '140 HAN RD,KING CITY,CA,95101'
         expect(retail_customers.first.agreement_id_service_uuid_map[:customer_agreement_id]).to be_nil
 
         expect(retail_customers.last.has_address?).to be_falsey
