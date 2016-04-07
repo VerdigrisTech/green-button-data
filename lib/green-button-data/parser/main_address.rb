@@ -4,7 +4,19 @@ module GreenButtonData
       include SAXMachine
 
       def town_detail_info
-        town_detail.name + ',' + town_detail.code.gsub(/\s+/, "") + ',' + town_detail.state_or_province
+         [town, state, zipcode].join(',')
+      end
+
+      def town
+        town_detail.name
+      end
+
+      def state
+        town_detail.state_or_province
+      end
+
+      def zipcode
+        town_detail.code.gsub(/\s+/, "")
       end
 
       def address_general
