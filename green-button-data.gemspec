@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://verdigris.co'
   s.licenses    = ['BSD-2-Clause']
 
-  s.summary     = 'Parser for Green Button data format'
+  s.summary     = 'Client and parser for Green Button API'
   s.description = 'Green Button Data is a Ruby gem that can consume Green ' +
                   'Button APIs and parse the Green Button data XML schema ' +
                   'very quickly. It uses an event-driven SAX parser which ' +
