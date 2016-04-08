@@ -189,6 +189,10 @@ module GreenButtonData
               entry.content.usage_point
             when 'usagesummary'
               entry.content.usage_summary
+            when 'servicelocation'
+              entry.content.service_location
+            when 'customeragreement'
+              entry.content.customer_agreement
             else
               nil
             end

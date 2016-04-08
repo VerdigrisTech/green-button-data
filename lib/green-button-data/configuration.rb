@@ -11,7 +11,8 @@ module GreenButtonData
                   :reading_type_path,
                   :subscription_path,
                   :usage_point_path,
-                  :usage_summary_path
+                  :usage_summary_path,
+                  :retail_customer_path
 
     def application_information_url(id = nil)
       return build_url @application_information_path, id
@@ -122,6 +123,17 @@ module GreenButtonData
       else
         raise ArgumentError.new "Missing required arguments: subscription_id," +
                                 " usage_point_id"
+      end
+    end
+
+    def retail_customer_url(kwargs = {})
+      retail_customer_id = kwargs[:subscription_id]
+
+      if retail_customer_id
+        retail_customer_url = build_url(@retail_customer_path)
+        return "#{retail_customer_url}/#{retail_customer_id}"
+      else
+        raise ArgumentError.new "Missing required arguments: subscription_id"
       end
     end
 
