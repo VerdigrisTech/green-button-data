@@ -10,7 +10,7 @@ module GreenButtonData
 
       element :quality, class: Integer
       element :timePeriod, class: Interval, as: :time_period
-      element :value, class: Integer
+      element :value, class: Float
       element :consumptionTier, class: Integer, as: :consumption_tier
       element :tou, class: Integer
       element :cpp, class: Integer
@@ -27,7 +27,7 @@ module GreenButtonData
       element :'espi:cost', class: Integer, as: :cost
       element :'espi:quality', class: Integer, as: :quality
       element :'espi:timePeriod', class: Interval, as: :time_period
-      element :'espi:value', class: Integer, as: :value
+      element :'espi:value', class: Float, as: :value
       element :'espi:consumptionTier', class: Integer, as: :consumption_tier
       element :'espi:tou', class: Integer, as: :tou
       element :'espi:cpp', class: Integer, as: :cpp
@@ -36,7 +36,7 @@ module GreenButtonData
       element :'ns0:cost', class: Integer, as: :cost
       element :'ns0:quality', class: Integer, as: :quality
       element :'ns0:timePeriod', class: Interval, as: :time_period
-      element :'ns0:value', class: Integer, as: :value
+      element :'ns0:value', class: Float, as: :value
       element :'ns0:consumptionTier', class: Integer, as: :consumption_tier
       element :'ns0:tou', class: Integer, as: :tou
       element :'ns0:cpp', class: Integer, as: :cpp
