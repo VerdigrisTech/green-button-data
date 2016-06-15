@@ -108,8 +108,8 @@ ESPI Green Button Data reference API and the other for Pacific Gas & Electric:
 
 ```ruby
 espi_base_url   = "https://services.greenbuttondata.org/DataCustodian/espi/" +
-                  "1_1/resources/"
-pge_base_url    = "https://api.pge.com/GreenButtonConnect/espi/1_1/resources/"
+                  "1_1/resource/"
+pge_base_url    = "https://api.pge.com/GreenButtonConnect/espi/1_1/resource/"
 
 espi_client = GreenButtonData.connect base_url: "https://foo.com" do |client|
   # Override base_url configuration
