@@ -164,6 +164,30 @@ module GreenButtonData
         /\/(#{resource}|#{resource}\/#{identifier})\/*\z/.match(url)
       end
 
+      def valid_resources
+        [
+          'applicationinformation',
+          'authorization',
+          'electricpowerusagesummary',
+          'intervalblock',
+          'localtimeparameters',
+          'readingtype',
+          'usagepoint',
+          'usagesummary',
+          'servicelocation',
+          'customeragreement'
+        ]
+      end
+
+      def valid_resource?(resource)
+        resource.downcase =~ /(#{valid_resources.join('|')})/
+      end
+
+      def infer_content_from(entry, resource)
+        return nil unless valid_resource? resource
+        entry.content.send resource.underscore
+      end
+
       def each_entry_content(feed)
         entry_content = nil
 
@@ -174,31 +198,7 @@ module GreenButtonData
             id = match_data[4] || entry.id
             type = match_data[2] || match_data[3]
 
-            entry_content = case type.downcase
-
-            when 'applicationinformation'
-              entry.content.application_information
-            when 'authorization'
-              entry.content.authorization
-            when 'electricpowerusagesummary'
-              entry.content.electric_power_usage_summary
-            when 'intervalblock'
-              entry.content.interval_block
-            when 'localtimeparameters'
-              entry.content.local_time_parameters
-            when 'readingtype'
-              entry.content.reading_type
-            when 'usagepoint'
-              entry.content.usage_point
-            when 'usagesummary'
-              entry.content.usage_summary
-            when 'servicelocation'
-              entry.content.service_location
-            when 'customeragreement'
-              entry.content.customer_agreement
-            else
-              nil
-            end
+            entry_content = infer_content_from entry, type
 
             yield id, entry_content, entry
           end
