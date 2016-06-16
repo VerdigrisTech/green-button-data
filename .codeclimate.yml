@@ -1,4 +1,5 @@
 languages:
   Ruby: true
 exclude_paths:
+- "lib/green-button-data/enumerations/*.rb"
 - "lib/green-button-data/parser/*.rb"
