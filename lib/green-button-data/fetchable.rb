@@ -183,6 +183,15 @@ module GreenButtonData
         resource.downcase =~ /(#{valid_resources.join('|')})/
       end
 
+      def type_match_class?(type)
+        class_name_mapping = {
+          'ServiceLocation' => 'RetailCustomer',
+          'CustomerAgreement' => 'RetailCustomer',
+          'ElectricPowerUsageSummary' => 'UsageSummary'
+        }
+        type == class_name || (class_name_mapping.has_key?(type) && class_name_mapping[type] == class_name)
+      end
+
       def infer_content_from(entry, resource)
         return nil unless valid_resource? resource
         entry.content.send resource.underscore
@@ -197,6 +206,7 @@ module GreenButtonData
           unless match_data.nil?
             id = match_data[4] || entry.id
             type = match_data[2] || match_data[3]
+            next unless type_match_class?(type)
 
             entry_content = infer_content_from entry, type
 
