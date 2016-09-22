@@ -3,7 +3,7 @@ module GreenButtonData
     include Fetchable
     include Utilities
 
-    attr_reader :id
+    attr_reader :id, :usage_point_id
     attr_accessor :token
 
     def initialize(attributes)

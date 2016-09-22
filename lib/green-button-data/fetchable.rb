@@ -164,6 +164,11 @@ module GreenButtonData
         /\/(#{resource}|#{resource}\/#{identifier})\/*\z/.match(url)
       end
 
+      def usage_point_id_from_url(url)
+        usage_point = 'UsagePoint\/(.*?)\/'
+        /(#{usage_point})/.match(url)
+      end
+
       def valid_resources
         [
           'applicationinformation',
@@ -209,8 +214,9 @@ module GreenButtonData
             next unless type_match_class?(type)
 
             entry_content = infer_content_from entry, type
-
-            yield id, entry_content, entry
+            match_usage_point_id = usage_point_id_from_url(entry.self)
+            usage_point_id = match_usage_point_id[2] unless match_usage_point_id.nil?
+            yield id, entry_content, entry, usage_point_id
           end
         end
       end
@@ -218,9 +224,10 @@ module GreenButtonData
       def populate_models(feed)
         models = GreenButtonData::ModelCollection.new
 
-        each_entry_content feed do |id, content, entry|
+        each_entry_content feed do |id, content, entry, usage_point_id|
           attributes_hash = attributes_to_hash(content)
           attributes_hash[:id] = id
+          attributes_hash[:usage_point_id] = usage_point_id
 
           attributes_hash[:related_urls] = construct_related_urls entry
           models << self.new(attributes_hash)

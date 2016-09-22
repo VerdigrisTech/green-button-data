@@ -12,7 +12,8 @@ module GreenButtonData
                   :subscription_path,
                   :usage_point_path,
                   :usage_summary_path,
-                  :retail_customer_path
+                  :retail_customer_path,
+                  :bulk_path
 
     def application_information_url(id = nil)
       return build_url @application_information_path, id
@@ -134,6 +135,18 @@ module GreenButtonData
         return "#{retail_customer_url}/#{retail_customer_id}"
       else
         raise ArgumentError.new "Missing required arguments: subscription_id"
+      end
+    end
+
+    def bulk_url(kwargs = {})
+      subscription_id = kwargs[:subscription_id]
+      bulk_file_id = kwargs[:bulk_file_id]
+
+      if subscription_id && bulk_file_id
+        bulk_url = build_url(@bulk_path)
+        return "#{bulk_url}/#{subscription_id}/#{bulk_file_id}"
+      else
+        raise ArgumentError.new "Missing required arguments: subscription_id or bulk_file_id"
       end
     end
 
