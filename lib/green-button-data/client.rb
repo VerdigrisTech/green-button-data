@@ -232,6 +232,26 @@ module GreenButtonData
       )
     end
 
+    def retail_customer_bulk(id = nil, options = {})
+      if id.is_a? Hash
+        options = id
+        id = nil
+      end
+
+      subscription_id = options[:subscription_id]
+      bulk_file_id = options[:bulk_file_id]
+
+      get_resource(
+        @configuration.bulk_url(
+          subscription_id: subscription_id,
+          bulk_file_id: bulk_file_id
+        ),
+        id,
+        RetailCustomer,
+        sanitize_options(options)
+      )
+    end
+
     private
 
     def get_resource(url, id = nil, klazz = nil, options = {})
