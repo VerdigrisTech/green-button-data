@@ -192,6 +192,66 @@ module GreenButtonData
       )
     end
 
+    def interval_block_bulk(id = nil, options = {})
+      if id.is_a? Hash
+        options = id
+        id = nil
+      end
+
+      subscription_id = options[:subscription_id]
+      bulk_file_id = options[:bulk_file_id]
+
+      get_resource(
+        @configuration.bulk_url(
+          subscription_id: subscription_id,
+          bulk_file_id: bulk_file_id
+        ),
+        id,
+        IntervalBlock,
+        sanitize_options(options)
+      )
+    end
+
+    def usage_summary_bulk(id = nil, options = {})
+      if id.is_a? Hash
+        options = id
+        id = nil
+      end
+
+      subscription_id = options[:subscription_id]
+      bulk_file_id = options[:bulk_file_id]
+
+      get_resource(
+        @configuration.bulk_url(
+          subscription_id: subscription_id,
+          bulk_file_id: bulk_file_id
+        ),
+        id,
+        UsageSummary,
+        sanitize_options(options)
+      )
+    end
+
+    def retail_customer_bulk(id = nil, options = {})
+      if id.is_a? Hash
+        options = id
+        id = nil
+      end
+
+      subscription_id = options[:subscription_id]
+      bulk_file_id = options[:bulk_file_id]
+
+      get_resource(
+        @configuration.bulk_url(
+          subscription_id: subscription_id,
+          bulk_file_id: bulk_file_id
+        ),
+        id,
+        RetailCustomer,
+        sanitize_options(options)
+      )
+    end
+
     private
 
     def get_resource(url, id = nil, klazz = nil, options = {})
@@ -214,6 +274,7 @@ module GreenButtonData
       options.delete(:subscription_id) if options.has_key? :subscription_id
       options.delete(:usage_point_id) if options.has_key? :usage_point_id
       options.delete(:usage_summary_id) if options.has_key? :usage_summary_id
+      options.delete(:bulk_file_id) if options.has_key? :bulk_file_id
       options
     end
   end

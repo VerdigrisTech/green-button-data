@@ -21,7 +21,10 @@ module Fixtures
     pge_usage_point: "PGEUsagePoint.xml",
     pge_usage_summaries: "PGEUsageSummaries.xml",
     pge_usage_summary: "PGEUsageSummary.xml",
-    pge_retail_customer: "PGERetailCustomer.xml"
+    pge_retail_customer: "PGERetailCustomer.xml",
+    sce_retail_customer: "BulkSCERetailCustomer.xml",
+    sce_usage_summary_and_interval_block: "BulkSCEUsageSummaryAndIntervalBlock.xml",
+    sce_interval_block: "BulkSCEIntervalBlock.xml"
   }
 
   ##

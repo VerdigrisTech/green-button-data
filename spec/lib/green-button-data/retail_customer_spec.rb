@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe GreenButtonData::UsagePoint do
+describe GreenButtonData::RetailCustomer do
   let(:all_url) { GreenButtonData.configuration.retail_customer_url subscription_id: 5 }
   let(:token) { "53520584-d640-4812-a721-8a1afa459ff7" }
 
