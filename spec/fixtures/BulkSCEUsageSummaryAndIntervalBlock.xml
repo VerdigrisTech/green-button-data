@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding = "UTF-8" ?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:espi="http://naesb.org/espi" xsi:schemaLocation="http://naesb.org/espi espiDerived.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id>urn:uuid:A958AEBC-4425-11E6-8D2E-4C7EF700ED0A</id>
+  <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/1161" ></link>
+  <title>Green Button Subscription Feed</title>
+  <updated>2016-07-07T02:32:02</updated>
+  <entry><id>urn:uuid:65FA6809-6331-450F-8FCE-FC114D3C49CB</id>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/1161" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters" ></link>
+    <title>DST for North America</title>
+    <content><LocalTimeParameters xmlns="http://naesb.org/espi"><dstEndRule>B40E</dstEndRule>
+      <dstOffset>3600</dstOffset>
+      <dstStartRule>B60E</dstStartRule>
+      <tzOffset>-28800</tzOffset>
+    </LocalTimeParameters>
+    </content>
+    <updated>2016-07-07T02:32:02</updated>
+    <published>2016-07-07T02:32:02</published>
+  </entry>
+  <entry><id>urn:uuid:94F0E796-4425-11E6-BFE1-4A1BC70062BB</id>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/1161" ></link>
+    <title>Green Button Subscription Feed</title>
+    <content><UsagePoint xmlns="http://naesb.org/espi"><ServiceCategory><kind>0</kind>
+    </ServiceCategory>
+      <ServiceDeliveryPoint><name>sample tariff showing block and tier pricing</name>
+        <tariffProfile>./TariffSample.xml</tariffProfile>
+      </ServiceDeliveryPoint>
+      <nominalServiceVoltage><value>240</value>
+      </nominalServiceVoltage>
+      <outageRegion>A067</outageRegion>
+      <readCycle>65</readCycle>
+      <pricingNode>GOLETA_6_N200</pricingNode>
+      <loadAggregationPoint>SCNW</loadAggregationPoint>
+    </UsagePoint>
+    </content>
+    <updated>2016-07-07T02:32:02</updated>
+    <published>2016-07-07T02:32:02</published>
+  </entry>
+  <entry><id>94F0E8AE-4425-11E6-BFE2-4A1BC70064C6</id>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1101NB6WRU" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType" ></link>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1101NB6WRU" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType" ></link>
+    <title>Type of Meter Reading Data</title>
+    <content><ReadingType xmlns="http://naesb.org/espi"><accumulationBehaviour>4</accumulationBehaviour>
+      <commodity>1</commodity>
+      <currency>840</currency>
+      <dataQualifier>12</dataQualifier>
+      <defaultQuality>19</defaultQuality>
+      <flowDirection>1</flowDirection>
+      <intervalLength>900</intervalLength>
+      <kind>12</kind>
+      <phase>769</phase>
+      <powerOfTenMultiplier>0</powerOfTenMultiplier>
+      <timeAttribute>7</timeAttribute>
+      <uom>72</uom>
+    </ReadingType>
+    </content>
+    <updated>2016-07-07T02:32:02</updated>
+    <published>2016-07-07T02:32:02</published>
+  </entry>
+  <entry><id>94F0E930-4425-11E6-BFE3-4A1BC70087CB</id>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1101NB6WRU" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType" ></link>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1101NB6WRU" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType" ></link>
+    <title>Type of Meter Reading Data</title>
+    <content><ReadingType xmlns="http://naesb.org/espi"><accumulationBehaviour>2</accumulationBehaviour>
+      <commodity>1</commodity>
+      <currency>840</currency>
+      <dataQualifier>12</dataQualifier>
+      <defaultQuality>19</defaultQuality>
+      <flowDirection>1</flowDirection>
+      <intervalLength>900</intervalLength>
+      <kind>12</kind>
+      <phase>769</phase>
+      <powerOfTenMultiplier>0</powerOfTenMultiplier>
+      <timeAttribute>7</timeAttribute>
+      <uom>72</uom>
+    </ReadingType>
+    </content>
+    <updated>2016-07-07T02:32:02</updated>
+    <published>2016-07-07T02:32:02</published>
+  </entry>
+  <entry><id>94F0E9B2-4425-11E6-BFE4-4A1BC7003F0D</id>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101/IntervalBlock" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1101NB6WRU" ></link>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101/IntervalBlock" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1101NB6WRU" ></link>
+    <title>Monthly Electricity Consumption</title>
+    <content><MeterReading xmlns="http://naesb.org/espi"><batchItemInfo><name></name>
+    </batchItemInfo>
+    </MeterReading>
+    </content>
+    <updated>2016-07-07T02:32:02</updated>
+    <published>2016-07-07T02:32:02</published>
+  </entry>
+  <entry><id>94F0EA2A-4425-11E6-BFE5-4A1BC700F5B4</id>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101/IntervalBlock" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1101NB6WRU" ></link>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101/IntervalBlock" ></link>
+    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ReadingType/1101NB6WRU" ></link>
+    <title>Monthly Electricity Consumption</title>
+    <content><MeterReading xmlns="http://naesb.org/espi"><batchItemInfo><name></name>
+    </batchItemInfo>
+    </MeterReading>
+    </content>
+    <updated>2016-07-07T02:32:02</updated>
+    <published>2016-07-07T02:32:02</published>
+  </entry>
+  <entry><id>94F0EAA2-4425-11E6-BFE6-4A1BC7001DF9</id>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101/IntervalBlock/1" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101/IntervalBlock" ></link>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101/IntervalBlock/1" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/MeterReading/1101/IntervalBlock" ></link>
+    <title>Interval Block</title>
+    <content><IntervalBlock xmlns="http://naesb.org/espi"><interval><duration>31737600</duration>
+      <start>1433660400</start>
+    </interval>
+      <IntervalReading><cost>0</cost>
+        <timePeriod><duration>900</duration>
+          <start>1433660400</start>
+        </timePeriod>
+        <value>210</value>
+      </IntervalReading>
+      <IntervalReading><cost>0</cost>
+        <timePeriod><duration>900</duration>
+          <start>1433661300</start>
+        </timePeriod>
+        <value>200</value>
+      </IntervalReading>
+      <IntervalReading><cost>0</cost>
+        <timePeriod><duration>900</duration>
+          <start>1433662200</start>
+        </timePeriod>
+        <value>210</value>
+      </IntervalReading>
+    </IntervalBlock>
+    </content>
+    <updated>2016-07-07T02:32:15</updated>
+    <published>2016-07-07T02:32:15</published>
+  </entry>
+  <entry><id>94F0EB92-4425-11E6-BFE8-4A1BC700F6FB</id>
+    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary/NB6WRU" ></link>
+    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary" ></link>
+    <title>Usage Summary</title>
+    <content><UsageSummary xmlns="http://naesb.org/espi"><billingPeriod><duration>2592000</duration>
+      <start>1463961600</start>
+    </billingPeriod>
+      <billLastPeriod>17418000</billLastPeriod>
+      <billToDate>13975000</billToDate>
+      <costAdditionalLastPeriod>0</costAdditionalLastPeriod>
+      <currency>840</currency>
+      <overallConsumptionLastPeriod><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <uom>72</uom>
+        <value>1152000</value>
+      </overallConsumptionLastPeriod>
+      <currentBillingPeriodOverAllConsumption><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>1466240895</timeStamp>
+        <uom>72</uom>
+        <value>808240</value>
+      </currentBillingPeriodOverAllConsumption>
+      <qualityOfReading>0</qualityOfReading>
+      <statusTimeStamp>1466240895</statusTimeStamp>
+    </UsageSummary>
+    </content>
+    <updated>2016-07-07T02:32:15</updated>
+    <published>2016-07-07T02:32:15</published>
+  </entry>
+  <entry><id>94F0EC14-4425-11E6-BFE9-4A1BC7001F93</id>
+  <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary/NB6WRU" ></link>
+  <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary" ></link>
+  <title>Usage Summary</title>
+  <content><UsageSummary xmlns="http://naesb.org/espi"><billingPeriod><duration>2592000</duration>
+    <start>1463961600</start>
+  </billingPeriod>
+    <billLastPeriod>17418000</billLastPeriod>
+    <billToDate>13975000</billToDate>
+    <costAdditionalLastPeriod>0</costAdditionalLastPeriod>
+    <currency>840</currency>
+    <overallConsumptionLastPeriod><powerOfTenMultiplier>0</powerOfTenMultiplier>
+      <uom>72</uom>
+      <value>1152000</value>
+    </overallConsumptionLastPeriod>
+    <currentBillingPeriodOverAllConsumption><powerOfTenMultiplier>0</powerOfTenMultiplier>
+      <timeStamp>1466240895</timeStamp>
+      <uom>72</uom>
+      <value>808240</value>
+    </currentBillingPeriodOverAllConsumption>
+    <qualityOfReading>0</qualityOfReading>
+    <statusTimeStamp>1466240895</statusTimeStamp>
+  </UsageSummary>
+  </content>
+  <updated>2016-07-07T02:32:15</updated>
+  <published>2016-07-07T02:32:15</published>
+  </entry>
+  <entry><id>94F0EC8C-4425-11E6-BFEA-4A1BC70061FD</id>
+  <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary" ></link>
+  <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary/NB6WRU" ></link>
+  <title>Usage Summary</title>
+  <content><UsageSummary xmlns="http://naesb.org/espi"><billingPeriod><duration>2505600</duration>
+    <start>1437609600</start>
+  </billingPeriod>
+    <costAdditionalDetailLastPeriod><amount>9706000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Generation Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>1</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>11110000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Delivery Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>2</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Usage Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>3</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>1482000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>4</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>25000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Tax - Local Or State Or Federal Energy Tax</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>5</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>-149000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Credit</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>8</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Information</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>10</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <currency>840</currency>
+    <statusTimeStamp>0</statusTimeStamp>
+    <tariffProfile>TOU-GS-1-A</tariffProfile>
+  </UsageSummary>
+  </content>
+  <updated>2016-07-07T02:32:15</updated>
+  <published>2016-07-07T02:32:15</published>
+  </entry>
+  <entry><id>94F0ED04-4425-11E6-BFEB-4A1BC700483A</id>
+  <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary" ></link>
+  <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary/NB6WRU" ></link>
+  <title>Usage Summary</title>
+  <content><UsageSummary xmlns="http://naesb.org/espi"><billingPeriod><duration>2764800</duration>
+    <start>1440115200</start>
+  </billingPeriod>
+    <costAdditionalDetailLastPeriod><amount>12237000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Generation Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>1</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>13750000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Delivery Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>2</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Usage Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>3</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>1889000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>4</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>32000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Tax - Local Or State Or Federal Energy Tax</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>5</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>-190000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Credit</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>8</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Information</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>10</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <currency>840</currency>
+    <statusTimeStamp>0</statusTimeStamp>
+    <tariffProfile>TOU-GS-1-A</tariffProfile>
+  </UsageSummary>
+  </content>
+  <updated>2016-07-07T02:32:15</updated>
+  <published>2016-07-07T02:32:15</published>
+  </entry>
+  <entry><id>94F0ED7C-4425-11E6-BFEC-4A1BC7007C1E</id>
+  <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary" ></link>
+  <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary/NB6WRU" ></link>
+  <title>Usage Summary</title>
+  <content><UsageSummary xmlns="http://naesb.org/espi"><billingPeriod><duration>2592000</duration>
+    <start>1442880000</start>
+  </billingPeriod>
+    <costAdditionalDetailLastPeriod><amount>6711000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Generation Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>1</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>11819000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Delivery Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>2</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Usage Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>3</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>1635000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>4</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>28000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Tax - Local Or State Or Federal Energy Tax</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>5</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>-164000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Credit</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>8</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Information</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>10</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <currency>840</currency>
+    <statusTimeStamp>0</statusTimeStamp>
+    <tariffProfile>TOU-GS-1-A</tariffProfile>
+  </UsageSummary>
+  </content>
+  <updated>2016-07-07T02:32:15</updated>
+  <published>2016-07-07T02:32:15</published>
+  </entry>
+  <entry><id>94F0EDF4-4425-11E6-BFED-4A1BC7007537</id>
+  <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary" ></link>
+  <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary/NB6WRU" ></link>
+  <title>Usage Summary</title>
+  <content><UsageSummary xmlns="http://naesb.org/espi"><billingPeriod><duration>2592000</duration>
+    <start>1445472000</start>
+  </billingPeriod>
+    <costAdditionalDetailLastPeriod><amount>4467000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Generation Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>1</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>11760000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Delivery Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>2</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Usage Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>3</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>1581000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>4</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>27000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Tax - Local Or State Or Federal Energy Tax</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>5</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>-159000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Credit</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>8</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Information</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>10</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <currency>840</currency>
+    <statusTimeStamp>0</statusTimeStamp>
+    <tariffProfile>TOU-GS-1-A</tariffProfile>
+  </UsageSummary>
+  </content>
+  <updated>2016-07-07T02:32:15</updated>
+  <published>2016-07-07T02:32:15</published>
+  </entry>
+  <entry><id>94F0EE6C-4425-11E6-BFEE-4A1BC700787D</id>
+  <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary" ></link>
+  <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/UsagePoint/NB6WRU/UsageSummary/NB6WRU" ></link>
+  <title>Usage Summary</title>
+  <content><UsageSummary xmlns="http://naesb.org/espi"><billingPeriod><duration>2678400</duration>
+    <start>1448064000</start>
+  </billingPeriod>
+    <costAdditionalDetailLastPeriod><amount>4042000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Generation Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>1</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>11057000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Delivery Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>2</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Energy Usage Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>3</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>1549000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Fee</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>4</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>26000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Tax - Local Or State Or Federal Energy Tax</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>5</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>-156000</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Administrative Credit</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>8</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <costAdditionalDetailLastPeriod><amount>0</amount>
+      <rounding>0</rounding>
+      <dateTime>0</dateTime>
+      <note>Information</note>
+      <measurement><powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <timeStamp>0</timeStamp>
+        <uom>72</uom>
+        <value>0</value>
+        <readingTypeRef>0</readingTypeRef>
+      </measurement>
+      <itemKind>10</itemKind>
+    </costAdditionalDetailLastPeriod>
+    <currency>840</currency>
+    <statusTimeStamp>0</statusTimeStamp>
+    <tariffProfile>TOU-GS-1-A</tariffProfile>
+  </UsageSummary>
+  </content>
+  <updated>2016-07-07T02:32:15</updated>
+  <published>2016-07-07T02:32:15</published>
+  </entry>
+</feed>
