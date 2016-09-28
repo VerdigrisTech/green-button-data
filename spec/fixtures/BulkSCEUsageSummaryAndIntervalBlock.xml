@@ -160,7 +160,7 @@
     </billingPeriod>
       <billLastPeriod>17418000</billLastPeriod>
       <billToDate>13975000</billToDate>
-      <costAdditionalLastPeriod>0</costAdditionalLastPeriod>
+      <costAdditionalLastPeriod>10</costAdditionalLastPeriod>
       <currency>840</currency>
       <overallConsumptionLastPeriod><powerOfTenMultiplier>0</powerOfTenMultiplier>
         <uom>72</uom>
