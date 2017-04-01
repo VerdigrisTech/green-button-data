@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.platform              = Gem::Platform::RUBY
   s.required_ruby_version = '>= 1.9.3'
 
-  s.add_dependency 'nokogiri', '~> 1.6'
+  s.add_dependency 'nokogiri', '~> 1.7'
   s.add_dependency 'sax-machine', '~> 1.3'
   s.add_dependency 'faraday', '~> 0.9'
 
