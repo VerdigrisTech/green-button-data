@@ -13,7 +13,6 @@ module GreenButtonData
       66 => :b_c,
       72 => :b_av,
       97 => :b_c_n,  # TODO: Check with GB XML schema maintainers? https://github.com/energyos/OpenESPI-Common-java/blob/master/etc/espiDerived.xsd
-      97 => :a_c_n,
       128 => :a,
       129 => :a_n,
       132 => :a_b,
