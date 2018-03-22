@@ -334,4 +334,4 @@ Verdigris Technologies Inc. assumes NO RESPONSIBILITY OR LIABILITY
 UNDER ANY CIRCUMSTANCES for usage of this software. See the [LICENSE.txt](https://raw.githubusercontent.com/VerdigrisTech/green-button-data/master/LICENSE.txt)
 file for detailed legal information.
 
-Copyright © 2015-2018, [Verdigris Technologies Inc](http://verdigris.co). All rights reserved.
+Copyright © 2015-2018, [Verdigris Technologies Inc](https://verdigris.co). All rights reserved.
