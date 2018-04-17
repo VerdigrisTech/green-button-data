@@ -3,7 +3,7 @@ module GreenButtonData
     class ServiceLocation
       include SAXMachine
 
-      element :main_address, class: MainAddress, as: :main_address
+      element :mainAddress, class: MainAddress, as: :main_address
 
       # ESPI Namespacing
       element :'espi:mainAddress', class: MainAddress, as: :main_address

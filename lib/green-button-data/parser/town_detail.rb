@@ -3,7 +3,7 @@ module GreenButtonData
     class TownDetail
       include SAXMachine
 
-      element :state_or_province, as: :state_or_province
+      element :stateOrProvince, as: :state_or_province
       element :code, as: :code
       element :name, as: :name
 

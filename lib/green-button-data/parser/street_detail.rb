@@ -3,7 +3,7 @@ module GreenButtonData
     class StreetDetail
       include SAXMachine
 
-      element :address_general, as: :address_general
+      element :addressGeneral, as: :address_general
 
       # ESPI Namespacing
       element :'espi:addressGeneral', as: :address_general

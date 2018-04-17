@@ -42,6 +42,14 @@ module GreenButtonData
       element :'ns1:content', class: Content, as: :content
       element :'ns1:published', as: :published
       element :'ns1:updated', as: :updated
+
+      element :'ns2:id', as: :entry_id
+      element :'ns2:link', as: :up, value: :href, with: { rel: 'up' }
+      element :'ns2:link', as: :self, value: :href, with: { rel: 'self' }
+      elements :'ns2:link', as: :related, value: :href, with: { rel: 'related' }
+      element :'ns2:content', class: Content, as: :content
+      element :'ns2:published', as: :published
+      element :'ns2:updated', as: :updated
     end
   end
 end
