@@ -66,11 +66,7 @@ describe GreenButtonData::Parser::UsageSummary do
     end
 
     it "should parse cost additional detail last period" do
-      expect(subject.cost_additional_detail_last_periods.first).
-      to be_an_instance_of GreenButtonData::Parser::CostAdditionalDetailLastPeriod
-      expect(subject.cost_additional_detail_last_periods.first.value).to eq 106120.6
-      expect(subject.cost_additional_detail_last_periods.first.uom).to eq :Wh
-      expect(subject.cost_additional_detail_last_periods.first.note).to eq 'Total Winter Partial Peak Usage'
+      expect(subject.cost_additional_detail_last_periods.first).to be_a GreenButtonData::Parser::CostAdditionalDetailLastPeriod
     end
 
     it "should parse quality of reading" do

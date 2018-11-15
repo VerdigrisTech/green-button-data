@@ -18,22 +18,78 @@
             </ns0:billingPeriod>
             <ns0:billLastPeriod>23364000</ns0:billLastPeriod>
             <ns0:costAdditionalDetailLastPeriod>
-               <ns0:note>Total Winter Partial Peak Usage</ns0:note>
+               <ns0:amount>1200000</ns0:amount>
+               <ns0:note>Part Peak Energy Charge</ns0:note>
                <ns0:measurement>
                   <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
                   <ns0:uom>72</ns0:uom>
-                  <ns0:value>106120600</ns0:value>
+                  <ns0:value>100000000</ns0:value>
                </ns0:measurement>
                <ns0:itemKind>3</ns0:itemKind>
+               <ns0:unitCost>12000</ns0:unitCost>
+               <ns0:itemPeriod>
+                  <ns0:duration>2505600</ns0:duration>
+                  <ns0:start>1434006000</ns0:start>
+               </ns0:itemPeriod>
             </ns0:costAdditionalDetailLastPeriod>
             <ns0:costAdditionalDetailLastPeriod>
-               <ns0:note>Total Winter Off Peak Usage</ns0:note>
+               <ns0:amount>3600000</ns0:amount>
+               <ns0:note>Off Peak Energy Charge</ns0:note>
                <ns0:measurement>
                   <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
                   <ns0:uom>72</ns0:uom>
-                  <ns0:value>398794000</ns0:value>
+                  <ns0:value>400000000</ns0:value>
                </ns0:measurement>
                <ns0:itemKind>3</ns0:itemKind>
+               <ns0:unitCost>9000</ns0:unitCost>
+               <ns0:itemPeriod>
+                  <ns0:duration>2505600</ns0:duration>
+                  <ns0:start>1434006000</ns0:start>
+               </ns0:itemPeriod>
+            </ns0:costAdditionalDetailLastPeriod>
+            <ns0:costAdditionalDetailLastPeriod>
+               <ns0:amount>77000</ns0:amount>
+               <ns0:note>Max Demand Charge</ns0:note>
+               <ns0:measurement>
+                  <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
+                  <ns0:uom>38</ns0:uom>
+                  <ns0:value>960000</ns0:value>
+               </ns0:measurement>
+               <ns0:itemKind>3</ns0:itemKind>
+               <ns0:unitCost>603000</ns0:unitCost>
+               <ns0:itemPeriod>
+                  <ns0:duration>2505600</ns0:duration>
+                  <ns0:start>1434006000</ns0:start>
+               </ns0:itemPeriod>
+            </ns0:costAdditionalDetailLastPeriod>
+            <ns0:costAdditionalDetailLastPeriod>
+               <ns0:amount>480000</ns0:amount>
+               <ns0:note>Customer Charge</ns0:note>
+               <ns0:measurement>
+                  <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
+                  <ns0:uom>72</ns0:uom>
+                  <ns0:value>4000000</ns0:value>
+               </ns0:measurement>
+               <ns0:itemKind>4</ns0:itemKind>
+               <ns0:unitCost>120000</ns0:unitCost>
+               <ns0:itemPeriod>
+                  <ns0:duration>2505600</ns0:duration>
+                  <ns0:start>1434006000</ns0:start>
+               </ns0:itemPeriod>
+            </ns0:costAdditionalDetailLastPeriod>
+            <ns0:costAdditionalDetailLastPeriod>
+               <ns0:amount>1000</ns0:amount>
+               <ns0:note>Energy Commission Tax</ns0:note>
+               <ns0:measurement>
+                  <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
+                  <ns0:uom>72</ns0:uom>
+                  <ns0:value>0</ns0:value>
+               </ns0:measurement>
+               <ns0:itemKind>5</ns0:itemKind>
+               <ns0:itemPeriod>
+                  <ns0:duration>2505600</ns0:duration>
+                  <ns0:start>1434006000</ns0:start>
+               </ns0:itemPeriod>
             </ns0:costAdditionalDetailLastPeriod>
             <ns0:overallConsumptionLastPeriod>
                <ns0:powerOfTenMultiplier>-3</ns0:powerOfTenMultiplier>
