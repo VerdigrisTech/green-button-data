@@ -28,7 +28,7 @@ module GreenButtonData
       end
 
       element :townDetail, class: TownDetail, as: :town_detail
-      element :streetDetail, class: StreetDetail, as: :town_detail
+      element :streetDetail, class: StreetDetail, as: :street_detail
 
 
       # ESPI Namespacing
