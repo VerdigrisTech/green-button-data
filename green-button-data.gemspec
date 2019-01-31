@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'green-button-data'
   s.version     = GreenButtonData::VERSION
 
-  s.authors     = ['Andrew Jo', 'Orlando Lee']
+  s.authors     = ['Andrew Jo', 'Orlando Lee', 'Edward Breen']
   s.email       = 'engineering@verdigris.co'
   s.homepage    = 'http://verdigris.co'
   s.licenses    = ['BSD-2-Clause']
