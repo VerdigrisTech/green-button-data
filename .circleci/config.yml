@@ -58,6 +58,11 @@ jobs:
       - attach_workspace:
           at: .
       - run:
+          name: Login to RubyGems.org
+          command: |
+            curl -u ${RUBYGEMS_USER}:${RUBYGEMS_PASS} https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials; \
+            chmod 0600 ~/.gem/credentials
+      - run:
           name: Publish to RubyGems.org
           command: gem push green-button-data-${CIRCLE_TAG:1}.gem
 
