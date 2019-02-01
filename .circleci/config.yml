@@ -4,9 +4,17 @@ test-steps: &test-steps
   working_directory: ~/green-button-data
   steps:
     - checkout
+    - restore_cache:
+        keys:
+          - v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          - v1-gem-cache-{{ arch }}-{{ .Branch }}
+          - v1-gem-cache-{{ arch }}
     - run:
         name: Install dependencies
-        command: bundle
+        command: bundle install && bundle clean
+    - save_cache:
+        paths:
+          - ~/.bundle
     - run:
         name: Run tests
         command: rspec
