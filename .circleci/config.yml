@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  test: &test
+    working_directory: ~/green-button-data
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: bundle
+      - run:
+          name: Run tests
+          command: rspec
+
+  test-ruby-2.4:
+    docker:
+      - image: circleci/ruby:2.4
+    <<: *test
+
+  test-ruby-2.5:
+    docker:
+      - image: circleci/ruby:2.5
+    <<: *test
+
+  test-ruby-2.6:
+    docker:
+      - image: circleci/ruby:2.6
+    <<: *test
+
+workflows:
+  version: 2
+  tests:
+    jobs:
+      - test-ruby-2.4
+      - test-ruby-2.5
+      - test-ruby-2.6
