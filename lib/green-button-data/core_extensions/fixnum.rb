@@ -1,6 +1,10 @@
 Fixnum.class_eval do
-  unless 0.respond_to? :digits
-    def digits(base = 10)
+  if 0.respond_to? :digits
+    def num_digits(base = 10)
+      self.digits.count
+    end
+  else
+    def num_digits(base = 10)
       num = self.abs
       if num == 0
         1
