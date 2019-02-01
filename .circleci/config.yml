@@ -48,7 +48,18 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - green-button-data-*.gem
+            - green-button-data-${CIRCLE_TAG:1}.gem
+
+  publish:
+    docker:
+      - image: circleci/ruby:2.4
+    working_directory: ~/green-button-data
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Publish to RubyGems.org
+          command: gem push green-button-data-${CIRCLE_TAG:1}.gem
 
 workflows:
   version: 2
@@ -59,4 +70,18 @@ workflows:
       - test-ruby-2.6
   release:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /v\d+(\.\d+){0,2}/
+      - publish:
+          context: ruby gem
+          requires:
+            - build
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /v\d+(\.\d+){0,2}/
