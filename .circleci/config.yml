@@ -47,6 +47,8 @@ jobs:
           command: gem build green-button-data.gemspec
       - persist_to_workspace:
           root: .
+          paths:
+            - green-button-data-*.gem
 
 workflows:
   version: 2
