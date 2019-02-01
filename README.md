@@ -333,4 +333,18 @@ Verdigris Technologies Inc. assumes NO RESPONSIBILITY OR LIABILITY
 UNDER ANY CIRCUMSTANCES for usage of this software. See the [LICENSE.txt](https://raw.githubusercontent.com/VerdigrisTech/green-button-data/master/LICENSE.txt)
 file for detailed legal information.
 
+## 📣 We’re Hiring!
+
+Do you have passion for solving challenging engineering problems? You may just be the right fit at Verdigris! We are hiring software engineers for our [Mountain View, California, USA](verdigris-location) office.
+
+### Open Positions
+
+* [Product Manager](https://jobs.lever.co/verdigris/bd472be8-df8e-48e9-952a-ad803c44c02f?source=GitHub) — [Apply](https://jobs.lever.co/verdigris/bd472be8-df8e-48e9-952a-ad803c44c02f/apply?source=GitHub)
+* [Technical Lead - Software Engineer](https://jobs.lever.co/verdigris/c65cd690-a7bd-4ab6-ab16-16a34888181b?source=GitHub) — [Apply](https://jobs.lever.co/verdigris/c65cd690-a7bd-4ab6-ab16-16a34888181b/apply?source=GitHub)
+
+For more information, check out our [Careers](verdigris-careers) page.
+
 Copyright © 2015-2019, [Verdigris Technologies Inc](https://verdigris.co). All rights reserved.
+
+[verdigris-location]: https://www.google.com/maps/place/Verdigris+Technologies/@37.4105674,-122.0605774,17z
+[verdigris-careers]: https://verdigris.co/careers
