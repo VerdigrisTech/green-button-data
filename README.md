@@ -344,7 +344,9 @@ Do you have passion for solving challenging engineering problems? You may just b
 
 For more information, check out our [Careers](verdigris-careers) page.
 
-Copyright © 2015-2019, [Verdigris Technologies Inc](https://verdigris.co). All rights reserved.
+---
+
+<sub>Copyright © 2015-2019, [Verdigris Technologies Inc](https://verdigris.co). All rights reserved.</sub>
 
 [verdigris-location]: https://www.google.com/maps/place/Verdigris+Technologies/@37.4105674,-122.0605774,17z
 [verdigris-careers]: https://verdigris.co/careers
