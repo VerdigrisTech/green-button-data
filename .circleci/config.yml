@@ -15,6 +15,7 @@ test-steps: &test-steps
     - save_cache:
         paths:
           - ~/.bundle
+        key: v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
     - run:
         name: Run tests
         command: rspec
