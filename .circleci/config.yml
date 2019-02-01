@@ -60,6 +60,7 @@ jobs:
       - run:
           name: Login to RubyGems.org
           command: |
+            mkdir ~/.gem; \
             curl -u ${RUBYGEMS_USER}:${RUBYGEMS_PASS} https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials; \
             chmod 0600 ~/.gem/credentials
       - run:
