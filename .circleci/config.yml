@@ -36,6 +36,18 @@ jobs:
       - image: circleci/ruby:2.6
     <<: *test-steps
 
+  build:
+    docker:
+      - image: circleci/ruby:2.4
+    working_directory: ~/green-button-data
+    steps:
+      - checkout
+      - run:
+          name: Build gem
+          command: gem build green-button-data.gemspec
+      - persist_to_workspace:
+          root: .
+
 workflows:
   version: 2
   tests:
@@ -43,3 +55,6 @@ workflows:
       - test-ruby-2.4
       - test-ruby-2.5
       - test-ruby-2.6
+  release:
+    jobs:
+      - build
