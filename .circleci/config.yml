@@ -48,7 +48,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - green-button-data-${CIRCLE_TAG:1}.gem
+            - green-button-data-*.gem
 
   publish:
     docker:
