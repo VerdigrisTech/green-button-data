@@ -1,96 +1,123 @@
-<?xml version="1.0" encoding = "UTF-8" ?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:cust="http://naesb.org/espi/customer">
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:cust="http://naesb.org/espi/customer">
   <id>489C14BF-4426-11E6-A453-5463F700E189</id>
-  <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/1161" ></link>
+  <link rel="self" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/1161" />
   <title>Green Button Customer Feed</title>
   <updated>2016-07-07T02:36:29</updated>
-  <entry><id>489D013A-4426-11E6-A454-5463F7007B38</id>
-    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111" ></link>
-    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount" ></link>
-    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement" ></link>
-    <title></title>
-    <content><CustomerAccount><name>2-00-111-1111</name>
-    </CustomerAccount>
+  <entry>
+    <id>489D013A-4426-11E6-A454-5463F7007B38</id>
+    <link rel="self" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111" />
+    <link rel="up" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount" />
+    <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement" />
+    <title />
+    <content>
+      <cust:CustomerAccount>
+        <cust:name>2-00-111-1111</cust:name>
+      </cust:CustomerAccount>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
   </entry>
-  <entry><id>489F8482-4426-11E6-A455-5463F70029FB</id>
-    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU" ></link>
-    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement" ></link>
-    <title></title>
-    <content><CustomerAgreement xmlns="http://naesb.org/espi/customer" ><name>3-001-4647-18</name>
-    </CustomerAgreement>
+  <entry>
+    <id>489F8482-4426-11E6-A455-5463F70029FB</id>
+    <link rel="self" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU" />
+    <link rel="up" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement" />
+    <title />
+    <content>
+      <cust:CustomerAgreement xmlns="http://naesb.org/espi/customer">
+        <cust:name>3-001-4647-18</cust:name>
+      </cust:CustomerAgreement>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
   </entry>
-  <entry><id>48A01C1C-4426-11E6-A456-5463F70022D6</id>
-    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceLocation/1" ></link>
-    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceLocation" ></link>
-    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceLocation/1/EndDevice" ></link>
-    <title></title>
-    <content><ServiceLocation xmlns="http://naesb.org/espi/customer" ><mainAddress><streetDetail><number>11111</number>
-      <name>COLORADO ST</name>
-    </streetDetail>
-      <townDetail><name>PALM DESERT</name>
-        <stateOrProvince>CA</stateOrProvince>
-      </townDetail>
-      <postalCode>11111-1111</postalCode>
-    </mainAddress>
-    </ServiceLocation>
+  <entry>
+    <id>48A01C1C-4426-11E6-A456-5463F70022D6</id>
+    <link rel="self" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceLocation/1" />
+    <link rel="up" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceLocation" />
+    <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceLocation/1/EndDevice" />
+    <title />
+    <content>
+      <ServiceLocation xmlns="http://naesb.org/espi/customer">
+        <mainAddress>
+          <streetDetail>
+            <number>11111</number>
+            <name>COLORADO ST</name>
+          </streetDetail>
+          <townDetail>
+            <name>PALM DESERT</name>
+            <stateOrProvince>CA</stateOrProvince>
+          </townDetail>
+          <postalCode>11111-1111</postalCode>
+        </mainAddress>
+      </ServiceLocation>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
   </entry>
-  <entry><id>48A0CAE0-4426-11E6-A457-5463F7008592</id>
-    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/msp" ></link>
-    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier" ></link>
-    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/msp/EndDevice" ></link>
-    <title></title>
-    <content><ServiceSupplier xmlns="http://naesb.org/espi/customer" ><kind>msp</kind>
-      <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
-    </ServiceSupplier>
+  <entry>
+    <id>48A0CAE0-4426-11E6-A457-5463F7008592</id>
+    <link rel="self" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/msp" />
+    <link rel="up" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier" />
+    <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/msp/EndDevice" />
+    <title />
+    <content>
+      <ServiceSupplier xmlns="http://naesb.org/espi/customer">
+        <kind>msp</kind>
+        <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
+      </ServiceSupplier>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
   </entry>
-  <entry><id>48A10474-4426-11E6-A458-5463F7008FC1</id>
-    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/mdma" ></link>
-    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier" ></link>
-    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/mdma/EndDevice" ></link>
-    <title></title>
-    <content><ServiceSupplier xmlns="http://naesb.org/espi/customer" ><kind>mdma</kind>
-      <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
-    </ServiceSupplier>
+  <entry>
+    <id>48A10474-4426-11E6-A458-5463F7008FC1</id>
+    <link rel="self" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/mdma" />
+    <link rel="up" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier" />
+    <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/mdma/EndDevice" />
+    <title />
+    <content>
+      <ServiceSupplier xmlns="http://naesb.org/espi/customer">
+        <kind>mdma</kind>
+        <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
+      </ServiceSupplier>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
   </entry>
-  <entry><id>48A13CA0-4426-11E6-A459-5463F70012F5</id>
-    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/lse" ></link>
-    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier" ></link>
-    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/lse/EndDevice" ></link>
-    <title></title>
-    <content><ServiceSupplier xmlns="http://naesb.org/espi/customer" ><kind>lse</kind>
-      <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
-    </ServiceSupplier>
+  <entry>
+    <id>48A13CA0-4426-11E6-A459-5463F70012F5</id>
+    <link rel="self" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/lse" />
+    <link rel="up" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier" />
+    <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/lse/EndDevice" />
+    <title />
+    <content>
+      <ServiceSupplier xmlns="http://naesb.org/espi/customer">
+        <kind>lse</kind>
+        <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
+      </ServiceSupplier>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
   </entry>
-  <entry><id>48A16DBA-4426-11E6-A45A-5463F700E024</id>
-    <link rel = "self"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter/14106263" ></link>
-    <link rel = "up"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter" ></link>
-    <link rel = "related"  href = "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter/14106263/EndDevice" ></link>
-    <title></title>
-    <content><Meter xmlns="http://naesb.org/espi/customer" ><type>C2SOD</type>
-      <serialNumber>2.16.840.1.114416.1.5.222013991111</serialNumber>
-      <formNumber>2S</formNumber>
-      <MeterMultipliers><kind>ctRatio</kind>
-      </MeterMultipliers>
-      <MeterMultipliers><kind>kR</kind>
-      </MeterMultipliers>
-    </Meter>
+  <entry>
+    <id>48A16DBA-4426-11E6-A45A-5463F700E024</id>
+    <link rel="self" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter/14106263" />
+    <link rel="up" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter" />
+    <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter/14106263/EndDevice" />
+    <title />
+    <content>
+      <Meter xmlns="http://naesb.org/espi/customer">
+        <type>C2SOD</type>
+        <serialNumber>2.16.840.1.114416.1.5.222013991111</serialNumber>
+        <formNumber>2S</formNumber>
+        <MeterMultipliers>
+          <kind>ctRatio</kind>
+        </MeterMultipliers>
+        <MeterMultipliers>
+          <kind>kR</kind>
+        </MeterMultipliers>
+      </Meter>
     </content>
     <updated>2016-07-07T02:36:30</updated>
     <published>2016-07-07T02:36:30</published>
