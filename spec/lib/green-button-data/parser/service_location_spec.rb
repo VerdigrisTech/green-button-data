@@ -4,7 +4,7 @@ describe GreenButtonData::Parser::ServiceLocation do
   context "PG&E namespace" do
     let(:feed) { GreenButtonData::Feed }
     let :service_location do
-      feed.parse(pge_retail_customer).entries.first.content.service_location
+      feed.parse(pge_retail_customer).entries[1].content.service_location
     end
 
     subject { service_location }

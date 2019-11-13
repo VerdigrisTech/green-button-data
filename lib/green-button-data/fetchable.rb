@@ -173,14 +173,17 @@ module GreenButtonData
         [
           'applicationinformation',
           'authorization',
+          'customer',
+          'customeraccount',
+          'customeragreement',
           'electricpowerusagesummary',
           'intervalblock',
           'localtimeparameters',
+          'meter',
           'readingtype',
-          'usagepoint',
-          'usagesummary',
           'servicelocation',
-          'customeragreement'
+          'usagepoint',
+          'usagesummary'
         ]
       end
 
@@ -190,8 +193,11 @@ module GreenButtonData
 
       def type_match_class?(type)
         class_name_mapping = {
+          'Customer' => 'RetailCustomer',
           'ServiceLocation' => 'RetailCustomer',
+          'CustomerAccount' => 'RetailCustomer',
           'CustomerAgreement' => 'RetailCustomer',
+          'Meter' => 'RetailCustomer',
           'ElectricPowerUsageSummary' => 'UsageSummary'
         }
         type == class_name || (class_name_mapping.has_key?(type) && class_name_mapping[type] == class_name)
@@ -228,7 +234,7 @@ module GreenButtonData
           attributes_hash = attributes_to_hash(content)
           attributes_hash[:id] = id
           attributes_hash[:usage_point_id] = usage_point_id
-
+          attributes_hash[:links] = construct_links_hash entry
           attributes_hash[:related_urls] = construct_related_urls entry
           models << self.new(attributes_hash)
         end

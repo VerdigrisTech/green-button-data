@@ -20,5 +20,13 @@ module GreenButtonData
 
       related_urls
     end
+
+    def construct_links_hash(entry)
+      {
+        related: entry.related,
+        self: entry.self,
+        up: entry.up
+      }
+    end
   end
 end

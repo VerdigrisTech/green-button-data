@@ -1,43 +1,90 @@
-<ns1:feed xmlns:ns0="http://naesb.org/espi" xmlns:ns1="http://www.w3.org/2005/Atom">
-  <ns1:id xmlns:ns1="http://www.w3.org/2005/Atom">ea1e55e9-4581-49bf-b0b6-3a50a4ba9a8d</ns1:id>
-  <ns1:title xmlns:ns1="http://www.w3.org/2005/Atom" type="text">Green Button Customer Feed</ns1:title>
-  <ns1:updated xmlns:ns1="http://www.w3.org/2005/Atom">2016-03-30T04:42:54.084Z</ns1:updated>
-  <ns1:link xmlns:ns1="http://www.w3.org/2005/Atom" href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Batch/RetailCustomer/92772" rel="self"/>
+<ns1:feed xmlns:ns1="http://www.w3.org/2005/Atom" xmlns:ns0="http://naesb.org/espi">
+  <ns2:id xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer">ea1e55e9-4581-49bf-b0b6-3a50a4ba9a8d</ns2:id>
+  <ns2:title xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer" type="text">Green Button Customer Feed</ns2:title>
+  <ns2:updated xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer">2019-11-13T00:47:51.173Z</ns2:updated>
+  <ns2:link xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer" href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/Batch/RetailCustomer/92772" rel="self" />
 
-  <ns1:entry xmlns:ns1="http://www.w3.org/2005/Atom">
-    <ns1:id xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:idType">334a13da-c931-4779-aaa0-1629cf1530db</ns1:id>
-    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation" rel="up" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
-    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation/ODg5NDU5MDcwNQ==" rel="self" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
-    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation/ODg5NDU5MDcwNQ==/EndDevice" rel="related" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
-    <ns1:published xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:dateTimeType">2016-03-30T04:42:54.092Z</ns1:published>
-    <ns1:updated xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:dateTimeType">2016-03-30T04:42:54.094Z</ns1:updated>
-    <ns1:content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:contentType">
-      <ns0:ServiceLocation xmlns:ns0="http://naesb.org/espi/customer">
-        <ns0:mainAddress>
-          <ns0:streetDetail>
-            <ns0:addressGeneral>140 HAN RD</ns0:addressGeneral>
-          </ns0:streetDetail>
-          <ns0:townDetail>
-            <ns0:code>95101</ns0:code>
-            <ns0:name>KING CITY</ns0:name>
-            <ns0:stateOrProvince>CA</ns0:stateOrProvince>
-          </ns0:townDetail>
-        </ns0:mainAddress>
-      </ns0:ServiceLocation>
-    </ns1:content>
-  </ns1:entry>
+  <ns2:entry xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer">
+    <ns2:id>4bf0ea20-9cd8-42ea-827c-af5751c9ccb0</ns2:id>
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer" rel="up" />
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==" rel="self" />
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount" rel="related" />
+    <ns2:published>2019-11-13T00:48:00.849Z</ns2:published>
+    <ns2:updated>2019-11-13T00:48:00.849Z</ns2:updated>
+    <ns2:content>
+      <Customer>
+        <name>ACME INDUSTRIES</name>
+      </Customer>
+    </ns2:content>
+  </ns2:entry>
 
-  <ns1:entry xmlns:ns1="http://www.w3.org/2005/Atom">
-    <ns1:id xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:idType">11111124-1cb4-4944-9774-a010272db0f8</ns1:id>
-    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement" rel="up" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
-    <ns1:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582" rel="self" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:linkType"/>
-    <ns1:published xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:dateTimeType">2016-03-30T04:42:54.099Z</ns1:published>
-    <ns1:updated xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:dateTimeType">2016-03-30T04:42:54.101Z</ns1:updated>
-    <ns1:content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:contentType">
-      <ns0:CustomerAgreement xmlns:ns0="http://naesb.org/espi/customer">
-        <ns0:name>1112392222</ns0:name>
-        <ns0:signDate>1376550000</ns0:signDate>
-      </ns0:CustomerAgreement>
-    </ns1:content>
-  </ns1:entry>
+  <ns2:entry xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer">
+    <ns2:id>334a13da-c931-4779-aaa0-1629cf1530db</ns2:id>
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation" rel="up" />
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation/ODg5NDU5MDcwNQ==" rel="self" />
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation/ODg5NDU5MDcwNQ==/EndDevice" rel="related" />
+    <ns2:published>2019-11-13T00:48:00.849Z</ns2:published>
+    <ns2:updated>2019-11-13T00:48:00.849Z</ns2:updated>
+    <ns2:content>
+      <ServiceLocation>
+        <mainAddress>
+          <streetDetail>
+            <addressGeneral>140 HAN RD</addressGeneral>
+          </streetDetail>
+          <townDetail>
+            <code>95101</code>
+            <name>KING CITY</name>
+            <stateOrProvince>CA</stateOrProvince>
+          </townDetail>
+        </mainAddress>
+      </ServiceLocation>
+    </ns2:content>
+  </ns2:entry>
+
+  <ns2:entry xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer">
+    <ns2:id>ad2957c6-be1d-4864-8218-d7fbaad595c2</ns2:id>
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount" rel="up" />
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821" rel="self" />
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement" rel="related" />
+    <ns2:published>2019-11-13T00:48:00.849Z</ns2:published>
+    <ns2:updated>2019-11-13T00:48:00.849Z</ns2:updated>
+    <ns2:content>
+      <CustomerAccount>
+        <name>1687340014</name>
+      </CustomerAccount>
+    </ns2:content>
+  </ns2:entry>
+
+  <ns2:entry xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer">
+    <ns2:id>11111124-1cb4-4944-9774-a010272db0f8</ns2:id>
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement" rel="up" />
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582" rel="self" />
+    <ns2:published>2016-03-30T04:42:54.099Z</ns2:published>
+    <ns2:updated>2016-03-30T04:42:54.101Z</ns2:updated>
+    <ns2:content>
+      <CustomerAgreement>
+        <name>1112392222</name>
+        <type>AGR</type>
+        <docStatus>
+          <value>Active</value>
+        </docStatus>
+        <signDate>1376550000</signDate>
+      </CustomerAgreement>
+    </ns2:content>
+  </ns2:entry>
+
+  <ns2:entry xmlns:ns2="http://www.w3.org/2005/Atom" xmlns="http://naesb.org/espi/customer">
+    <ns2:id>0b28e1d1-512e-4eb4-9ffb-03f05621425d</ns2:id>
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation/ODg5NDU5MDcwNQ==/Meter" rel="up" />
+    <ns2:link href="https://api.pge.com/GreenButtonConnect/espi/1_1/resource/RetailCustomer/92772/Customer/MjYyNjk0MDkxMA==/CustomerAccount/4872715821/CustomerAgreement/9760620582/ServiceLocation/ODg5NDU5MDcwNQ==/Meter/1121183459" rel="self" />
+    <ns2:published>2019-11-13T00:48:00.851Z</ns2:published>
+    <ns2:updated>2019-11-13T00:48:00.851Z</ns2:updated>
+    <ns2:content>
+      <Meter>
+        <type>EMTR 12S/XP/CL200/3W/5Dials</type>
+        <serialNumber>1121183459</serialNumber>
+        <intervalLength>900</intervalLength>
+      </Meter>
+    </ns2:content>
+  </ns2:entry>
 </ns1:feed>
