@@ -2,7 +2,7 @@ source 'https://rubygems.org/'
 
 gemspec
 
-group :deveopment do
+group :development do
   gem 'guard-rspec', require: false
 end
 
