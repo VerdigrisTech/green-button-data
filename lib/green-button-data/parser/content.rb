@@ -56,6 +56,10 @@ module GreenButtonData
               as: :service_location
       element :'ns0:CustomerAgreement', class: CustomerAgreement,
               as: :customer_agreement
+
+      # Special case for SCE namespacing
+      element :'cust:CustomerAgreement', class: CustomerAgreement,
+              as: :customer_agreement        
     end
   end
 end

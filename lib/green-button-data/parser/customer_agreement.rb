@@ -10,6 +10,9 @@ module GreenButtonData
 
       # Special case for PG&E generic namespacing
       element :'ns0:name', as: :customer_agreement_id
+
+      # Special case for SCE namespacing
+      element :'cust:name', as: :customer_agreement_id
     end
   end
 end
