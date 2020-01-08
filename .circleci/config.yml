@@ -11,7 +11,7 @@ test-steps: &test-steps
           - v1-gem-cache-{{ arch }}
     - run:
         name: Install dependencies
-        command: bundle install && bundle clean
+        command: bundle install
     - save_cache:
         paths:
           - ~/.bundle
