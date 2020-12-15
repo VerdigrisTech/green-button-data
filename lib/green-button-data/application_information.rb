@@ -36,12 +36,12 @@ module GreenButtonData
 
     def client_secret_expires_at(kwargs = {})
       if @client_secret_expires_at == 0
-        # Maximum Fixnum = 4611686018427387903
-        max_fixnum = 2 ** (@client_secret_expires_at.size * 8 - 2) - 1
+        # Maximum Integer = 4611686018427387903
+        max_integer = 2 ** (@client_secret_expires_at.size * 8 - 2) - 1
 
         # Roughly 146 billion years into the future; Sun would be long dead by
         # this time; so for all intents and purposes, never expires
-        time = Time.at(max_fixnum)
+        time = Time.at(max_integer)
 
         if kwargs[:local] == true
           return time.localtime

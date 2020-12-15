@@ -1,4 +1,4 @@
-Fixnum.class_eval do
+Integer.class_eval do
   if 0.respond_to? :digits
     def num_digits(base = 10)
       self.digits.count
@@ -13,4 +13,4 @@ Fixnum.class_eval do
       end
     end
   end
-end # Fixnum.class_eval
+end # Integer.class_eval

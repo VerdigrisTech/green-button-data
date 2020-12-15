@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Fixnum do
+describe Integer do
   describe "#digits" do
     it "should return number of digits for a fixed number" do
       expect(1234.num_digits).to eq 4

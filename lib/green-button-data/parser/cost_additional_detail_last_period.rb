@@ -22,7 +22,7 @@ module GreenButtonData
       element :'ns0:unitCost', class: Integer, as: :unit_cost
 
       def cost
-        @amount / 100_000.0 if @amount.class == Fixnum
+        @amount / 100_000.0 if @amount.class == Integer
       end
     end
   end
