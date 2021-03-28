@@ -21,6 +21,18 @@ module GreenButtonData
               as: :service_location
       element :CustomerAgreement, class: CustomerAgreement,
               as: :customer_agreement
+      element :Customer,
+              class: Customer,
+              as: :customer
+      element :CustomerAccount,
+              class: CustomerAccount,
+              as: :customer_account
+      element :Meter,
+              class: Meter,
+              as: :meter
+      element :MeterReading,
+              class: Meter,
+              as: :meter_reading
 
       # ESPI Namespacing
       element :'espi:ApplicationInformation', class: ApplicationInformation,
@@ -41,6 +53,9 @@ module GreenButtonData
               as: :service_location
       element :'espi:CustomerAgreement', class: CustomerAgreement,
               as: :customer_agreement
+      element :'espi:MeterReading',
+              class: Meter,
+              as: :meter_reading
 
       # Special case for PG&E generic namespaces
       element :'ns0:ApplicationInformation', class: ApplicationInformation,
@@ -58,8 +73,12 @@ module GreenButtonData
               as: :customer_agreement
 
       # Special case for SCE namespacing
-      element :'cust:CustomerAgreement', class: CustomerAgreement,
-              as: :customer_agreement        
+      element :'cust:CustomerAgreement',
+              class: CustomerAgreement,
+              as: :customer_agreement
+      element :'cust:CustomerAccount',
+              class: CustomerAccount,
+              as: :customer_account
     end
   end
 end

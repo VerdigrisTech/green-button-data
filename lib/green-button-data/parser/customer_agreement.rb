@@ -4,6 +4,9 @@ module GreenButtonData
       include SAXMachine
 
       element :name, as: :customer_agreement_id
+      element :type
+      element :docStatus, class: DocStatus, as: :doc_status
+      element :signDate, class: Integer, as: :sign_date
 
       # ESPI Namespacing
       element :'espi:name', as: :customer_agreement_id
