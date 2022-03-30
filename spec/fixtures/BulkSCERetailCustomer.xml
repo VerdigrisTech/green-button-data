@@ -38,19 +38,19 @@
     <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceLocation/1/EndDevice" />
     <title />
     <content>
-      <ServiceLocation xmlns="http://naesb.org/espi/customer">
-        <mainAddress>
-          <streetDetail>
-            <number>11111</number>
-            <name>COLORADO ST</name>
-          </streetDetail>
-          <townDetail>
-            <name>PALM DESERT</name>
-            <stateOrProvince>CA</stateOrProvince>
-          </townDetail>
-          <postalCode>11111-1111</postalCode>
-        </mainAddress>
-      </ServiceLocation>
+      <cust:ServiceLocation xmlns="http://naesb.org/espi/customer">
+        <cust:mainAddress>
+          <cust:streetDetail>
+            <cust:number>11111</cust:number>
+            <cust:name>COLORADO ST</cust:name>
+          </cust:streetDetail>
+          <cust:townDetail>
+            <cust:name>PALM DESERT</cust:name>
+            <cust:stateOrProvince>CA</cust:stateOrProvince>
+          </cust:townDetail>
+          <cust:postalCode>92260</cust:postalCode>
+        </cust:mainAddress>
+      </cust:ServiceLocation>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
@@ -62,10 +62,10 @@
     <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/msp/EndDevice" />
     <title />
     <content>
-      <ServiceSupplier xmlns="http://naesb.org/espi/customer">
-        <kind>msp</kind>
-        <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
-      </ServiceSupplier>
+      <cust:ServiceSupplier xmlns="http://naesb.org/espi/customer">
+        <cust:kind>msp</cust:kind>
+        <cust:issuerIdentificationNumber>SCE</cust:issuerIdentificationNumber>
+      </cust:ServiceSupplier>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
@@ -77,10 +77,10 @@
     <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/mdma/EndDevice" />
     <title />
     <content>
-      <ServiceSupplier xmlns="http://naesb.org/espi/customer">
-        <kind>mdma</kind>
-        <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
-      </ServiceSupplier>
+      <cust:ServiceSupplier xmlns="http://naesb.org/espi/customer">
+        <cust:kind>mdma</cust:kind>
+        <cust:issuerIdentificationNumber>SCE</cust:issuerIdentificationNumber>
+      </cust:ServiceSupplier>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
@@ -92,10 +92,10 @@
     <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/ServiceSupplier/lse/EndDevice" />
     <title />
     <content>
-      <ServiceSupplier xmlns="http://naesb.org/espi/customer">
-        <kind>lse</kind>
-        <issuerIdentificationNumber>SCE</issuerIdentificationNumber>
-      </ServiceSupplier>
+      <cust:ServiceSupplier xmlns="http://naesb.org/espi/customer">
+        <cust:kind>lse</cust:kind>
+        <cust:issuerIdentificationNumber>SCE</cust:issuerIdentificationNumber>
+      </cust:ServiceSupplier>
     </content>
     <updated>2016-07-07T02:36:29</updated>
     <published>2016-07-07T02:36:29</published>
@@ -107,17 +107,18 @@
     <link rel="related" href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter/14106263/EndDevice" />
     <title />
     <content>
-      <Meter xmlns="http://naesb.org/espi/customer">
-        <type>C2SOD</type>
-        <serialNumber>2.16.840.1.114416.1.5.222013991111</serialNumber>
-        <formNumber>2S</formNumber>
-        <MeterMultipliers>
-          <kind>ctRatio</kind>
-        </MeterMultipliers>
-        <MeterMultipliers>
-          <kind>kR</kind>
-        </MeterMultipliers>
-      </Meter>
+      <cust:Meter xmlns="http://naesb.org/espi/customer">
+        <cust:name>ITRON (SCHLUMBERGER; SANGAMO)</cust:name>
+        <cust:type>C2SOD</cust:type>
+        <cust:serialNumber>2.16.840.1.114416.1.5.222013991111</cust:serialNumber>
+        <cust:formNumber>2S</cust:formNumber>
+        <cust:MeterMultipliers>
+          <cust:kind>ctRatio</cust:kind>
+        </cust:MeterMultipliers>
+        <cust:MeterMultipliers>
+          <cust:kind>kR</cust:kind>
+        </cust:MeterMultipliers>
+      </cust:Meter>
     </content>
     <updated>2016-07-07T02:36:30</updated>
     <published>2016-07-07T02:36:30</published>

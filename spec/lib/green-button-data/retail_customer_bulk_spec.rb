@@ -59,6 +59,16 @@ describe GreenButtonData::RetailCustomer do
           expect(retail_customer).to be_a GreenButtonData::RetailCustomer
         end
       end
+
+      it 'sets Meter attributes' do
+        expect(meter.meter_serial_number).to eq('2.16.840.1.114416.1.5.222013991111')
+        expect(meter.meter_type).to eq('C2SOD')
+        expect(meter.links).to eq(
+          related: ['https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter/14106263/EndDevice'],
+          self: 'https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter/14106263',
+          up: 'https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/RetailCustomer/VJEWP31BE/Customer/1/CustomerAccount/1111111/CustomerAgreement/NB6WRU/Meter'
+        )
+      end
     end
   end
 
@@ -91,6 +101,22 @@ describe GreenButtonData::RetailCustomer do
         expect(service_location.agreement_id_service_uuid_map).to eq({})
         expect(customer_account.agreement_id_service_uuid_map).to eq({})
         expect(meter.agreement_id_service_uuid_map).to eq({})
+      end
+    end
+  end
+
+  describe '#address_general' do
+    context 'when ServiceLocation' do
+      it 'returns address' do
+        expect(service_location.address_general).to eq '11111 COLORADO ST,PALM DESERT,CA,92260'
+      end
+    end
+
+    context 'when not ServiceLocation' do
+      it 'returns empty string' do
+        expect(customer_agreement.address_general).to eq('')
+        expect(customer_account.address_general).to eq('')
+        expect(meter.address_general).to eq('')
       end
     end
   end
