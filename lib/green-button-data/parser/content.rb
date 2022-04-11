@@ -79,6 +79,12 @@ module GreenButtonData
       element :'cust:CustomerAccount',
               class: CustomerAccount,
               as: :customer_account
+      element :'cust:ServiceLocation',
+              class: ServiceLocation,
+              as: :service_location
+      element :'cust:Meter',
+              class: Meter,
+              as: :meter
     end
   end
 end

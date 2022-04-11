@@ -10,6 +10,9 @@ module GreenButtonData
 
       # Special case for PG&E generic namespacing
       element :'ns0:mainAddress', class: MainAddress, as: :main_address
+
+      # Special case for SCE namespacing
+      element :'cust:mainAddress', class: MainAddress, as: :main_address
     end
   end
 end

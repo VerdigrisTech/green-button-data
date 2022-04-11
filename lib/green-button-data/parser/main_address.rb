@@ -16,11 +16,15 @@ module GreenButtonData
       end
 
       def zipcode
-        town_detail.code.gsub(/\s+/, "")
+        return town_detail.code.gsub(/\s+/, "") if town_detail.code
+
+        postal_code
       end
 
       def address_general
-        street_detail.address_general
+        return street_detail.address_general if street_detail.address_general
+
+        street_detail.number + ' ' + street_detail.name
       end
 
       def to_s
@@ -29,7 +33,7 @@ module GreenButtonData
 
       element :townDetail, class: TownDetail, as: :town_detail
       element :streetDetail, class: StreetDetail, as: :street_detail
-
+      element :postalCode, as: :postal_code
 
       # ESPI Namespacing
       element :'espi:townDetail', class: TownDetail, as: :town_detail
@@ -38,6 +42,11 @@ module GreenButtonData
       # Special case for PG&E generic namespacing
       element :'ns0:townDetail', class: TownDetail, as: :town_detail
       element :'ns0:streetDetail', class: StreetDetail, as: :street_detail
+
+      # Special case for SCE namespacing
+      element :'cust:townDetail', class: TownDetail, as: :town_detail
+      element :'cust:streetDetail', class: StreetDetail, as: :street_detail
+      element :'cust:postalCode', as: :postal_code
     end
   end
 end

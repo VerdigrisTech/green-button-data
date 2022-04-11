@@ -16,6 +16,10 @@ module GreenButtonData
       element :'ns0:stateOrProvince', as: :state_or_province
       element :'ns0:code', as: :code
       element :'ns0:name', as: :name
+
+      # Special case for SCE namespacing
+      element :'cust:stateOrProvince', as: :state_or_province
+      element :'cust:name', as: :name
     end
   end
 end
