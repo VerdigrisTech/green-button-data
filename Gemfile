@@ -7,6 +7,5 @@ group :development do
 end
 
 group :test do
-  gem 'codecov', require: false
   gem 'rspec_junit_formatter', require: false
 end

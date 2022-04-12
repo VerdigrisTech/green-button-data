@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   ruby: circleci/ruby@1.7.1
+  codecov: codecov/codecov@3.2.2
 
 jobs:
   test:
@@ -15,6 +16,7 @@ jobs:
       - checkout
       - ruby/install-deps
       - ruby/rspec-test
+      - codecov/upload
 
   build:
     docker:
