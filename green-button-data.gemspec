@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'nokogiri', '~> 1.8'
   s.add_dependency 'sax-machine', '~> 1.3'
-  s.add_dependency 'faraday', '~> 0.11'
+  s.add_dependency 'faraday', '~> 1.0'
 
   s.add_development_dependency 'rspec', '~> 3.0'
   s.add_development_dependency 'webmock', '~> 1.21'
