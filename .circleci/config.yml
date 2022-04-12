@@ -1,4 +1,7 @@
-version: 2
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.7.1
 
 test-steps: &test-steps
   working_directory: ~/green-button-data
@@ -21,6 +24,18 @@ test-steps: &test-steps
         command: rspec
 
 jobs:
+  test:
+    parameters:
+      ruby-version:
+        type: string
+    docker:
+      - image: cimg/ruby:<< parameters.ruby-version >>
+    working_directory: ~/green-button-data
+    steps:
+      - checkout
+      - ruby/install-deps
+      - ruby/rspec-test
+
   test-ruby-2.4:
     docker:
       - image: circleci/ruby:2.4
@@ -71,6 +86,14 @@ workflows:
   version: 2
   tests:
     jobs:
+      - test:
+          matrix:
+            parameters:
+              ruby-version:
+                - "2.6"
+                - "2.7"
+                - "3.0"
+                - "3.1"
       - test-ruby-2.4
       - test-ruby-2.5
       - test-ruby-2.6
