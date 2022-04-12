@@ -5,8 +5,8 @@ SimpleCov.start do
 end
 
 if ENV['CI'] == 'true'
-  require 'codecov'
-  SimpleCov.formatter = SimpleCov::Formatter::Codecov
+  require 'simplecov-cobertura'
+  SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
 end
 
 require File.expand_path(File.dirname(__FILE__) + '/../lib/green-button-data')
@@ -15,8 +15,7 @@ require 'fixtures'
 require 'support/custom_expectations/warn_expectation'
 
 # Disable network connections
-WebMock.disable_net_connect! allow_localhost: true,
-                             allow: /codecov/
+WebMock.disable_net_connect! allow_localhost: true
 
 SAXMachine.handler = ENV['HANDLER'].to_sym if ENV['HANDLER']
 
