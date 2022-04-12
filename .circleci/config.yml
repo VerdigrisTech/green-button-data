@@ -3,26 +3,6 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@1.7.1
 
-test-steps: &test-steps
-  working_directory: ~/green-button-data
-  steps:
-    - checkout
-    - restore_cache:
-        keys:
-          - v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-          - v1-gem-cache-{{ arch }}-{{ .Branch }}
-          - v1-gem-cache-{{ arch }}
-    - run:
-        name: Install dependencies
-        command: bundle install
-    - save_cache:
-        paths:
-          - ~/.bundle
-        key: v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-    - run:
-        name: Run tests
-        command: rspec
-
 jobs:
   test:
     parameters:
@@ -35,21 +15,6 @@ jobs:
       - checkout
       - ruby/install-deps
       - ruby/rspec-test
-
-  test-ruby-2.4:
-    docker:
-      - image: circleci/ruby:2.4
-    <<: *test-steps
-
-  test-ruby-2.5:
-    docker:
-      - image: circleci/ruby:2.5
-    <<: *test-steps
-
-  test-ruby-2.6:
-    docker:
-      - image: circleci/ruby:2.6
-    <<: *test-steps
 
   build:
     docker:
@@ -94,9 +59,6 @@ workflows:
                 - "2.7"
                 - "3.0"
                 - "3.1"
-      - test-ruby-2.4
-      - test-ruby-2.5
-      - test-ruby-2.6
   release:
     jobs:
       - build:
