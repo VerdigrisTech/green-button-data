@@ -20,7 +20,7 @@ jobs:
 
   build:
     docker:
-      - image: circleci/ruby:2.4
+      - image: cimg/ruby:2.7
     working_directory: ~/green-button-data
     steps:
       - checkout
@@ -34,7 +34,7 @@ jobs:
 
   publish:
     docker:
-      - image: circleci/ruby:2.4
+      - image: cimg/ruby:2.7
     working_directory: ~/green-button-data
     steps:
       - attach_workspace:
