@@ -92,7 +92,7 @@ module GreenButtonData
           connection.response :logger
           connection.adapter Faraday.default_adapter
         end
-        conn.authorization :Bearer, options[:token] if options[:token]
+        conn.request(:authorization, :Bearer, options[:token]) if options[:token]
 
         response = conn.get do |req|
           req.url url

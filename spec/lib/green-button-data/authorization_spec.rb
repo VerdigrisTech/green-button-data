@@ -59,12 +59,12 @@ describe GreenButtonData::Authorization do
   describe ".find" do
     context "valid authorization" do
       it "is an instance of Authorization" do
-        expect(subject.find(4, token: token)).to be_a GreenButtonData::Authorization
+        expect(subject.find("4", token: token)).to be_a GreenButtonData::Authorization
         expect(subject.find("https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Authorization/4", token: token)).to be_a GreenButtonData::Authorization
       end
 
       it "should populate attributes" do
-        authorization = subject.find(4, token: token)
+        authorization = subject.find("4", token: token)
         expect(authorization.id).to eq "4"
         expect(authorization.status).to eq :active
         expect(authorization.resource_uri).to eq "https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/2"

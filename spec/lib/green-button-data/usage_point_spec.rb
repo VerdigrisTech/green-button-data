@@ -9,7 +9,7 @@ describe GreenButtonData::UsagePoint do
 
   subject { GreenButtonData::UsagePoint }
 
-  let(:usage_point) { subject.find(2, subscription_id: 5, token: token) }
+  let(:usage_point) { subject.find("2", subscription_id: 5, token: token) }
 
   before do
     GreenButtonData.configure do |config|

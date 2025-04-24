@@ -7,7 +7,7 @@ describe GreenButtonData::ApplicationInformation do
 
   subject { GreenButtonData::ApplicationInformation }
 
-  let(:application_information) { subject.find(2, token: token) }
+  let(:application_information) { subject.find("2", token: token) }
 
   let :authorization_server_authorization_endpoint do
     "https://services.greenbuttondata.org//DataCustodian/oauth/authorize"

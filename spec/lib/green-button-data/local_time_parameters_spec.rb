@@ -7,7 +7,7 @@ describe GreenButtonData::LocalTimeParameters do
 
   subject { GreenButtonData::LocalTimeParameters }
 
-  let(:local_time_parameters) { subject.find(1, token: token) }
+  let(:local_time_parameters) { subject.find("1", token: token) }
 
   let(:dst_starts_at) { Time.new 2015, 3, 7, 18, 0, 0, '-08:00' }
   let(:dst_ends_at) { Time.new 2015, 10, 31, 19, 0, 0, '-07:00' }

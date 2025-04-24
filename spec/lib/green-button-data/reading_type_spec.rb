@@ -7,7 +7,7 @@ describe GreenButtonData::ReadingType do
 
   subject { GreenButtonData::ReadingType }
 
-  let(:reading_type) { subject.find(11, token: token) }
+  let(:reading_type) { subject.find("11", token: token) }
 
   let(:accumulation_behaviour) { :delta_data }
   let(:commodity) { :electricity_secondary_metered }
